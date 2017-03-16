@@ -785,11 +785,11 @@ SPIConfigSetExpClk(unsigned long ulBase,unsigned long ulSPIClk,
   // Mask the configurations and set clock divider granularity
   // to 1 cycle
   //
-  ulRegData = (ulRegData & ~(MCSPI_CH0CONF_WL_M |
-                             MCSPI_CH0CONF_EPOL |
-                             MCSPI_CH0CONF_POL  |
-                             MCSPI_CH0CONF_PHA  |
-                             MCSPI_CH0CONF_TURBO ) |
+  ulRegData = ((ulRegData & ~(MCSPI_CH0CONF_WL_M |
+                              MCSPI_CH0CONF_EPOL |
+                              MCSPI_CH0CONF_POL  |
+                              MCSPI_CH0CONF_PHA  |
+                              MCSPI_CH0CONF_TURBO )) |
                MCSPI_CH0CONF_CLKG);
 
   //
