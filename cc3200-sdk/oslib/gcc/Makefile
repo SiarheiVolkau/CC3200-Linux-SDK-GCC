@@ -1,124 +1,153 @@
 #******************************************************************************
 #
-# Makefile - Rules for building the FreeRTOS Library.
+# Makefile - Rules for building the FreeRTOS library.
 #
-#  Copyright (C) 2014 Texas Instruments Incorporated - http:#www.ti.com/
+#	v- 1.3.0
 #
+# The MIT License
 #
-#  Redistribution and use in source and binary forms, with or without
-#  modification, are permitted provided that the following conditions
-#  are met:
+# Copyright (c) 2017 Siarhei Volkau
 #
-#    Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer.
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
 #
-#    Redistributions in binary form must reproduce the above copyright
-#    notice, this list of conditions and the following disclaimer in the
-#    documentation and/or other materials provided with the
-#    distribution.
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
 #
-#    Neither the name of Texas Instruments Incorporated nor the names of
-#    its contributors may be used to endorse or promote products derived
-#    from this software without specific prior written permission.
-#
-#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-#  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-#  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-#  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-#  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-#  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-#  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-#  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-#  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-#  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
 #
 #*****************************************************************************
 
-#
-# The base directory.
-#
-ROOT=../../
+.PHONY: all clean
 
-#
-# Include the common make definitions.
-#
-include ${ROOT}/tools/gcc_scripts/makedefs
+# The base SDK directory.
+SDK_ROOT=../..
 
-#
-# The FreeRTOS base directory.
-#
-RTOS_SOURCE_DIR=../../third_party/FreeRTOS
+# Sources root directory
+SRC_ROOT=..
 
-#
-# Where to find header files that do not live in the current directory.
-#
-IPATH=../
-IPATH+=${RTOS_SOURCE_DIR}
-IPATH+=${RTOS_SOURCE_DIR}/../../driverlib/
-IPATH+=${RTOS_SOURCE_DIR}/../../inc/
-IPATH+=${RTOS_SOURCE_DIR}/source
-IPATH+=${RTOS_SOURCE_DIR}/source/include
-IPATH+=${RTOS_SOURCE_DIR}/source/portable/MemMang
-IPATH+=${RTOS_SOURCE_DIR}/source/portable/GCC/ARM_CM4
+# The FreeRTOS directory.
+RTOSDIR=$(SDK_ROOT)/third_party/FreeRTOS/source
 
-#
-# Where to find source files that do not live in the current directory.
-#
-VPATH=../
-VPATH+=${RTOS_SOURCE_DIR}
-VPATH+=${RTOS_SOURCE_DIR}/source
-VPATH+=${RTOS_SOURCE_DIR}/source/portable/MemMang
-VPATH+=${RTOS_SOURCE_DIR}/source/portable/GCC/ARM_CM4
+# Output directory
+OUTDIR=free_rtos
 
-#
-# Required object file
-#
-OBJS= ${OBJDIR}/croutine.o    \
-      ${OBJDIR}/list.o        \
-      ${OBJDIR}/queue.o       \
-      ${OBJDIR}/tasks.o       \
-      ${OBJDIR}/port.o        \
-      ${OBJDIR}/timers.o      \
-      ${OBJDIR}/heap_3.o      \
-      ${OBJDIR}/osi_freertos.o
+# Lib Name
+LIBRARY=free_rtos.a
+DEBUG_LIBRARY=$(OUTDIR)/Debug/${LIBRARY}
+RELEASE_LIBRARY=$(OUTDIR)/Release/${LIBRARY}
 
-#
-# The default rule, which causes init to be built.
-#
-all: ${OBJDIR} ${BINDIR} \
-     ${BINDIR}/FreeRTOS.a
-	 
-#
-# The rule to clean out all the build products.
-#
-clean:
-	@rm -rf ${OBJDIR} ${wildcard *~}
-	@rm -rf ${BINDIR} ${wildcard *~}
-	
-#
-# The rule to create the target directories.
-#
-${OBJDIR}:
-	@mkdir -p ${OBJDIR}
+DEBUG_OBJPATH=obj/Debug
+RELEASE_OBJPATH=obj/Release
 
-${BINDIR}:
-	@mkdir -p ${BINDIR}
+# Tools Setup
+CROSS_COMPILE ?= arm-none-eabi-
 
-#
-# Rules for building the FreeRTOS library.
-#
-${BINDIR}/FreeRTOS.a: ${OBJS}
+CC=$(CROSS_COMPILE)gcc
+AR=$(CROSS_COMPILE)ar
 
-#
-# Include the automatically generated dependency files.
-#
-ifneq (${MAKECMDGOALS},clean)
--include ${wildcard ${COMPILER}/*.d} __dummy__
-endif
+# Where to find header files
+IPATH=  -I${SRC_ROOT}
+IPATH+= -I${SDK_ROOT}/inc
+IPATH+= -I${SDK_ROOT}/driverlib
+IPATH+= -I${RTOSDIR}
+IPATH+= -I${RTOSDIR}/include
+IPATH+= -I${RTOSDIR}/portable/GCC/ARM_CM4
 
+# C Compiler Flags
+CFLAGS_COMMON=-mthumb       \
+       -mcpu=cortex-m4      \
+       -ffunction-sections  \
+       -fdata-sections      \
+       -MD                  \
+       -std=c99             \
+       -Wall                \
+       -g                   \
+       -Dgcc                \
+       $(IPATH)
 
-	 
+RELEASE_CFLAGS=-Os -DTARGET_IS_CC3200
+DEBUG_CFLAGS=-O0
 
+# Sources
+SOURCES= osi_freertos.c \
+	croutine.c      \
+	list.c          \
+	queue.c         \
+	tasks.c         \
+	port.c          \
+	timers.c        \
+	heap_3.c
 
+vpath %.c $(SRC_ROOT):$(RTOSDIR):$(RTOSDIR)/portable/GCC/ARM_CM4:$(RTOSDIR)/portable/MemMang
 
+# Directory creator
+dir_create=@mkdir -p $(@D)
+
+# Objects
+# Objects
+DEBUG_OBJECTS= $(SOURCES:%.c=$(DEBUG_OBJPATH)/%.o)
+RELEASE_OBJECTS= $(SOURCES:%.c=$(RELEASE_OBJPATH)/%.o)
+
+all: debug release
+
+# Rules for rebuild when dependencies changed
+# GCC option -MD enables dependency rules generation
+-include $(SOURCES:%.c=$(DEBUG_OBJPATH)/%.d)
+-include $(SOURCES:%.c=$(RELEASE_OBJPATH)/%.d)
+
+# *.o build rules
+$(DEBUG_OBJPATH)/%.o: %.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(DEBUG_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+$(RELEASE_OBJPATH)/%.o: %.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(RELEASE_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+# *.a build rules
+$(DEBUG_LIBRARY): $(DEBUG_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(DEBUG_OBJECTS)
+	@echo "AR	$@";
+
+$(RELEASE_LIBRARY): $(RELEASE_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(RELEASE_OBJECTS)
+	@echo "AR	$@";
+
+# Rules for build release & debug libs
+debug: $(DEBUG_LIBRARY)
+
+release: $(RELEASE_LIBRARY)
+
+# clean rules
+clean_debug:
+	@rm -rf $(DEBUG_OBJPATH)/*.d
+	@echo "rm -rf $(DEBUG_OBJPATH)/*.d";
+	@rm -rf $(DEBUG_OBJPATH)/*.o
+	@echo "rm -rf $(DEBUG_OBJPATH)/*.o";
+	@rm -rf $(DEBUG_LIBRARY)
+	@echo "rm -rf $(DEBUG_LIBRARY)";
+
+clean_release:
+	@rm -rf $(RELEASE_OBJPATH)/*.d
+	@echo "rm -rf $(RELEASE_OBJPATH)/*.d";
+	@rm -rf $(RELEASE_OBJPATH)/*.o
+	@echo "rm -rf $(RELEASE_OBJPATH)/*.o";
+	@rm -rf $(RELEASE_LIBRARY)
+	@echo "rm -rf $(RELEASE_LIBRARY)";
+
+clean: clean_debug clean_release
