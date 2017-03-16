@@ -91,6 +91,27 @@ CPUipsr(void)
 }
 #endif
 
+#if defined(gcc)
+u32 __attribute__((naked))
+CPUipsr(void)
+{
+    //
+    // Read IPSR.
+    //
+    __asm("    mrs     r0, IPSR\n"
+          "    bx      lr\n");
+
+    //
+    // The following keeps the compiler happy, because it wants to see a
+    // return value from this function.  It will generate code to return
+    // a zero.  However, the real return is the "bx lr" above, so the
+    // return(0) is never executed and the function returns with the value
+    // you expect in R0.
+    //
+    return(0);
+}
+#endif
+
 
 void global_intr_handler()
 {

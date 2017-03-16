@@ -197,6 +197,26 @@ i32 try_S4_no_irq(void)
           }
 #endif
 
+#ifdef gcc
+#define BACK_UP_ARM_REGISTERS() {     \
+        __asm(" push {r0-r12,LR} \n" \
+          " movw r1, #:lower16:vault_arm_registers \n" \
+          " movt r1, #:upper16:vault_arm_registers \n" \
+          " mrs  r0,msp \n" \
+          " str  r0,[r1] \n" \
+          " mrs  r0,psp \n" \
+          " str  r0,[r1, #4] \n" \
+          " mrs  r0,primask \n" \
+          " str  r0,[r1, #12] \n" \
+          " mrs  r0,faultmask \n" \
+          " str  r0,[r1, #16] \n" \
+          " mrs  r0,basepri \n" \
+          " str  r0,[r1, #20] \n" \
+          " mrs  r0,control \n" \
+          " str  r0,[r1, #24] \n"); \
+          }
+#endif
+
 //static inline void restore_arm_registers()
 
 #ifdef ewarm
@@ -223,6 +243,26 @@ i32 try_S4_no_irq(void)
 #define RESTORE_ARM_REGISTERS() {        \
     __asm(" movw r1, vault_arm_registers \n" \
           " movt r1, vault_arm_registers \n" \
+          " ldr  r0,[r1, #24] \n" \
+          " msr  control,r0 \n" \
+          " ldr  r0,[r1] \n" \
+          " msr  msp,r0 \n" \
+          " ldr  r0,[r1,#4] \n" \
+          " msr  psp,r0 \n" \
+          " ldr  r0,[r1, #12] \n" \
+          " msr  primask,r0 \n" \
+          " ldr  r0,[r1, #16] \n" \
+          " msr  faultmask,r0 \n" \
+          " ldr  r0,[r1, #20] \n" \
+          " msr  basepri,r0 \n" \
+          " pop  {r0-r12,LR} \n"); \
+         }
+#endif
+
+#ifdef gcc
+#define RESTORE_ARM_REGISTERS() {        \
+    __asm(" movw r1, #:lower16:vault_arm_registers \n" \
+          " movt r1, #:upper16:vault_arm_registers \n" \
           " ldr  r0,[r1, #24] \n" \
           " msr  control,r0 \n" \
           " ldr  r0,[r1] \n" \
@@ -275,9 +315,9 @@ static void enter_into_S3(void)
         }
 
         /* Introducing delays to facilitate CPU to fade away ........ */
-        asm(" NOP"); asm(" NOP"); asm(" NOP"); asm(" NOP"); asm(" NOP"); 
-        asm(" NOP"); asm(" NOP"); asm(" NOP"); asm(" NOP"); asm(" NOP");
-        asm(" NOP"); asm(" NOP"); asm(" NOP"); asm(" NOP"); asm(" NOP");
+        __asm(" NOP"); __asm(" NOP"); __asm(" NOP"); __asm(" NOP"); __asm(" NOP");
+        __asm(" NOP"); __asm(" NOP"); __asm(" NOP"); __asm(" NOP"); __asm(" NOP");
+        __asm(" NOP"); __asm(" NOP"); __asm(" NOP"); __asm(" NOP"); __asm(" NOP");
 }
 
 static i32 do_try_S3_no_irq()
@@ -314,7 +354,12 @@ static i32 do_try_S3_no_irq()
         return 0;
 }
 
-i32 try_S3_no_irq(void)
+i32
+/* Hack for make S3 working when gcc optimization disabled */
+#ifdef gcc
+__attribute__((optimize("Os")))
+#endif
+try_S3_no_irq(void)
 {
 #define PFORM_CAN_TRY_S3() ((NULL != pform->pm_ops->enter_S3)        && \
                             pform->pm_ops->can_try_pm_state(e_pm_S3))
