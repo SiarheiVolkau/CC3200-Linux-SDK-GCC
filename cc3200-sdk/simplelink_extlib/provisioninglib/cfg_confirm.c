@@ -203,6 +203,10 @@ void cfgNotifyTimeout()
             LOG_DEBUG("cfgNotifyTimeout: IP address timeout\n\r");
             g_ConfigResult = CFG_CONFIRM_RES_IP_NOT_ACQUIRED;
             break;
+
+        case CFG_CONFIRM_STATE_IDLE:
+            /* FIXME */
+            break;
     }
 
 

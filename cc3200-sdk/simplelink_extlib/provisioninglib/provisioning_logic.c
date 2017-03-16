@@ -146,8 +146,8 @@ static void mac_addr_to_string (const unsigned char *mac_addr, char *mac_addr_st
 
     for ( i = 0 ; i < SL_MAC_ADDR_LEN ; i++ )
     {
-        const char upper_nibble = (mac_addr[i] & 0xF0) >> 4 ;
-        const char lower_nibble = (mac_addr[i] & 0x0F) >> 0 ;
+        unsigned char upper_nibble = (mac_addr[i] & 0xF0) >> 4 ;
+        unsigned char lower_nibble = (mac_addr[i] & 0x0F) >> 0 ;
         const int  j            = i*2                       ;
         mac_addr_string[j+0] = hex_digit_to_string[upper_nibble];
         mac_addr_string[j+1] = hex_digit_to_string[lower_nibble];
