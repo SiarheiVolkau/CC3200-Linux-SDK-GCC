@@ -645,6 +645,7 @@ _SlReturnVal_t _SlDrvCmdOp(
 
     SL_TRACE0(DBG_MSG, MSG_312, "_SlDrvCmdOp: call _SlDrvMsgWrite");
 
+
     /* send the message */
     RetVal = _SlDrvMsgWrite(pCmdCtrl, pCmdExt, pTxRxDescBuff);
 
@@ -972,16 +973,16 @@ static _SlReturnVal_t _SlDrvMsgRead(void)
 		return SL_API_ABORTED;
 	}
 #endif
-    OpCode = OPCODE(uBuf.TempBuf);
-    RespPayloadLen = (_u16)(RSP_PAYLOAD_LEN(uBuf.TempBuf));
+    OpCode = OPCODE(uBuf.DummyBuf);
+    RespPayloadLen = (_u16)(RSP_PAYLOAD_LEN(uBuf.DummyBuf));
 
 
     /* 'Init Compelete' message bears no valid FlowControl info */
     if(SL_OPCODE_DEVICE_INITCOMPLETE != OpCode)
     {
-        g_pCB->FlowContCB.TxPoolCnt = ((_SlResponseHeader_t *)uBuf.TempBuf)->TxPoolCnt;
-        g_pCB->SocketNonBlocking = ((_SlResponseHeader_t *)uBuf.TempBuf)->SocketNonBlocking;
-        g_pCB->SocketTXFailure = ((_SlResponseHeader_t *)uBuf.TempBuf)->SocketTXFailure;
+        g_pCB->FlowContCB.TxPoolCnt = ((_SlResponseHeader_t *)uBuf.DummyBuf)->TxPoolCnt;
+        g_pCB->SocketNonBlocking = ((_SlResponseHeader_t *)uBuf.DummyBuf)->SocketNonBlocking;
+        g_pCB->SocketTXFailure = ((_SlResponseHeader_t *)uBuf.DummyBuf)->SocketTXFailure;
 
         if(g_pCB->FlowContCB.TxPoolCnt > FLOW_CONT_MIN)
         {
@@ -1083,12 +1084,12 @@ static _SlReturnVal_t _SlDrvMsgRead(void)
             NWP_IF_READ_CHECK(g_pCB->FD, &uBuf.TempBuf[4], RECV_ARGS_SIZE);
 
             /*  Validate Socket ID and Received Length value.  */
-            VERIFY_PROTOCOL((SD(&uBuf.TempBuf[4])& BSD_SOCKET_ID_MASK) < SL_MAX_SOCKETS);
+            VERIFY_PROTOCOL((SD(&uBuf.DummyBuf[1])& BSD_SOCKET_ID_MASK) < SL_MAX_SOCKETS);
 
             SL_DRV_PROTECTION_OBJ_LOCK_FOREVER();
 
             /* go over the active list if exist to find obj waiting for this Async event */
-				VERIFY_RET_OK(_SlFindAndSetActiveObj(OpCode,SD(&uBuf.TempBuf[4]) & BSD_SOCKET_ID_MASK));
+				VERIFY_RET_OK(_SlFindAndSetActiveObj(OpCode,SD(&uBuf.DummyBuf[1]) & BSD_SOCKET_ID_MASK));
 
             /*  Verify data is waited on this socket. The pArgs should have been set by _SlDrvDataReadOp(). */
             VERIFY_SOCKET_CB(NULL !=  ((_SlArgsData_t *)(g_pCB->ObjPool[g_pCB->FunctionParams.AsyncExt.ActionIndex].pData))->pArgs);	
@@ -1105,7 +1106,7 @@ static _SlReturnVal_t _SlDrvMsgRead(void)
             /*  Here g_pCB->ObjPool[g_pCB->FunctionParams.AsyncExt.ActionIndex].pData contains requested(expected) Recv/Recvfrom DataSize. */
             /*  Overwrite requested DataSize with actual one. */
             /*  If error is received, this information will be read from arguments. */
-            if(ACT_DATA_SIZE(&uBuf.TempBuf[4]) > 0)
+            if(ACT_DATA_SIZE(&uBuf.DummyBuf[1]) > 0)
             {       
                 VERIFY_SOCKET_CB(NULL != ((_SlArgsData_t *)(g_pCB->ObjPool[g_pCB->FunctionParams.AsyncExt.ActionIndex].pRespArgs))->pData);
 
@@ -1113,8 +1114,8 @@ static _SlReturnVal_t _SlDrvMsgRead(void)
                 /*  therefore check the requested length and read only  */
                 /*  4 bytes aligned data. The rest unaligned (if any) will be read */
                 /*  and copied to a TailBuffer  */
-                LengthToCopy = (_u16)(ACT_DATA_SIZE(&uBuf.TempBuf[4]) & (3));
-                AlignedLengthRecv = (_u16)(ACT_DATA_SIZE(&uBuf.TempBuf[4]) & (~3));
+                LengthToCopy = (_u16)(ACT_DATA_SIZE(&uBuf.DummyBuf[1]) & (3));
+                AlignedLengthRecv = (_u16)(ACT_DATA_SIZE(&uBuf.DummyBuf[1]) & (~3));
                 if( AlignedLengthRecv >= 4)
                 {
                     NWP_IF_READ_CHECK(g_pCB->FD,((_SlArgsData_t *)(g_pCB->ObjPool[g_pCB->FunctionParams.AsyncExt.ActionIndex].pRespArgs))->pData,AlignedLengthRecv );                      
@@ -1147,7 +1148,7 @@ static _SlReturnVal_t _SlDrvMsgRead(void)
         if((NULL != g_pCB->FunctionParams.pCmdExt) && (0 != g_pCB->FunctionParams.pCmdExt->RxPayloadLen))
         {
             /*  Actual size of command's response payload: <msg_payload_len> - <rsp_args_len> */
-            _i16    ActDataSize = (_i16)(RSP_PAYLOAD_LEN(uBuf.TempBuf) - g_pCB->FunctionParams.pCmdCtrl->RxDescLen);
+            _i16    ActDataSize = (_i16)(RSP_PAYLOAD_LEN(uBuf.DummyBuf) - g_pCB->FunctionParams.pCmdCtrl->RxDescLen);
 
             g_pCB->FunctionParams.pCmdExt->ActualRxPayloadLen = ActDataSize;
 
@@ -1591,7 +1592,7 @@ static _SlReturnVal_t _SlDrvRxHdrRead(_u8 *pBuf, _u8 *pAlignSize)
     _u8         ShiftIdx;
     _u8         TimeoutState = TIMEOUT_STATE_INIT_VAL;
     _u8         SearchSync = TRUE;
-	_u8         SyncPattern[4];
+	_u32        SyncPattern;
 
 
 #if (!defined (SL_TINY_EXT)) && (defined(sl_GetTimestamp))
@@ -1630,12 +1631,11 @@ static _SlReturnVal_t _SlDrvRxHdrRead(_u8 *pBuf, _u8 *pAlignSize)
     	/* scan till we get the real sync pattern */
 		for (ShiftIdx =0; ShiftIdx <=4 ; ShiftIdx++)
 		{
-
 		   /* copy to local variable to ensure starting address which is 4-bytes aligned */
-		   sl_Memcpy(&SyncPattern[0],  &pBuf[ShiftIdx], 4);
+		   sl_Memcpy(&SyncPattern,  &pBuf[ShiftIdx], 4);
 
 		   /* sync pattern found so complete the read to  4 bytes aligned */
-		   if (N2H_SYNC_PATTERN_MATCH(&SyncPattern[0], g_pCB->TxSeqNum))
+		   if (N2H_SYNC_PATTERN_MATCH(&SyncPattern, g_pCB->TxSeqNum))
 		   {
 				   /* copy the bytes following the sync pattern to the buffer start */
 				   sl_Memcpy(&pBuf[0],  &pBuf[ShiftIdx + SYNC_PATTERN_LEN], 4);
