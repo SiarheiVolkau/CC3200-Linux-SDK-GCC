@@ -1,114 +1,138 @@
 #******************************************************************************
 #
-# Makefile - Rules for building the driver library.
+# Makefile - Rules for building the Driverlib library.
 #
-#  Copyright (C) 2014 Texas Instruments Incorporated - http:#www.ti.com/
+#	v- 1.3.0
 #
+# The MIT License
 #
-#  Redistribution and use in source and binary forms, with or without
-#  modification, are permitted provided that the following conditions
-#  are met:
+# Copyright (c) 2017 Siarhei Volkau
 #
-#    Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer.
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
 #
-#    Redistributions in binary form must reproduce the above copyright
-#    notice, this list of conditions and the following disclaimer in the
-#    documentation and/or other materials provided with the
-#    distribution.
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
 #
-#    Neither the name of Texas Instruments Incorporated nor the names of
-#    its contributors may be used to endorse or promote products derived
-#    from this software without specific prior written permission.
-#
-#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-#  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-#  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-#  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-#  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-#  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-#  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-#  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-#  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-#  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
 #
 #*****************************************************************************
 
-#
-# The base directory
-#
-ROOT=../../
+.PHONY: all clean
 
-#
-# Include the common make definitions.
-#
-include ${ROOT}/tools/gcc_scripts/makedefs
+# The base SDK directory.
+SDK_ROOT=../..
 
-#
-# Where to find header files that do not live in the source directory.
-#
-VPATH=..
+# Sources root directory
+SRC_ROOT=..
 
-#
-# Where to find header files that do not live in the source directory.
-#
-IPATH= ..
-IPATH+= ../../
+# Output directory
+OUTDIR=lib
 
-#
-# The default rule, which causes the driver library to be built.
-#
-all: ${OBJDIR} ${BINDIR}
-all: ${BINDIR}/libdriver.a
+# Lib Name
+LIBRARY=libdriver.a
+DEBUG_LIBRARY=$(OUTDIR)/Debug/${LIBRARY}
+RELEASE_LIBRARY=$(OUTDIR)/Release/${LIBRARY}
 
-#
-# The rule to clean out all the build products.
-#
-clean:
-	@rm -rf ${OBJDIR} ${wildcard *~}
-	@rm -rf ${BINDIR} ${wildcard *~}
+DEBUG_OBJPATH=obj/Debug
+RELEASE_OBJPATH=obj/Release
 
+# Tools Setup
+CROSS_COMPILE ?= arm-none-eabi-
 
-#
-# The rule to create the target directories.
-#
-${OBJDIR}:
-	@mkdir -p ${OBJDIR}
+CC=$(CROSS_COMPILE)gcc
+AR=$(CROSS_COMPILE)ar
 
-${BINDIR}:
-	@mkdir -p ${BINDIR}
+# Where to find header files
+IPATH=-I${SDK_ROOT}
 
-#
-# Rules for building the driver library.
-#
-${BINDIR}/libdriver.a: ${OBJDIR}/adc.o
-${BINDIR}/libdriver.a: ${OBJDIR}/aes.o
-${BINDIR}/libdriver.a: ${OBJDIR}/camera.o
-${BINDIR}/libdriver.a: ${OBJDIR}/cpu.o
-${BINDIR}/libdriver.a: ${OBJDIR}/crc.o
-${BINDIR}/libdriver.a: ${OBJDIR}/des.o
-${BINDIR}/libdriver.a: ${OBJDIR}/flash.o
-${BINDIR}/libdriver.a: ${OBJDIR}/gpio.o
-${BINDIR}/libdriver.a: ${OBJDIR}/hwspinlock.o
-${BINDIR}/libdriver.a: ${OBJDIR}/i2c.o
-${BINDIR}/libdriver.a: ${OBJDIR}/interrupt.o
-${BINDIR}/libdriver.a: ${OBJDIR}/i2s.o
-${BINDIR}/libdriver.a: ${OBJDIR}/pin.o
-${BINDIR}/libdriver.a: ${OBJDIR}/prcm.o
-${BINDIR}/libdriver.a: ${OBJDIR}/sdhost.o
-${BINDIR}/libdriver.a: ${OBJDIR}/shamd5.o
-${BINDIR}/libdriver.a: ${OBJDIR}/spi.o
-${BINDIR}/libdriver.a: ${OBJDIR}/systick.o
-${BINDIR}/libdriver.a: ${OBJDIR}/timer.o
-${BINDIR}/libdriver.a: ${OBJDIR}/uart.o
-${BINDIR}/libdriver.a: ${OBJDIR}/udma.o
-${BINDIR}/libdriver.a: ${OBJDIR}/utils.o
-${BINDIR}/libdriver.a: ${OBJDIR}/wdt.o
+# C Compiler Flags
+CFLAGS_COMMON=-mthumb       \
+       -mcpu=cortex-m4      \
+       -ffunction-sections  \
+       -fdata-sections      \
+       -MD                  \
+       -std=c99             \
+       -Wall                \
+       -g                   \
+       -Dgcc                \
+       $(IPATH)
 
-#
-# Include the automatically generated dependency files.
-#
-ifneq (${MAKECMDGOALS},clean)
--include ${wildcard ${OBJDIR}/*.d} __dummy__
-endif
+RELEASE_CFLAGS=-Os -DTARGET_IS_CC3200
+DEBUG_CFLAGS=-O0
+
+# Sources
+SOURCES= adc.c aes.c camera.c cpu.c crc.c des.c flash.c gpio.c hwspinlock.c i2c.c \
+	interrupt.c i2s.c pin.c prcm.c sdhost.c shamd5.c spi.c systick.c timer.c \
+	uart.c udma.c utils.c wdt.c
+
+# Directory creator
+dir_create=@mkdir -p $(@D)
+
+# Objects
+DEBUG_OBJECTS= $(SOURCES:%.c=$(DEBUG_OBJPATH)/%.o)
+RELEASE_OBJECTS= $(SOURCES:%.c=$(RELEASE_OBJPATH)/%.o)
+
+all: debug release
+
+# Rules for rebuild when dependencies changed
+# GCC option -MD enables dependency rules generation
+-include $(SOURCES:%.c=$(DEBUG_OBJPATH)/%.d)
+-include $(SOURCES:%.c=$(RELEASE_OBJPATH)/%.d)
+
+# *.o build rules
+$(DEBUG_OBJPATH)/%.o: $(SRC_ROOT)/%.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(DEBUG_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+$(RELEASE_OBJPATH)/%.o: $(SRC_ROOT)/%.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(RELEASE_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+# *.a build rules
+$(DEBUG_LIBRARY): $(DEBUG_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(DEBUG_OBJECTS)
+	@echo "AR	$@";
+
+$(RELEASE_LIBRARY): $(RELEASE_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(RELEASE_OBJECTS)
+	@echo "AR	$@";
+
+# Rules for build release & debug libs
+debug: $(DEBUG_LIBRARY)
+
+release: $(RELEASE_LIBRARY)
+
+# clean rules
+clean_debug:
+	@rm -rf $(DEBUG_OBJPATH)/*.d
+	@echo "rm -rf $(DEBUG_OBJPATH)/*.d";
+	@rm -rf $(DEBUG_OBJPATH)/*.o
+	@echo "rm -rf $(DEBUG_OBJPATH)/*.o";
+	@rm -rf $(DEBUG_LIBRARY)
+	@echo "rm -rf $(DEBUG_LIBRARY)";
+
+clean_release:
+	@rm -rf $(RELEASE_OBJPATH)/*.d
+	@echo "rm -rf $(RELEASE_OBJPATH)/*.d";
+	@rm -rf $(RELEASE_OBJPATH)/*.o
+	@echo "rm -rf $(RELEASE_OBJPATH)/*.o";
+	@rm -rf $(RELEASE_LIBRARY)
+	@echo "rm -rf $(RELEASE_LIBRARY)";
+
+clean: clean_debug clean_release
+
