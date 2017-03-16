@@ -72,7 +72,7 @@ _i32 LogClient_Print(void *pvLogClient, _u8 *pFilename, OtaApp_statistics_t *pSt
     /*strcat(log_filename, "?overwrite=false"); */
 
 
-    http_build_request (send_buf, "PUT ", pLogClient->pOtaServerInfo->log_server_name, pLogClient->pOtaServerInfo->rest_files_put, log_filename, pLogClient->pOtaServerInfo->rest_hdr, pLogClient->pOtaServerInfo->rest_hdr_val);
+    http_build_request (send_buf, (_u8*)"PUT ", pLogClient->pOtaServerInfo->log_server_name, pLogClient->pOtaServerInfo->rest_files_put, log_filename, pLogClient->pOtaServerInfo->rest_hdr, pLogClient->pOtaServerInfo->rest_hdr_val);
 
     /* prepare log buffer */
     sprintf((char *)log_buf, "start counter=%ld, access errors=%ld ---------------\n", pStatistics->startCount, pStatistics->continuousAccessErrorCount);
