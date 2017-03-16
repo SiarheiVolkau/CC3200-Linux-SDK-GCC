@@ -383,6 +383,9 @@ bool cc_rtc_has_alarm(void)
 		u32 intr_mask;
         bool rv = false;
         
+		if (!rtc || !dsbl_irqc)
+			return false;
+
         intr_mask = dsbl_irqc();
         rv = rtc->has_alarm;
         enbl_irqc(intr_mask);

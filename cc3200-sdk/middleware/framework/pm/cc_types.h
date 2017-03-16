@@ -48,7 +48,7 @@ typedef void * cc_hndl;
 
 typedef u32 (*sys_irq_dsbl)();
 typedef void (*sys_irq_enbl)(u32 mask);
-#define UNUSED(x) ((x) = (x))
+#define UNUSED(x) (void)(x)
 
 #define INTRODUCE_SYNC_BARRIER() {          \
     __asm(" dsb \n"                         \

@@ -178,7 +178,7 @@ struct chan_mux_desc {
 };
 
 #define CHAN_MUX_OPT(m1, m2, m3)                                        \
-        {DMA_USER_##m1, DMA_USER_##m2, DMA_USER_##m3, DMA_USER_SW_PROG}
+        { {DMA_USER_##m1, DMA_USER_##m2, DMA_USER_##m3, DMA_USER_SW_PROG} }
 
 static const struct chan_mux_desc chan_mux[] = {
         CHAN_MUX_OPT(TIMER0_A, MOD_NONE, MOD_NONE), /* Chan# 00 */

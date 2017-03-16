@@ -583,7 +583,7 @@ static struct sw_timer *isolate_expired_swt_list(struct hwt_info *hwt)
                 return NULL;
 
         /*** Watch out for assignment in the 'while' statement ***/
-        while(elem = hwt->used_list) {
+        while((elem = hwt->used_list)) {
 
                 if(0 > cmp_u64(&hwt_current, &elem->hwt_expires)) {
                         /* SWT is yet to reach expiry, sched it  */
@@ -687,7 +687,7 @@ i32 cc_timer_delete(cc_hndl hndl)
                 goto cc_timer_delete_exit1;
 
         set_alloc_status(swt, false);
-        memset(swt, 0, sizeof(swt));
+        memset(swt, 0, sizeof(*swt));
         swt->hwt_obj = NULL;
         swt->next    = NULL;
 

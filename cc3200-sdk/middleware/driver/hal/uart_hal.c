@@ -144,7 +144,7 @@ static i32 free_uart_state(struct cc_uart_state *uart_state_hndl)
 void cc_uart_isr(cc_hndl uart_hndl)
 {
         uint32_t uiIntStat;
-        int8_t temp;
+        int8_t temp = -1;
         u32 disable = 0;
         struct cc_uart_state *uart_state = (struct cc_uart_state *)uart_hndl;
         struct cc_uart_config *uart_config = (struct cc_uart_config *)&(uart_state->uart_config);
