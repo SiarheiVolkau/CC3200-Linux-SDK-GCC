@@ -1,153 +1,263 @@
 #******************************************************************************
 #
-# Makefile - Rules for building the SimpleLink library.
+# Makefile - Rules for building the Simplelink library.
 #
-#  Copyright (C) 2014 Texas Instruments Incorporated - http:#www.ti.com/
+#	v- 1.3.0
 #
+# The MIT License
 #
-#  Redistribution and use in source and binary forms, with or without
-#  modification, are permitted provided that the following conditions
-#  are met:
+# Copyright (c) 2017 Siarhei Volkau
 #
-#    Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer.
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
 #
-#    Redistributions in binary form must reproduce the above copyright
-#    notice, this list of conditions and the following disclaimer in the
-#    documentation and/or other materials provided with the
-#    distribution.
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
 #
-#    Neither the name of Texas Instruments Incorporated nor the names of
-#    its contributors may be used to endorse or promote products derived
-#    from this software without specific prior written permission.
-#
-#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-#  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-#  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-#  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-#  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-#  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-#  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-#  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-#  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-#  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
 #
 #*****************************************************************************
 
-#
-# The base directory.
-#
-ROOT=../..
+.PHONY: all clean
 
-#
-# Set the target based on command line parameter 'target'.
-#
-# If target is set to NONOS then build a non-os version of SimpleLink Library
-# else an os version 
-#
+# The base SDK directory.
+SDK_ROOT=../..
 
-ifeq "${target}" "NONOS"
-TARGET=${BINDIR}/libsimplelink_nonos.a
-OBJDIR=obj_nonos
-else ifeq "${target}" "NONOS_DEBUG"
-TARGET=${BINDIR}/libsimplelink_nonos_debug.a
-OBJDIR=obj_nonos_debug
-else ifeq "${target}" "OS_DEBUG"
-TARGET=${BINDIR}/libsimplelink_debug.a
-OBJDIR=obj_os_debug
-else
-TARGET=${BINDIR}/libsimplelink.a
-OBJDIR=obj_os
-endif
+# Sources root directory
+SRC_ROOT=..
 
+# Output directory
+OUTDIR=lib
 
-#
-# Include the common make definitions.
-#
-include ${ROOT}/tools/gcc_scripts/makedefs
+# Lib Name
+LIBRARY=libsimplelink.a
+DEBUG_NONOS_LIBRARY=$(OUTDIR)/nonos/Debug/${LIBRARY}
+RELEASE_NONOS_LIBRARY=$(OUTDIR)/nonos/Release/${LIBRARY}
+DEBUG_OS_LIBRARY=$(OUTDIR)/os/Debug/${LIBRARY}
+RELEASE_OS_LIBRARY=$(OUTDIR)/os/Release/${LIBRARY}
+DEBUG_OS_PM_LIBRARY=$(OUTDIR)/os_PM/Debug/${LIBRARY}
+RELEASE_OS_PM_LIBRARY=$(OUTDIR)/os_PM/Release/${LIBRARY}
 
+DEBUG_NONOS_OBJPATH=obj/nonos/Debug
+RELEASE_NONOS_OBJPATH=obj/nonos/Release
+DEBUG_OS_OBJPATH=obj/os/Debug
+RELEASE_OS_OBJPATH=obj/os/Release
+DEBUG_OS_PM_OBJPATH=obj/os_PM/Debug
+RELEASE_OS_PM_OBJPATH=obj/os_PM/Release
 
-ifeq "${target}" "NONOS_DEBUG"
+# Tools Setup
+CROSS_COMPILE ?= arm-none-eabi-
 
-else ifeq "${target}" "OS_DEBUG"
-CFLAGS+=-DSL_PLATFORM_MULTI_THREADED
-else ifeq "${target}" "NONOS"
-CFLAGS+=-DDISABLE_DEBUGGER_RECONNECT
-else
-CFLAGS+=-DSL_PLATFORM_MULTI_THREADED
-CFLAGS+=-DDISABLE_DEBUGGER_RECONNECT
-endif
+CC=$(CROSS_COMPILE)gcc
+AR=$(CROSS_COMPILE)ar
 
-CFLAGS+=-DSL_FULL
-	
+# Where to find header files
+IPATH=-I${SDK_ROOT}
+IPATH+=-I${SRC_ROOT}
+IPATH+=-I${SRC_ROOT}/include
+IPATH+=-I${SDK_ROOT}/inc
+IPATH+=-I${SDK_ROOT}/driverlib
+IPATH+=-I${SDK_ROOT}/simplelink_extlib/provisioninglib
 
-#
-# Where to find source files that do not live in this directory.
-#
-VPATH=..
-VPATH+=../source
+# C Compiler Flags
+CFLAGS_COMMON=-mthumb       \
+       -mcpu=cortex-m4      \
+       -ffunction-sections  \
+       -fdata-sections      \
+       -MD                  \
+       -std=c99             \
+       -Wall                \
+       -g                   \
+       -Dgcc                \
+       $(IPATH)
 
-#
-# Where to find header files that do not live in the source directory.
-#
-IPATH=..
-IPATH+=../..
-IPATH+=../include
-IPATH+=../source
-IPATH+=../../oslib
-IPATH+=../../driverlib
-IPATH+=../../inc
-IPATH+=../../simplelink_extlib/provisioninglib
+PM_ROOT=$(SDK_ROOT)/middleware
+PM_IPATH=-I${PM_ROOT}/driver -I${PM_ROOT}/driver/hal -I${PM_ROOT}/framework/pm -I${PM_ROOT}/framework/timer -I${PM_ROOT}/soc
 
-#
-# The default rule, which causes the driver library to be built.
-#
-all: ${OBJDIR} ${BINDIR}
-all: ${TARGET}
+OSLIB_ROOT=$(SDK_ROOT)/oslib
+OS_IPATH=-I$(OSLIB_ROOT)
 
+DEBUG_CFLAGS=-O0 -DSL_FULL
+RELEASE_CFLAGS=-Os -DTARGET_IS_CC3200 -DSL_FULL
 
+DEBUG_NONOS_CFLAGS=$(DEBUG_CFLAGS)
+RELEASE_NONOS_CFLAGS=$(RELEASE_CFLAGS)
+DEBUG_OS_CFLAGS=$(OS_IPATH) $(DEBUG_CFLAGS) -DSL_PLATFORM_MULTI_THREADED -DUSE_FREERTOS
+RELEASE_OS_CFLAGS=$(OS_IPATH) $(RELEASE_CFLAGS) -DSL_PLATFORM_MULTI_THREADED -DUSE_FREERTOS
+DEBUG_OS_PM_CFLAGS=$(OS_IPATH) $(PM_IPATH) $(DEBUG_CFLAGS) -DSL_PLATFORM_MULTI_THREADED -DUSE_FREERTOS
+RELEASE_OS_PM_CFLAGS=$(OS_IPATH) $(PM_IPATH) $(RELEASE_CFLAGS) -DSL_PLATFORM_MULTI_THREADED -DUSE_FREERTOS
 
-#
-# The rule to clean out all the build products.
-#
-clean:
-	@rm -rf obj_nonos ${wildcard *~}
-	@rm -rf obj_os ${wildcard *~}
-	@rm -rf obj_nonos_debug ${wildcard *~}
-	@rm -rf obj_os_debug ${wildcard *~}
-	@rm -rf ${BINDIR} ${wildcard *~}
+# Sources
+SOURCES= device.c driver.c flowcont.c netapp.c netcfg.c nonos.c fs.c socket.c spawn.c wlan.c
 
+NOT_PM_SOURCES=cc_pal.c $(SOURCES)
+PM_SOURCES=cc_pal_pm.c $(SOURCES)
 
-#
-# The rule to create the target directories.
-#
-${OBJDIR}:
-	@mkdir -p ${OBJDIR}
+vpath %.c $(SRC_ROOT):$(SRC_ROOT)/source
 
-${BINDIR}:
-	@mkdir -p ${BINDIR}
+# Directory creator
+dir_create=@mkdir -p $(@D)
 
+# Objects
+DEBUG_NONOS_OBJECTS= $(NOT_PM_SOURCES:%.c=$(DEBUG_NONOS_OBJPATH)/%.o)
+RELEASE_NONOS_OBJECTS= $(NOT_PM_SOURCES:%.c=$(RELEASE_NONOS_OBJPATH)/%.o)
 
-#
-# Rules for building the Simplelink library with os support.
-#
-${TARGET}: ${OBJDIR}/cc_pal.o
-${TARGET}: ${OBJDIR}/device.o
-${TARGET}: ${OBJDIR}/driver.o
-${TARGET}: ${OBJDIR}/flowcont.o
-${TARGET}: ${OBJDIR}/netapp.o
-${TARGET}: ${OBJDIR}/netcfg.o
-${TARGET}: ${OBJDIR}/nonos.o
-${TARGET}: ${OBJDIR}/fs.o
-${TARGET}: ${OBJDIR}/socket.o
-${TARGET}: ${OBJDIR}/spawn.o
-${TARGET}: ${OBJDIR}/wlan.o
+DEBUG_OS_OBJECTS= $(NOT_PM_SOURCES:%.c=$(DEBUG_OS_OBJPATH)/%.o)
+RELEASE_OS_OBJECTS= $(NOT_PM_SOURCES:%.c=$(RELEASE_OS_OBJPATH)/%.o)
 
+DEBUG_OS_PM_OBJECTS= $(PM_SOURCES:%.c=$(DEBUG_OS_PM_OBJPATH)/%.o)
+RELEASE_OS_PM_OBJECTS= $(PM_SOURCES:%.c=$(RELEASE_OS_PM_OBJPATH)/%.o)
 
-#
-# Include the automatically generated dependency files.
-#
-ifneq (${MAKECMDGOALS},clean)
--include ${wildcard ${OBJDIR}/*.d} __dummy__
-endif
+all: debug release
+
+debug: nonos_dbg os_dbg os_pm_dbg
+release: nonos_rel os_rel os_pm_rel
+
+nonos: nonos_dbg nonos_rel
+os: os_dbg os_rel
+os_pm: os_pm_dbg os_pm_rel
+
+# Rules for rebuild when dependencies changed
+# GCC option -MD enables dependency rules generation
+-include $(NOT_PM_SOURCES:%.c=$(DEBUG_NONOS_OBJPATH)/%.d)
+-include $(NOT_PM_SOURCES:%.c=$(RELEASE_NONOS_OBJPATH)/%.d)
+-include $(NOT_PM_SOURCES:%.c=$(DEBUG_OS_OBJPATH)/%.d)
+-include $(NOT_PM_SOURCES:%.c=$(RELEASE_OS_OBJPATH)/%.d)
+-include $(PM_SOURCES:%.c=$(DEBUG_OS_PM_OBJPATH)/%.d)
+-include $(PM_SOURCES:%.c=$(RELEASE_OS_PM_OBJPATH)/%.d)
+
+print-%: ; @echo $*=$($*)
+
+# *.o build rules
+$(DEBUG_NONOS_OBJPATH)/%.o: %.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(DEBUG_NONOS_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+$(RELEASE_NONOS_OBJPATH)/%.o: %.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(RELEASE_NONOS_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+$(DEBUG_OS_OBJPATH)/%.o: %.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(DEBUG_OS_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+$(RELEASE_OS_OBJPATH)/%.o: %.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(RELEASE_OS_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+$(DEBUG_OS_PM_OBJPATH)/%.o: %.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(DEBUG_OS_PM_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+$(RELEASE_OS_PM_OBJPATH)/%.o: %.c Makefile
+	$(dir_create)
+	@$(CC) $(CFLAGS_COMMON) $(RELEASE_OS_PM_CFLAGS) $(CFLAGS) -c "$<" -o "$@";
+	@echo "CC	$@";
+
+# *.a build rules
+$(DEBUG_NONOS_LIBRARY): $(DEBUG_NONOS_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(DEBUG_NONOS_OBJECTS)
+	@echo "AR	$@";
+
+$(RELEASE_NONOS_LIBRARY): $(RELEASE_NONOS_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(RELEASE_NONOS_OBJECTS)
+	@echo "AR	$@";
+
+$(DEBUG_OS_LIBRARY): $(DEBUG_OS_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(DEBUG_OS_OBJECTS)
+	@echo "AR	$@";
+
+$(RELEASE_OS_LIBRARY): $(RELEASE_OS_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(RELEASE_OS_OBJECTS)
+	@echo "AR	$@";
+
+$(DEBUG_OS_PM_LIBRARY): $(DEBUG_OS_PM_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(DEBUG_OS_PM_OBJECTS)
+	@echo "AR	$@";
+
+$(RELEASE_OS_PM_LIBRARY): $(RELEASE_OS_PM_OBJECTS)
+	$(dir_create)
+	@${AR} -cr $@ $(RELEASE_OS_PM_OBJECTS)
+	@echo "AR	$@";
+
+# Rules for build all types of libs
+nonos_dbg: $(DEBUG_NONOS_LIBRARY)
+nonos_rel: $(RELEASE_NONOS_LIBRARY)
+os_dbg: $(DEBUG_OS_LIBRARY)
+os_rel: $(RELEASE_OS_LIBRARY)
+os_pm_dbg: $(DEBUG_OS_PM_LIBRARY)
+os_pm_rel: $(RELEASE_OS_PM_LIBRARY)
+
+# clean rules
+clean_nonos_dbg:
+	@rm -rf $(DEBUG_NONOS_OBJPATH)/*.d
+	@echo "rm -rf $(DEBUG_NONOS_OBJPATH)/*.d";
+	@rm -rf $(DEBUG_NONOS_OBJPATH)/*.o
+	@echo "rm -rf $(DEBUG_NONOS_OBJPATH)/*.o";
+	@rm -rf $(DEBUG_NONOS_LIBRARY)
+	@echo "rm -rf $(DEBUG_NONOS_LIBRARY)";
+
+clean_nonos_rel:
+	@rm -rf $(RELEASE_NONOS_OBJPATH)/*.d
+	@echo "rm -rf $(RELEASE_NONOS_OBJPATH)/*.d";
+	@rm -rf $(RELEASE_NONOS_OBJPATH)/*.o
+	@echo "rm -rf $(RELEASE_NONOS_OBJPATH)/*.o";
+	@rm -rf $(RELEASE_NONOS_LIBRARY)
+	@echo "rm -rf $(RELEASE_NONOS_LIBRARY)";
+
+clean_os_dbg:
+	@rm -rf $(DEBUG_OS_OBJPATH)/*.d
+	@echo "rm -rf $(DEBUG_OS_OBJPATH)/*.d";
+	@rm -rf $(DEBUG_OS_OBJPATH)/*.o
+	@echo "rm -rf $(DEBUG_OS_OBJPATH)/*.o";
+	@rm -rf $(DEBUG_OS_LIBRARY)
+	@echo "rm -rf $(DEBUG_OS_LIBRARY)";
+
+clean_os_rel:
+	@rm -rf $(RELEASE_OS_OBJPATH)/*.d
+	@echo "rm -rf $(RELEASE_OS_OBJPATH)/*.d";
+	@rm -rf $(RELEASE_OS_OBJPATH)/*.o
+	@echo "rm -rf $(RELEASE_OS_OBJPATH)/*.o";
+	@rm -rf $(RELEASE_OS_LIBRARY)
+	@echo "rm -rf $(RELEASE_OS_LIBRARY)";
+
+clean_os_pm_dbg:
+	@rm -rf $(DEBUG_OS_PM_OBJPATH)/*.d
+	@echo "rm -rf $(DEBUG_OS_PM_OBJPATH)/*.d";
+	@rm -rf $(DEBUG_OS_PM_OBJPATH)/*.o
+	@echo "rm -rf $(DEBUG_OS_PM_OBJPATH)/*.o";
+	@rm -rf $(DEBUG_OS_PM_LIBRARY)
+	@echo "rm -rf $(DEBUG_OS_PM_LIBRARY)";
+
+clean_os_pm_rel:
+	@rm -rf $(RELEASE_OS_PM_OBJPATH)/*.d
+	@echo "rm -rf $(RELEASE_OS_PM_OBJPATH)/*.d";
+	@rm -rf $(RELEASE_OS_PM_OBJPATH)/*.o
+	@echo "rm -rf $(RELEASE_OS_PM_OBJPATH)/*.o";
+	@rm -rf $(RELEASE_OS_PM_LIBRARY)
+	@echo "rm -rf $(RELEASE_OS_PM_LIBRARY)";
+
+clean_debug: clean_nonos_dbg clean_os_dbg clean_os_pm_dbg
+clean_release: clean_nonos_rel clean_os_rel clean_os_pm_rel
+
+clean: clean_debug clean_release
