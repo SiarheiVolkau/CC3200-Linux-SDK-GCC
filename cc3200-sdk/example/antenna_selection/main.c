@@ -105,6 +105,10 @@ typedef enum{
 
 volatile unsigned char  g_ulStatus = 0;
 
+#if defined(gcc) || defined(ccs)
+extern void (* const g_pfnVectors[])(void);
+#endif
+
 #if defined(ewarm)
 extern uVectorEntry __vector_table;
 #endif
@@ -1401,6 +1405,9 @@ static void
 BoardInit(void)
 {
 
+#if defined(gcc) || defined(ccs)
+    MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
+#endif
 #if defined(ewarm)
     MAP_IntVTableBaseSet((unsigned long)&__vector_table);
 #endif
@@ -1480,7 +1487,7 @@ static void SetAntennaSelectionGPIOs(void)
 //! \return None.
 //
 //****************************************************************************
-void main()
+int main()
 {
     long lRetVal = -1;
 
@@ -1521,7 +1528,7 @@ void main()
     //    
     osi_start();
 
-    
+    LOOP_FOREVER();
 }
 
 //*****************************************************************************
