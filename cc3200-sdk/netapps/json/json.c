@@ -177,7 +177,7 @@ jsonArray	json_object_get_array(jsonParser *jParser, jsonObj jObj, char *tagName
 char * 		json_array_get_string(jsonParser *jParser, jsonArray jArray, int jElement, char *str)
 {
 	char	*cmpStr;
-	char	cmpStrLen;
+	unsigned char	cmpStrLen;
 	jsonString	jString;
 
 	jString = (jsonString)get_array_object_by_type(jParser, jArray, jElement, JSON_STRING_OBJECT);
