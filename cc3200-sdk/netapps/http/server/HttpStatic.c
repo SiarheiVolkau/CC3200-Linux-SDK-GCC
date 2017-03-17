@@ -119,7 +119,7 @@ int HttpStatic_ProcessRequest(struct HttpRequest* request)
    		 }
 	}
 
-	sl_FsGetInfo((unsigned char *)g_cFileName, NULL, &pFsFileInfo);
+	sl_FsGetInfo((unsigned char *)g_cFileName, 0, &pFsFileInfo);
 	TotalLength = (&pFsFileInfo)->FileLen;
 
 	while(TotalLength > 0)
@@ -154,7 +154,7 @@ int HttpStatic_ProcessRequest(struct HttpRequest* request)
 		{
 			if(!HeaderFlag)
 			{
-				if(!HttpResponse_Headers(request->uConnection, HTTP_STATUS_OK, NULL,TotalLength, contentType, location))
+				if(!HttpResponse_Headers(request->uConnection, HTTP_STATUS_OK, 0,TotalLength, contentType, location))
 				{
 					bRetVal = 0;
 					goto end;
