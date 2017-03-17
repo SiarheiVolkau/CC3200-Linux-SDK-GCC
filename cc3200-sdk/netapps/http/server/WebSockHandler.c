@@ -26,8 +26,8 @@
 #include "HttpDebug.h"
 #include <string.h>
 #include <stdlib.h>
-#include "HTTPConfig.h"
-#include "HTTPString.h"
+#include "HttpConfig.h"
+#include "HttpString.h"
 #include "osi.h"
 #include "WebSockHandler.h"
 

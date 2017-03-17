@@ -36,8 +36,8 @@
 #include "HttpDynamic.h"
 #include "HttpStatic.h"
 #include <string.h>
-#include "HTTPConfig.h"
-#include "HTTPString.h"
+#include "HttpConfig.h"
+#include "HttpString.h"
 #include "sha1.h"
 #include "osi.h"
 #include "WebSockHandler.h"
