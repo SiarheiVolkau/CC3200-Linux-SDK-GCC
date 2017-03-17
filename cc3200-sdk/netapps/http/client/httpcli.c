@@ -1166,7 +1166,7 @@ int HTTPCli_initSockAddr(struct sockaddr *addr, const char *uri, int flags)
 int HTTPCli_connect(HTTPCli_Struct *cli, const struct sockaddr *addr,
         int flags, const HTTPCli_Params *params)
 {
-    int skt;
+    int skt = 0;
     int ret;
     int slen;
     int sopt = 0;
