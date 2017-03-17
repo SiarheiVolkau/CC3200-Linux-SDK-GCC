@@ -148,7 +148,7 @@ static volatile bool g_bDataInIntFlag;
 static volatile bool g_bContextOutIntFlag;
 static volatile bool g_bDataOutIntFlag;
 
-#if defined(ccs)
+#if defined(gcc) || defined(ccs)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -418,7 +418,7 @@ BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(ccs)
+#if defined(gcc) || defined(ccs)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -445,7 +445,7 @@ BoardInit(void)
 //! \return none
 //!
 //*****************************************************************************
-void 
+int
 main()
 {
     unsigned int uiConfig,uiKeySize,*puiKey1,*puiData,*puiResult=NULL,
@@ -582,6 +582,7 @@ main()
         while(FOREVER);
     #endif
 
+    return 0;
 }
 //*****************************************************************************
 //
