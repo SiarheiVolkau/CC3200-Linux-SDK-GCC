@@ -224,7 +224,7 @@ void vApplicationMallocFailedHook()
 
 //*****************************************************************************
 //
-//! itoa
+//! itoa_incompat
 //!
 //!    @brief  Convert integer to ASCII in decimal base
 //!
@@ -236,7 +236,7 @@ void vApplicationMallocFailedHook()
 //!
 //
 //*****************************************************************************
-static unsigned short itoa(char cNum, char *cString)
+static unsigned short itoa_incompat(char cNum, char *cString)
 {
     char* ptr;
     char uTemp = cNum;
@@ -616,7 +616,7 @@ void SimpleLinkHttpServerCallback(SlHttpServerEvent_t *pSlHttpServerEvent,
                 float fCurrentTemp;
                 TMP006DrvGetTemp(&fCurrentTemp);
                 char cTemp = (char)fCurrentTemp;
-                short sTempLen = itoa(cTemp,(char*)ptr);
+                short sTempLen = itoa_incompat(cTemp,(char*)ptr);
                 ptr[sTempLen++] = ' ';
                 ptr[sTempLen] = 'F';
                 pSlHttpServerResponse->ResponseData.token_value.len += sTempLen;

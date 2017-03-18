@@ -375,7 +375,7 @@ long GetSNTPTime(unsigned char ucGmtDiffHr, unsigned char ucGmtDiffMins)
         // restore the day in current month
         //
         g_sAppData.isGeneralVar += g_acNumOfDaysPerMonth[iIndex];
-        g_sAppData.uisCCLen = itoa(g_sAppData.isGeneralVar + 1,
+        g_sAppData.uisCCLen = itoa_incompat(g_sAppData.isGeneralVar + 1,
                                    g_sAppData.pcCCPtr);
         g_sAppData.pcCCPtr += g_sAppData.uisCCLen;
         *g_sAppData.pcCCPtr++ = '\x20';
@@ -390,7 +390,7 @@ long GetSNTPTime(unsigned char ucGmtDiffHr, unsigned char ucGmtDiffMins)
 
         // number of hours
         g_sAppData.ulGeneralVar /= SEC_IN_HOUR;
-        g_sAppData.uisCCLen = itoa(g_sAppData.ulGeneralVar,
+        g_sAppData.uisCCLen = itoa_incompat(g_sAppData.ulGeneralVar,
                                    g_sAppData.pcCCPtr);
         g_sAppData.pcCCPtr += g_sAppData.uisCCLen;
         *g_sAppData.pcCCPtr++ = ':';
@@ -400,11 +400,11 @@ long GetSNTPTime(unsigned char ucGmtDiffHr, unsigned char ucGmtDiffMins)
 
         // number of seconds per minute
         g_sAppData.ulGeneralVar1 %= SEC_IN_MIN;
-        g_sAppData.uisCCLen = itoa(g_sAppData.ulGeneralVar,
+        g_sAppData.uisCCLen = itoa_incompat(g_sAppData.ulGeneralVar,
                                    g_sAppData.pcCCPtr);
         g_sAppData.pcCCPtr += g_sAppData.uisCCLen;
         *g_sAppData.pcCCPtr++ = ':';
-        g_sAppData.uisCCLen = itoa(g_sAppData.ulGeneralVar1,
+        g_sAppData.uisCCLen = itoa_incompat(g_sAppData.ulGeneralVar1,
                                    g_sAppData.pcCCPtr);
         g_sAppData.pcCCPtr += g_sAppData.uisCCLen;
         *g_sAppData.pcCCPtr++ = '\x20';
@@ -415,7 +415,7 @@ long GetSNTPTime(unsigned char ucGmtDiffHr, unsigned char ucGmtDiffMins)
         //
         g_sAppData.ulGeneralVar = g_sAppData.ulElapsedSec/SEC_IN_DAY;
         g_sAppData.ulGeneralVar /= 365;
-        g_sAppData.uisCCLen = itoa(YEAR2013 + g_sAppData.ulGeneralVar,
+        g_sAppData.uisCCLen = itoa_incompat(YEAR2013 + g_sAppData.ulGeneralVar,
                                    g_sAppData.pcCCPtr);
         g_sAppData.pcCCPtr += g_sAppData.uisCCLen;
 

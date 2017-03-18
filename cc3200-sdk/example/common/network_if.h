@@ -69,11 +69,7 @@ unsigned long Network_IF_CurrentMCUState();
 void Network_IF_UnsetMCUMachineState(char stat);
 void Network_IF_SetMCUMachineState(char stat);
 void Network_IF_ResetMCUStateMachine();
-#if defined(gcc)
-#include <stdlib.h>
-#else
-unsigned short itoa(short cNum, char *cString);
-#endif
+unsigned short itoa_incompat(short cNum, char *cString);
 //*****************************************************************************
 //
 // Mark the end of the C bindings section for C++ compilers.
