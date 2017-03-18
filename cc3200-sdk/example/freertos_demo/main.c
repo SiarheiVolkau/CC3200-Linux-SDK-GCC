@@ -359,13 +359,13 @@ int main( void )
     //
     // Create the Queue Receive task
     //
-    osi_TaskCreate( vTestTask1, "TASK1",\
+    osi_TaskCreate( vTestTask1, (signed char*)"TASK1",\
     							OSI_STACK_SIZE, NULL, 1, NULL );
 
     //
     // Create the Queue Send task
     //
-    osi_TaskCreate( vTestTask2, "TASK2",\
+    osi_TaskCreate( vTestTask2, (signed char*)"TASK2",\
     							OSI_STACK_SIZE,NULL, 1, NULL );
 
     //
