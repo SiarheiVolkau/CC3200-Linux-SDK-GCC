@@ -41,9 +41,9 @@
 //                          provision a CC3200 device.
 //
 // Application Details  -
-// http://processors.wiki.ti.com/index.php/
+// http://processors.wiki.ti.com/index.php/CC32xx_Provisioning_AP
 // or
-// docs\examples\
+// docs\examples\CC3200 Provisioning AP.pdf
 //
 //*****************************************************************************
 
@@ -795,35 +795,35 @@ int startProvisioning(void)
 	// If not, than create a file and write the required token
 
 	// Creating the param_product_version.txt file once
-	if (SL_FS_ERR_FILE_NOT_EXISTS == sl_FsGetInfo(SL_FILE_PARAM_PRODUCT_VERSION, 0 , &FsFileInfo))
+	if (SL_FS_ERR_FILE_NOT_EXISTS == sl_FsGetInfo((unsigned char*)SL_FILE_PARAM_PRODUCT_VERSION, 0 , &FsFileInfo))
 	{
-		sl_FsOpen(SL_FILE_PARAM_PRODUCT_VERSION, FS_MODE_OPEN_CREATE(100, _FS_FILE_OPEN_FLAG_COMMIT), NULL, &FileHandle);
-		sl_FsWrite(FileHandle, NULL, SL_PARAM_PRODUCT_VERSION_DATA, strlen(SL_PARAM_PRODUCT_VERSION_DATA));
-		sl_FsClose(FileHandle, NULL, NULL, NULL);
+		sl_FsOpen((unsigned char*)SL_FILE_PARAM_PRODUCT_VERSION, FS_MODE_OPEN_CREATE(100, _FS_FILE_OPEN_FLAG_COMMIT), NULL, &FileHandle);
+		sl_FsWrite(FileHandle, 0, (unsigned char*)SL_PARAM_PRODUCT_VERSION_DATA, strlen(SL_PARAM_PRODUCT_VERSION_DATA));
+		sl_FsClose(FileHandle, NULL, NULL, 0);
 	}
 
 	// Creating the config result file once
-	if (SL_FS_ERR_FILE_NOT_EXISTS == sl_FsGetInfo(SL_FILE_PARAM_CFG_RESULT, 0 , &FsFileInfo))
+	if (SL_FS_ERR_FILE_NOT_EXISTS == sl_FsGetInfo((unsigned char*)SL_FILE_PARAM_CFG_RESULT, 0 , &FsFileInfo))
 	{
-		sl_FsOpen(SL_FILE_PARAM_CFG_RESULT, FS_MODE_OPEN_CREATE(100, _FS_FILE_OPEN_FLAG_COMMIT), NULL, &FileHandle);
-		sl_FsWrite(FileHandle, NULL, GET_CFG_RESULT_TOKEN, strlen(GET_CFG_RESULT_TOKEN));
-		sl_FsClose(FileHandle, NULL, NULL, NULL);
+		sl_FsOpen((unsigned char*)SL_FILE_PARAM_CFG_RESULT, FS_MODE_OPEN_CREATE(100, _FS_FILE_OPEN_FLAG_COMMIT), NULL, &FileHandle);
+		sl_FsWrite(FileHandle, 0, (unsigned char*)GET_CFG_RESULT_TOKEN, strlen(GET_CFG_RESULT_TOKEN));
+		sl_FsClose(FileHandle, NULL, NULL, 0);
 	}
 
 	// Creating the param device name file once/
-	if (SL_FS_ERR_FILE_NOT_EXISTS == sl_FsGetInfo(SL_FILE_PARAM_DEVICE_NAME, 0 , &FsFileInfo))
+	if (SL_FS_ERR_FILE_NOT_EXISTS == sl_FsGetInfo((unsigned char*)SL_FILE_PARAM_DEVICE_NAME, 0 , &FsFileInfo))
 	{
-		sl_FsOpen(SL_FILE_PARAM_DEVICE_NAME, FS_MODE_OPEN_CREATE(100, _FS_FILE_OPEN_FLAG_COMMIT), NULL, &FileHandle);
-		sl_FsWrite(FileHandle, NULL, GET_DEVICE_NAME_TOKEN, strlen(GET_DEVICE_NAME_TOKEN));
-		sl_FsClose(FileHandle, NULL, NULL, NULL);
+		sl_FsOpen((unsigned char*)SL_FILE_PARAM_DEVICE_NAME, FS_MODE_OPEN_CREATE(100, _FS_FILE_OPEN_FLAG_COMMIT), NULL, &FileHandle);
+		sl_FsWrite(FileHandle, 0, (unsigned char*)GET_DEVICE_NAME_TOKEN, strlen(GET_DEVICE_NAME_TOKEN));
+		sl_FsClose(FileHandle, NULL, NULL, 0);
 	}
 
 	// Creating the netlist name file once/
-	if (SL_FS_ERR_FILE_NOT_EXISTS == sl_FsGetInfo(SL_FILE_NETLIST, 0 , &FsFileInfo))
+	if (SL_FS_ERR_FILE_NOT_EXISTS == sl_FsGetInfo((unsigned char*)SL_FILE_NETLIST, 0 , &FsFileInfo))
 	{
-		sl_FsOpen(SL_FILE_NETLIST, FS_MODE_OPEN_CREATE(100, _FS_FILE_OPEN_FLAG_COMMIT), NULL, &FileHandle);
-		sl_FsWrite(FileHandle, NULL, SL_SET_NETLIST_TOKENS, strlen(SL_SET_NETLIST_TOKENS));
-		sl_FsClose(FileHandle, NULL, NULL, NULL);
+		sl_FsOpen((unsigned char*)SL_FILE_NETLIST, FS_MODE_OPEN_CREATE(100, _FS_FILE_OPEN_FLAG_COMMIT), NULL, &FileHandle);
+		sl_FsWrite(FileHandle, 0, (unsigned char*)SL_SET_NETLIST_TOKENS, strlen(SL_SET_NETLIST_TOKENS));
+		sl_FsClose(FileHandle, NULL, NULL, 0);
 	}
 
 	// Initializes configuration
