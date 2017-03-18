@@ -562,11 +562,11 @@ WpsConnectPushButton()
     SlSecParams_t secParams;
     long lRetVal = -1;
 
-    secParams.Key = "";
+    secParams.Key = (signed char*)"";
     secParams.KeyLen = 0;
     secParams.Type = SL_SEC_TYPE_WPS_PBC;
 
-    lRetVal = sl_WlanConnect(SSID_NAME, strlen(SSID_NAME), 0, &secParams,0);
+    lRetVal = sl_WlanConnect((signed char*)SSID_NAME, strlen(SSID_NAME), 0, &secParams,0);
     ASSERT_ON_ERROR(lRetVal);
 
     while((!IS_CONNECTED(g_ulStatus)) || (!IS_IP_ACQUIRED(g_ulStatus)))
@@ -600,11 +600,11 @@ WpsConnectPinCode()
     SlSecParams_t secParams;
     long lRetVal = -1;
 
-    secParams.Key = WPS_PIN_CODE;
+    secParams.Key = (signed char*)WPS_PIN_CODE;
     secParams.KeyLen = strlen(WPS_PIN_CODE);
     secParams.Type = SL_SEC_TYPE_WPS_PIN;
 
-    lRetVal = sl_WlanConnect(SSID_NAME, strlen(SSID_NAME), 0, &secParams, 0);
+    lRetVal = sl_WlanConnect((signed char*)SSID_NAME, strlen(SSID_NAME), 0, &secParams, 0);
     ASSERT_ON_ERROR(lRetVal);
 
     while((!IS_CONNECTED(g_ulStatus)) || (!IS_IP_ACQUIRED(g_ulStatus)))
@@ -661,7 +661,7 @@ BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -686,7 +686,7 @@ BoardInit(void)
 //! \return 0
 //
 //*****************************************************************************
-void
+int
 main()
 {
     long lRetVal = -1;
