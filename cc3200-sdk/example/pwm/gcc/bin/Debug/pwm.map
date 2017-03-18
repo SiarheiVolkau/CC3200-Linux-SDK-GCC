@@ -1,0 +1,646 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+                              obj/Debug/main.o (IntMasterEnable)
+../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+                              obj/Debug/pinmux.o (PinTypeTimer)
+../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+                              obj/Debug/main.o (PRCMPeripheralClkEnable)
+../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+                              obj/Debug/main.o (TimerEnable)
+../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+                              obj/Debug/main.o (UtilsDelay)
+../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+                              ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o) (CPUcpsid)
+../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+                              ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o) (FlashDisable)
+/usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+                              ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o) (__aeabi_uldivmod)
+/usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+/usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 obj/Debug/main.o
+ .data          0x0000000000000000        0x0 obj/Debug/main.o
+ .bss           0x0000000000000000        0x0 obj/Debug/main.o
+ .text.DeInitPWMModules
+                0x0000000000000000       0x3c obj/Debug/main.o
+ .text          0x0000000000000000        0x0 obj/Debug/pinmux.o
+ .data          0x0000000000000000        0x0 obj/Debug/pinmux.o
+ .bss           0x0000000000000000        0x0 obj/Debug/pinmux.o
+ .text          0x0000000000000000        0x0 obj/Debug/startup_gcc.o
+ .data          0x0000000000000000        0x0 obj/Debug/startup_gcc.o
+ .bss           0x0000000000000000        0x0 obj/Debug/startup_gcc.o
+ .text._sbrk    0x0000000000000000       0x70 obj/Debug/startup_gcc.o
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .rodata.g_pulPriority
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .rodata.g_pulRegs
+                0x0000000000000000       0xd4 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .rodata.g_pulDisRegs
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .rodata.g_pulPendRegs
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .rodata.g_pulUnpendRegs
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntDefaultHandler
+                0x0000000000000000        0x8 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntMasterDisable
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntRegister
+                0x0000000000000000       0x2c ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntUnregister
+                0x0000000000000000       0x2c ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntPriorityGroupingSet
+                0x0000000000000000       0x30 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntPriorityGroupingGet
+                0x0000000000000000       0x48 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntPrioritySet
+                0x0000000000000000       0x68 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntPriorityGet
+                0x0000000000000000       0x30 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntDisable
+                0x0000000000000000       0xbc ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntPendSet
+                0x0000000000000000       0x9c ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntPendClear
+                0x0000000000000000       0x68 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntPriorityMaskSet
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text.IntPriorityMaskGet
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinModeGet
+                0x0000000000000000       0x3c ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinDirModeSet
+                0x0000000000000000       0x44 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinDirModeGet
+                0x0000000000000000       0x3c ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinConfigGet
+                0x0000000000000000       0x50 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinTypeUART
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinTypeI2C
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinTypeSPI
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinTypeI2S
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinTypeCamera
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinTypeGPIO
+                0x0000000000000000       0x3c ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinTypeADC
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text.PinTypeSDHost
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.RTCUseSet
+                0x0000000000000000       0x30 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.IsRTCUsed
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.RTCU16MSecRegRead
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.RTCU16MSecRegWrite
+                0x0000000000000000       0x3c ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.RTCU32SecRegRead
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.RTCU32SecRegWrite
+                0x0000000000000000       0x1c ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMMCUReset
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMPeripheralClockGet
+                0x0000000000000000       0xa8 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMPeripheralStatusGet
+                0x0000000000000000       0x40 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMI2SClockFreqSet
+                0x0000000000000000       0x54 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMLPDSRestoreInfoSet
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMLPDSEnter
+                0x0000000000000000       0x50 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMLPDSEnterKeepDebugIf
+                0x0000000000000000       0x40 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMLPDSWakeupSourceEnable
+                0x0000000000000000       0x30 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMLPDSWakeupSourceDisable
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMLPDSWakeupCauseGet
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMLPDSIntervalSet
+                0x0000000000000000       0x34 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMLPDSWakeUpGPIOSelect
+                0x0000000000000000       0x2c ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMSleepEnter
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMSRAMRetentionEnable
+                0x0000000000000000       0x2c ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMSRAMRetentionDisable
+                0x0000000000000000       0x34 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMHibernateWakeupSourceEnable
+                0x0000000000000000       0x50 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMHibernateWakeupSourceDisable
+                0x0000000000000000       0x54 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMHibernateWakeupCauseGet
+                0x0000000000000000       0x1c ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMHibernateIntervalSet
+                0x0000000000000000       0x9c ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMHibernateWakeUpGPIOSelect
+                0x0000000000000000       0x70 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMHibernateEnter
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMSlowClkCtrGet
+                0x0000000000000000       0x64 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMSlowClkCtrFastGet
+                0x0000000000000000       0x50 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMSlowClkCtrMatchSet
+                0x0000000000000000       0x38 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMSlowClkCtrMatchGet
+                0x0000000000000000       0x58 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMOCRRegisterWrite
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMOCRRegisterRead
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMIntRegister
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMIntUnregister
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMIntEnable
+                0x0000000000000000       0x48 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMIntDisable
+                0x0000000000000000       0x48 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMIntStatus
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMRTCInUseSet
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMRTCInUseGet
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMRTCSet
+                0x0000000000000000       0xa8 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMRTCGet
+                0x0000000000000000       0xb0 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMRTCMatchSet
+                0x0000000000000000       0xd8 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMRTCMatchGet
+                0x0000000000000000       0xb0 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text.PRCMCameraFreqSet
+                0x0000000000000000       0x50 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerDisable
+                0x0000000000000000       0x30 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerControlEvent
+                0x0000000000000000       0x40 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerControlStall
+                0x0000000000000000       0x48 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerPrescaleGet
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerPrescaleMatchSet
+                0x0000000000000000       0x3c ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerPrescaleMatchGet
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerLoadGet
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerValueGet
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerValueSet
+                0x0000000000000000       0x34 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerMatchGet
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerIntRegister
+                0x0000000000000000       0x80 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerIntUnregister
+                0x0000000000000000       0x78 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerIntEnable
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerIntDisable
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerIntStatus
+                0x0000000000000000       0x2c ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerIntClear
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerDMAEventSet
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text.TimerDMAEventGet
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+ .text.CPUcpsid
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+ .text.CPUprimask
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+ .text.CPUwfi   0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+ .text.CPUbasepriSet
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+ .text.CPUbasepriGet
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .rodata.g_pulFMPPERegs
+                0x0000000000000000       0x40 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .rodata.g_pulFMPRERegs
+                0x0000000000000000       0x40 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashDisable
+                0x0000000000000000       0x50 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashErase
+                0x0000000000000000       0x60 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashEraseNonBlocking
+                0x0000000000000000       0x38 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashMassErase
+                0x0000000000000000       0x50 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashMassEraseNonBlocking
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashProgram
+                0x0000000000000000       0xb4 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashProgramNonBlocking
+                0x0000000000000000       0xa4 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashProtectGet
+                0x0000000000000000       0x78 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashIntRegister
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashIntUnregister
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashIntEnable
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashIntDisable
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashIntStatus
+                0x0000000000000000       0x2c ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text.FlashIntClear
+                0x0000000000000000       0x1c ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .debug_info    0x0000000000000000      0x300 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .debug_abbrev  0x0000000000000000      0x191 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .debug_aranges
+                0x0000000000000000       0x88 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .debug_ranges  0x0000000000000000       0x78 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .debug_line    0x0000000000000000      0x1f4 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .debug_str     0x0000000000000000      0x279 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .ARM.attributes
+                0x0000000000000000       0x33 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .debug_frame   0x0000000000000000      0x214 ../../../driverlib/gcc/lib/Debug/libdriver.a(flash.o)
+ .text          0x0000000000000000       0x30 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x0000000000000000       0x64 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x0000000000000000       0xb7 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000000000       0x2c /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .text          0x0000000000000000      0x2e4 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0000000000000000        0x8 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_info    0x0000000000000000      0x441 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_abbrev  0x0000000000000000      0x101 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_loc     0x0000000000000000      0xe94 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_ranges  0x0000000000000000       0xd8 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_line    0x0000000000000000      0x1ad /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_str     0x0000000000000000      0x243 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000000000       0x34 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .text          0x0000000000000000        0x4 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x0000000000000000       0x64 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x0000000000000000       0xbb /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+SRAM             0x0000000020000000 0x0000000000040000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000004000                BOOTLOADER_SIZE = 0x4000
+
+.bootloader     0x0000000020000000     0x4000
+                0x0000000020000000                _heap2 = .
+                0x0000000020004000                . = (. + BOOTLOADER_SIZE)
+ *fill*         0x0000000020000000     0x4000 
+                0x0000000020004000                . = ALIGN (0x8)
+                0x0000000020004000                _eheap2 = .
+
+.text           0x0000000020004000      0xed0
+                0x0000000020004000                _text = .
+ *(.intvecs)
+ .intvecs       0x0000000020004000      0x400 obj/Debug/startup_gcc.o
+                0x0000000020004000                g_pfnVectors
+ *(.text*)
+ .text.UpdateDutyCycle
+                0x0000000020004400       0x28 obj/Debug/main.o
+                0x0000000020004400                UpdateDutyCycle
+ .text.SetupTimerPWMMode
+                0x0000000020004428       0x4c obj/Debug/main.o
+                0x0000000020004428                SetupTimerPWMMode
+ .text.InitPWMModules
+                0x0000000020004474       0x6c obj/Debug/main.o
+                0x0000000020004474                InitPWMModules
+ .text.BoardInit
+                0x00000000200044e0       0x24 obj/Debug/main.o
+ .text.main     0x0000000020004504       0x68 obj/Debug/main.o
+                0x0000000020004504                main
+ .text.PinMuxConfig
+                0x000000002000456c       0x30 obj/Debug/pinmux.o
+                0x000000002000456c                PinMuxConfig
+ .text.ResetISR
+                0x000000002000459c       0x78 obj/Debug/startup_gcc.o
+                0x000000002000459c                ResetISR
+ .text.NmiSR    0x0000000020004614        0x8 obj/Debug/startup_gcc.o
+ .text.FaultISR
+                0x000000002000461c        0x8 obj/Debug/startup_gcc.o
+ .text.BusFaultHandler
+                0x0000000020004624        0x8 obj/Debug/startup_gcc.o
+ .text.IntDefaultHandler
+                0x000000002000462c        0x8 obj/Debug/startup_gcc.o
+ .text.IntMasterEnable
+                0x0000000020004634       0x10 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+                0x0000000020004634                IntMasterEnable
+ .text.IntVTableBaseSet
+                0x0000000020004644       0x1c ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+                0x0000000020004644                IntVTableBaseSet
+ .text.IntEnable
+                0x0000000020004660       0xbc ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+                0x0000000020004660                IntEnable
+ .text.PinModeSet
+                0x000000002000471c       0x48 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+                0x000000002000471c                PinModeSet
+ .text.PinConfigSet
+                0x0000000020004764       0x98 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+                0x0000000020004764                PinConfigSet
+ .text.PinTypeTimer
+                0x00000000200047fc       0x24 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+                0x00000000200047fc                PinTypeTimer
+ .text.PRCMSysResetCauseGet
+                0x0000000020004820       0x3c ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+                0x0000000020004820                PRCMSysResetCauseGet
+ .text.PRCMPeripheralClkEnable
+                0x000000002000485c       0x5c ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+                0x000000002000485c                PRCMPeripheralClkEnable
+ .text.PRCMPeripheralClkDisable
+                0x00000000200048b8       0x44 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+                0x00000000200048b8                PRCMPeripheralClkDisable
+ .text.PRCMPeripheralReset
+                0x00000000200048fc       0x8c ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+                0x00000000200048fc                PRCMPeripheralReset
+ .text.PRCMCC3200MCUInit
+                0x0000000020004988      0x1a0 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+                0x0000000020004988                PRCMCC3200MCUInit
+ .text.PRCMHIBRegRead
+                0x0000000020004b28       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+                0x0000000020004b28                PRCMHIBRegRead
+ .text.PRCMHIBRegWrite
+                0x0000000020004b48       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+                0x0000000020004b48                PRCMHIBRegWrite
+ .text.TimerEnable
+                0x0000000020004b68       0x2c ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+                0x0000000020004b68                TimerEnable
+ .text.TimerConfigure
+                0x0000000020004b94       0x58 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+                0x0000000020004b94                TimerConfigure
+ .text.TimerControlLevel
+                0x0000000020004bec       0x48 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+                0x0000000020004bec                TimerControlLevel
+ .text.TimerPrescaleSet
+                0x0000000020004c34       0x3c ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+                0x0000000020004c34                TimerPrescaleSet
+ .text.TimerLoadSet
+                0x0000000020004c70       0x3c ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+                0x0000000020004c70                TimerLoadSet
+ .text.TimerMatchSet
+                0x0000000020004cac       0x3c ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+                0x0000000020004cac                TimerMatchSet
+ .text.UtilsDelay
+                0x0000000020004ce8        0xc ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+                0x0000000020004ce8                UtilsDelay
+ .text.CPUcpsie
+                0x0000000020004cf4       0x18 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+                0x0000000020004cf4                CPUcpsie
+ *(.rodata*)
+ .rodata.g_pulEnRegs
+                0x0000000020004d0c       0x18 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .rodata.g_ulPinToPadMap
+                0x0000000020004d24      0x100 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .rodata.PRCM_PeriphRegsList
+                0x0000000020004e24       0xa8 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000020004ed0                . = ALIGN (0x8)
+ *fill*         0x0000000020004ecc        0x4 
+                0x0000000020004ed0                _etext = .
+
+.glue_7         0x0000000020004ed0        0x0
+ .glue_7        0x0000000000000000        0x0 linker stubs
+
+.glue_7t        0x0000000020004ed0        0x0
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+
+.vfp11_veneer   0x0000000020004ed0        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x0000000020004ed0        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x0000000020004ed0        0x0
+ .iplt          0x0000000000000000        0x0 obj/Debug/main.o
+
+.rel.dyn        0x0000000020004ed0        0x0
+ .rel.iplt      0x0000000000000000        0x0 obj/Debug/main.o
+
+.ARM            0x0000000020004ed0        0x0
+                0x0000000020004ed0                __exidx_start = .
+ *(.ARM.exidx*)
+                0x0000000020004ed0                __exidx_end = .
+                0x0000000020004ed0                __init_data = .
+
+.data           0x0000000020004ed0        0x0
+                0x0000000020004ed0                _data = .
+ *(.data*)
+                0x0000000020004ed0                . = ALIGN (0x8)
+                0x0000000020004ed0                _edata = .
+
+.igot.plt       0x0000000020004ed0        0x0
+ .igot.plt      0x0000000000000000        0x0 obj/Debug/main.o
+
+.bss            0x0000000020004ed0     0x1008
+                0x0000000020004ed0                _bss = .
+ *(.bss*)
+ .bss.heap_end  0x0000000020004ed0        0x4 obj/Debug/startup_gcc.o
+ .bss.heap2_end
+                0x0000000020004ed4        0x4 obj/Debug/startup_gcc.o
+ .bss.pui32Stack
+                0x0000000020004ed8     0x1000 obj/Debug/startup_gcc.o
+ *(COMMON)
+                0x0000000020005ed8                _ebss = .
+
+.heap           0x0000000020005ed8    0x39d28
+                0x0000000020005ed8                _heap = .
+                0x000000002003fc00                . = (((((((. + 0x40000) - SIZEOF (.bss)) - SIZEOF (.data)) - SIZEOF (.ARM)) - SIZEOF (.text)) - SIZEOF (.bootloader)) - 0x400)
+ *fill*         0x0000000020005ed8    0x39d28 
+                0x000000002003fc00                . = ALIGN (0x400)
+                0x000000002003fc00                _eheap = .
+LOAD obj/Debug/main.o
+LOAD obj/Debug/pinmux.o
+LOAD obj/Debug/startup_gcc.o
+LOAD ../../../driverlib/gcc/lib/Debug/libdriver.a
+LOAD /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libm.a
+LOAD /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a
+LOAD /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libnosys.a
+OUTPUT(bin/Debug/pwm.elf elf32-littlearm)
+
+.debug_info     0x0000000000000000     0x1c96
+ .debug_info    0x0000000000000000      0x188 obj/Debug/main.o
+ .debug_info    0x0000000000000188       0x45 obj/Debug/pinmux.o
+ .debug_info    0x00000000000001cd      0x20f obj/Debug/startup_gcc.o
+ .debug_info    0x00000000000003dc      0x383 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .debug_info    0x000000000000075f      0x3eb ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .debug_info    0x0000000000000b4a      0xa3d ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .debug_info    0x0000000000001587      0x5c1 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .debug_info    0x0000000000001b48       0x50 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .debug_info    0x0000000000001b98       0xfe ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+
+.debug_abbrev   0x0000000000000000      0x7ff
+ .debug_abbrev  0x0000000000000000       0xde obj/Debug/main.o
+ .debug_abbrev  0x00000000000000de       0x37 obj/Debug/pinmux.o
+ .debug_abbrev  0x0000000000000115      0x10b obj/Debug/startup_gcc.o
+ .debug_abbrev  0x0000000000000220      0x145 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .debug_abbrev  0x0000000000000365       0xf4 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .debug_abbrev  0x0000000000000459      0x1cc ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .debug_abbrev  0x0000000000000625       0xde ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .debug_abbrev  0x0000000000000703       0x48 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .debug_abbrev  0x000000000000074b       0xb4 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+
+.debug_aranges  0x0000000000000000      0x4d0
+ .debug_aranges
+                0x0000000000000000       0x48 obj/Debug/main.o
+ .debug_aranges
+                0x0000000000000048       0x20 obj/Debug/pinmux.o
+ .debug_aranges
+                0x0000000000000068       0x48 obj/Debug/startup_gcc.o
+ .debug_aranges
+                0x00000000000000b0       0x98 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .debug_aranges
+                0x0000000000000148       0x90 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .debug_aranges
+                0x00000000000001d8      0x1b8 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .debug_aranges
+                0x0000000000000390       0xd8 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .debug_aranges
+                0x0000000000000468       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .debug_aranges
+                0x0000000000000488       0x48 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+
+.debug_ranges   0x0000000000000000      0x440
+ .debug_ranges  0x0000000000000000       0x38 obj/Debug/main.o
+ .debug_ranges  0x0000000000000038       0x10 obj/Debug/pinmux.o
+ .debug_ranges  0x0000000000000048       0x38 obj/Debug/startup_gcc.o
+ .debug_ranges  0x0000000000000080       0x88 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .debug_ranges  0x0000000000000108       0x80 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .debug_ranges  0x0000000000000188      0x1a8 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .debug_ranges  0x0000000000000330       0xc8 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .debug_ranges  0x00000000000003f8       0x10 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .debug_ranges  0x0000000000000408       0x38 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+
+.debug_line     0x0000000000000000      0xed3
+ .debug_line    0x0000000000000000       0xcf obj/Debug/main.o
+ .debug_line    0x00000000000000cf       0x41 obj/Debug/pinmux.o
+ .debug_line    0x0000000000000110      0x131 obj/Debug/startup_gcc.o
+ .debug_line    0x0000000000000241      0x210 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .debug_line    0x0000000000000451      0x172 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .debug_line    0x00000000000005c3      0x4f6 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .debug_line    0x0000000000000ab9      0x33d ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .debug_line    0x0000000000000df6       0x3d ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .debug_line    0x0000000000000e33       0xa0 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+
+.debug_str      0x0000000000000000      0xd95
+ .debug_str     0x0000000000000000      0x181 obj/Debug/main.o
+                                        0x1c9 (size before relaxing)
+ .debug_str     0x0000000000000181       0x19 obj/Debug/pinmux.o
+                                         0xd6 (size before relaxing)
+ .debug_str     0x000000000000019a       0xdb obj/Debug/startup_gcc.o
+                                        0x22f (size before relaxing)
+ .debug_str     0x0000000000000275      0x1c9 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+                                        0x296 (size before relaxing)
+ .debug_str     0x000000000000043e      0x115 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+                                        0x1fa (size before relaxing)
+ .debug_str     0x0000000000000553      0x613 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+                                        0x71d (size before relaxing)
+ .debug_str     0x0000000000000b66      0x1b5 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+                                        0x2af (size before relaxing)
+ .debug_str     0x0000000000000d1b       0x1e ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+                                         0xcb (size before relaxing)
+ .debug_str     0x0000000000000d39       0x5c ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+                                        0x109 (size before relaxing)
+
+.comment        0x0000000000000000       0x21
+ .comment       0x0000000000000000       0x21 obj/Debug/main.o
+                                         0x22 (size before relaxing)
+ .comment       0x0000000000000000       0x22 obj/Debug/pinmux.o
+ .comment       0x0000000000000000       0x22 obj/Debug/startup_gcc.o
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+
+.ARM.attributes
+                0x0000000000000000       0x33
+ .ARM.attributes
+                0x0000000000000000       0x33 obj/Debug/main.o
+ .ARM.attributes
+                0x0000000000000033       0x33 obj/Debug/pinmux.o
+ .ARM.attributes
+                0x0000000000000066       0x33 obj/Debug/startup_gcc.o
+ .ARM.attributes
+                0x0000000000000099       0x33 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .ARM.attributes
+                0x00000000000000cc       0x33 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .ARM.attributes
+                0x00000000000000ff       0x33 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .ARM.attributes
+                0x0000000000000132       0x33 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .ARM.attributes
+                0x0000000000000165       0x33 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .ARM.attributes
+                0x0000000000000198       0x33 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
+
+.debug_frame    0x0000000000000000     0x1238
+ .debug_frame   0x0000000000000000       0xcc obj/Debug/main.o
+ .debug_frame   0x00000000000000cc       0x2c obj/Debug/pinmux.o
+ .debug_frame   0x00000000000000f8       0xbc obj/Debug/startup_gcc.o
+ .debug_frame   0x00000000000001b4      0x258 ../../../driverlib/gcc/lib/Debug/libdriver.a(interrupt.o)
+ .debug_frame   0x000000000000040c      0x244 ../../../driverlib/gcc/lib/Debug/libdriver.a(pin.o)
+ .debug_frame   0x0000000000000650      0x790 ../../../driverlib/gcc/lib/Debug/libdriver.a(prcm.o)
+ .debug_frame   0x0000000000000de0      0x3c8 ../../../driverlib/gcc/lib/Debug/libdriver.a(timer.o)
+ .debug_frame   0x00000000000011a8       0x20 ../../../driverlib/gcc/lib/Debug/libdriver.a(utils.o)
+ .debug_frame   0x00000000000011c8       0x70 ../../../driverlib/gcc/lib/Debug/libdriver.a(cpu.o)
