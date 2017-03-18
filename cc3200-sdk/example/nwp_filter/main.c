@@ -255,10 +255,10 @@ void SimpleLinkNetAppEventHandler(SlNetAppEvent_t *pNetAppEvent)
             g_ulGatewayIP = pEventData->gateway;
 
             sprintf(g_cRx_Buffer, "%d.%d.%d.%d",
-                    SL_IPV4_BYTE(pNetAppEvent->EventData.ipAcquiredV4.ip,3),
-                    SL_IPV4_BYTE(pNetAppEvent->EventData.ipAcquiredV4.ip,2),
-                    SL_IPV4_BYTE(pNetAppEvent->EventData.ipAcquiredV4.ip,1),
-                    SL_IPV4_BYTE(pNetAppEvent->EventData.ipAcquiredV4.ip,0));
+                    SL_IPV4_BYTE((int)pNetAppEvent->EventData.ipAcquiredV4.ip,3),
+                    SL_IPV4_BYTE((int)pNetAppEvent->EventData.ipAcquiredV4.ip,2),
+                    SL_IPV4_BYTE((int)pNetAppEvent->EventData.ipAcquiredV4.ip,1),
+                    SL_IPV4_BYTE((int)pNetAppEvent->EventData.ipAcquiredV4.ip,0));
 
             UART_PRINT("[NETAPP EVENT] IP Acquired: IP=%d.%d.%d.%d , "
                         "Gateway=%d.%d.%d.%d\n\r",
@@ -552,11 +552,11 @@ static long WlanConnect()
     SlSecParams_t secParams = {0};
     long lRetVal = 0;
 
-    secParams.Key = SECURITY_KEY;
+    secParams.Key = (signed char*)SECURITY_KEY;
     secParams.KeyLen = strlen(SECURITY_KEY);
     secParams.Type = SECURITY_TYPE;
 
-    lRetVal = sl_WlanConnect(SSID_NAME, strlen(SSID_NAME), 0, &secParams, 0);
+    lRetVal = sl_WlanConnect((signed char*)SSID_NAME, strlen(SSID_NAME), 0, &secParams, 0);
     ASSERT_ON_ERROR(lRetVal);
 
     // Wait for WLAN Event
@@ -927,7 +927,7 @@ static void BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
