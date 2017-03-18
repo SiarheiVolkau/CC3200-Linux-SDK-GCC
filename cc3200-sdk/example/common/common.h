@@ -69,6 +69,7 @@ extern "C"
 #define DBG_PRINT(x,...)
 #define ERR_PRINT(x)
 #else
+#include "uart_if.h"
 #define UART_PRINT Report
 #define DBG_PRINT  Report
 #define ERR_PRINT(x) Report("Error [%d] at line [%d] in function [%s]  \n\r",x,__LINE__,__FUNCTION__)

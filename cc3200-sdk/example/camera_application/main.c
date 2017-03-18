@@ -102,7 +102,7 @@ OsiTaskHandle g_CameraTaskHandle;
 #if defined(ewarm)
 extern uVectorEntry __vector_table;
 #endif
-#if defined(ccs)
+#if defined(gcc) || defined(ccs)
 extern void (* const g_pfnVectors[])(void);
 #endif
 //*****************************************************************************

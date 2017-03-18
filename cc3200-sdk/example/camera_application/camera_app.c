@@ -94,8 +94,8 @@ typedef enum{
 //*****************************************************************************
 unsigned long g_image_buffer[NUM_OF_4B_CHUNKS];
 unsigned long g_frame_size_in_bytes;
-extern volatile unsigned char g_CaptureImage;
-extern int g_uiSimplelinkRole = ROLE_INVALID;
+volatile unsigned char g_CaptureImage;
+int g_uiSimplelinkRole = ROLE_INVALID;
 static unsigned long *p_buffer = NULL;
 static unsigned char g_dma_txn_done;
 static unsigned char g_frame_end;
@@ -1300,11 +1300,11 @@ static int DefineHuffmanTableMarkerDC(char *pbuf, unsigned int *htable,
         UART_PRINT("Null pointer\n\r");
         LOOP_FOREVER();
     }
-    *pbuf++= 0xFF;                  // define huffman table marker 
+    *pbuf++= 0xFF;                  // define huffman table marker
     *pbuf++= 0xC4;
     plength = pbuf;                 // place holder for length field 
-    *pbuf++;
-    *pbuf++;
+    pbuf++;
+    pbuf++;
     *pbuf++= class_id;              // huffman table class | identifier 
 
     for (l = 0; l < 16; l++)
@@ -1369,8 +1369,8 @@ static int DefineHuffmanTableMarkerAC(char *pbuf, unsigned int *htable,
     *pbuf++= 0xFF;                      // define huffman table marker 
     *pbuf++= 0xC4;
     plength = pbuf;                     // place holder for length field 
-    *pbuf++;
-    *pbuf++;
+    pbuf++;
+    pbuf++;
     *pbuf++= class_id;                  // huffman table class | identifier 
 
     for (l = 0; l < 16; l++)
