@@ -128,7 +128,7 @@ int g_iSimplelinkRole = ROLE_INVALID;
 signed int g_uiIpAddress = 0;
 unsigned char g_ucSSID[AP_SSID_LEN_MAX];
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -1121,7 +1121,7 @@ BoardInit(void)
   //
   // Set vector table base
   //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -1140,7 +1140,7 @@ BoardInit(void)
 //****************************************************************************
 //                            MAIN FUNCTION
 //****************************************************************************
-void main()
+int main()
 {
     long lRetVal = -1;
   
