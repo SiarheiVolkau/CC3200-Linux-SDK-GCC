@@ -94,7 +94,7 @@
 //*****************************************************************************
 //                 GLOBAL VARIABLES -- Start
 //*****************************************************************************
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -226,7 +226,7 @@ BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -251,7 +251,7 @@ BoardInit(void)
 //! \return None
 //
 //*****************************************************************************
-void 
+int
 main()
 {
     unsigned int uiConfig,uiSeed=0x0000a5a5,uiDataLength,*puiData,uiResult;
@@ -340,10 +340,9 @@ main()
       UART_PRINT("\n\r\n\r Error in CRC generation");
     }
 
-    while(FOREVER);
-
 #endif
 
+	while(FOREVER);
 }
 //*****************************************************************************
 //
