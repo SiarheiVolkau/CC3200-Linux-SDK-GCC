@@ -120,7 +120,7 @@ unsigned long  g_ulGatewayIP = 0; //Network Gateway IP address
 unsigned char  g_ucConnectionSSID[SSID_LEN_MAX+1]; //Connection SSID
 unsigned char  g_ucConnectionBSSID[BSSID_LEN_MAX]; //Connection BSSID
 
-#if defined(gcc)
+#if defined(gcc) || defined(ccs)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -941,7 +941,7 @@ BoardInit(void)
 //*****************************************************************************
 //                            MAIN FUNCTION
 //*****************************************************************************
-void main()
+int main()
 {
     long lRetVal = -1;
 
