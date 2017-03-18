@@ -1212,7 +1212,7 @@ Network_IF_UnsetMCUMachineState(char cStat)
     CLR_STATUS_BIT(g_ulStatus, cStat);
 }
 
-
+#if !defined(gcc)
 //*****************************************************************************
 //
 //! itoa
@@ -1262,6 +1262,7 @@ unsigned short itoa(short cNum, char *cString)
 
     return length;
 }
+#endif
 
 //*****************************************************************************
 //
