@@ -74,9 +74,15 @@
 #ifdef ccs
 #pragma DATA_ALIGN(dma_ctrl_table, 1024)
 tDMAControlTable dma_ctrl_table[CTL_TBL_SIZE];
-#else
+#endif
+
+#ifdef ewarm
 #pragma data_alignment=1024
 tDMAControlTable dma_ctrl_table[CTL_TBL_SIZE];
+#endif
+
+#ifdef gcc
+tDMAControlTable dma_ctrl_table[CTL_TBL_SIZE] __attribute__((aligned(1024)));
 #endif
 
 extern int gpio_intr_hndlr(int gpio_num);
