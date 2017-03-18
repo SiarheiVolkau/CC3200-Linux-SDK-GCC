@@ -206,6 +206,12 @@ if (CC3200_USE_LIBS MATCHES "provisioning")
 	include_directories(${CC3200_SDK_ROOT}/simplelink_extlib/include)
 endif()
 
+if (CC3200_USE_LIBS MATCHES "fatfs")
+	message(STATUS "Using FatFS library.")
+	set(LINK_LIBS "'${CC3200_SDK_ROOT}/third_party/fatfs/gcc/lib/${CC3200_LIB_TYPE}/fatfs.a' ${LINK_LIBS}")
+	include_directories(${CC3200_SDK_ROOT}/third_party/fatfs/src)
+endif()
+
 set(CC3200_SDK_ROOT "${CC3200_SDK_ROOT}" CACHE STRING "SDK location" FORCE)
 
 #
