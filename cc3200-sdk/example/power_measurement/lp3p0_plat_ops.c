@@ -209,7 +209,7 @@ void enable_peripherals()
 	UDMAInit();
     
     //Initialising the link SPI
-	spi_Open(NULL, NULL);
+	spi_Open(NULL, 0);
 	
     //Initialising the UART terminal
     InitTerm();
