@@ -113,7 +113,7 @@ unsigned long  g_ulStaIp = 0;
 unsigned long  g_ulPingPacketsRecv = 0;
 unsigned long  g_uiGatewayIP = 0;
 
-#if defined(gcc)
+#if defined(gcc) || defined(ccs)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -930,7 +930,7 @@ BoardInit(void)
 //*****************************************************************************
 //                            MAIN FUNCTION
 //*****************************************************************************
-void main()
+int main()
 {
     long lRetVal = -1;
   
