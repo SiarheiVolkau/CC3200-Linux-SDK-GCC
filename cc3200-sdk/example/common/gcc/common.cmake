@@ -82,6 +82,16 @@ if (CC3200_USE_LIBS MATCHES "mqtt_server")
 	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
 endif()
 
+if (CC3200_USE_LIBS MATCHES "ota")
+	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} flc")
+endif()
+
+if (CC3200_USE_LIBS MATCHES "flc")
+	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
+elseif (CC3200_USE_LIBS MATCHES "flc_fastboot")
+	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
+endif()
+
 #
 # include requested libs
 #
@@ -167,7 +177,24 @@ elseif (CC3200_USE_LIBS MATCHES "mqtt_client")
 	include_directories(${CC3200_SDK_ROOT}/netapps/mqtt/platform)
 endif()
 
+if (CC3200_USE_LIBS MATCHES "flc_fastboot")
+	message(STATUS "Using FLC (fastboot) library.")
+	set(LINK_LIBS "'${CC3200_SDK_ROOT}/simplelink_extlib/flc/gcc/lib/fastboot/${CC3200_LIB_TYPE}/flc.a' ${LINK_LIBS}")
+	include_directories(${CC3200_SDK_ROOT}/simplelink_extlib/flc)
+	include_directories(${CC3200_SDK_ROOT}/simplelink_extlib/include)
+elseif (CC3200_USE_LIBS MATCHES "flc")
+	message(STATUS "Using FLC library.")
+	set(LINK_LIBS "'${CC3200_SDK_ROOT}/simplelink_extlib/flc/gcc/lib/${CC3200_LIB_TYPE}/flc.a' ${LINK_LIBS}")
+	include_directories(${CC3200_SDK_ROOT}/simplelink_extlib/flc)
+	include_directories(${CC3200_SDK_ROOT}/simplelink_extlib/include)
+endif()
 
+if (CC3200_USE_LIBS MATCHES "ota")
+	message(STATUS "Using OTA library.")
+	set(LINK_LIBS "'${CC3200_SDK_ROOT}/simplelink_extlib/ota/gcc/lib/${CC3200_LIB_TYPE}/ota.a' ${LINK_LIBS}")
+	# line above should be included by flc library
+	# include_directories(${CC3200_SDK_ROOT}/simplelink_extlib/include)
+endif()
 
 set(CC3200_SDK_ROOT "${CC3200_SDK_ROOT}" CACHE STRING "SDK location" FORCE)
 
