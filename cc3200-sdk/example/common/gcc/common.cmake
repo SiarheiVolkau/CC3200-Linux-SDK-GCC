@@ -70,6 +70,10 @@ if (CC3200_USE_LIBS MATCHES "smtp_client")
 	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
 endif()
 
+if (CC3200_USE_LIBS MATCHES "http_client")
+	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
+endif()
+
 #
 # include requested libs
 #
@@ -128,6 +132,17 @@ if (CC3200_USE_LIBS MATCHES "smtp_client")
 	message(STATUS "Using SMTP client library.")
 	set(LINK_LIBS "'${CC3200_SDK_ROOT}/netapps/smtp/client/gcc/lib/${CC3200_LIB_TYPE}/libemail.a' ${LINK_LIBS}")
 	include_directories(${CC3200_SDK_ROOT}/netapps/smtp/client)
+endif()
+
+if (CC3200_USE_LIBS MATCHES "http_client")
+	message(STATUS "Using HTTP client library.")
+	include_directories(${CC3200_SDK_ROOT}/netapps)
+	if (CC3200_USE_LIBS MATCHES "oslib")
+		set(LINK_LIBS "'${CC3200_SDK_ROOT}/netapps/http/client/gcc/lib/full/${CC3200_LIB_TYPE}/libwebclient.a' ${LINK_LIBS}")
+	else()
+		add_definitions(-DHTTPCli_LIBTYPE_MIN)
+		set(LINK_LIBS "'${CC3200_SDK_ROOT}/netapps/http/client/gcc/lib/min/${CC3200_LIB_TYPE}/libwebclient.a' ${LINK_LIBS}")
+	endif()
 endif()
 
 
