@@ -1,0 +1,1797 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+                              obj/Release/main.o (sl_Start)
+../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                              ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o) (g_bDeviceRestartIsRequired)
+../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                              obj/Release/main.o (sl_NetAppMDNSUnRegisterService)
+../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+                              obj/Release/main.o (sl_NetCfgSet)
+../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+                              ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o) (_SlNonOsSemSet)
+../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                              obj/Release/main.o (sl_Socket)
+../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+                              obj/Release/main.o (sl_WlanConnect)
+../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                              ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o) (spi_Open)
+../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+                              obj/Release/main.o (IntEnable)
+../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+                              obj/Release/pinmux.o (PRCMPeripheralClkEnable)
+../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+                              ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o) (SPIConfigSetExpClk)
+../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+                              ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o) (TimerConfigure)
+../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+                              ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o) (UtilsDelay)
+../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+                              ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o) (CPUcpsid)
+../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+                              ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o) (FlashDisable)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+                              obj/Release/uart_if.o (malloc)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+                              obj/Release/main.o (memcpy)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+                              obj/Release/uart_if.o (memmove)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+                              obj/Release/main.o (memset)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o) (_free_r)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o) (_malloc_r)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+                              obj/Release/uart_if.o (realloc)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+                              obj/Release/main.o (strlen)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+                              obj/Release/uart_if.o (vsnprintf)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o) (_impure_ptr)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o) (_realloc_r)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o) (_svfprintf_r)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o) (_printf_i)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o) (errno)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o) (memchr)
+/usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o) (_malloc_usable_size_r)
+/usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+                              ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o) (__aeabi_uldivmod)
+/usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+/usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+                              /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+
+Allocating common symbols
+Common symbol       size              file
+
+uBuf                0x578             obj/Release/main.o
+g_bDeviceRestartIsRequired
+                    0x1               ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+errno               0x4               /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+RxIrqCnt            0x1               ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+g_ucLED1Pin         0x1               obj/Release/gpio_if.o
+g_ucLED2Pin         0x1               obj/Release/gpio_if.o
+g_cDummy            0x1               ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+g_ucDinDout         0x50              ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+g_ucLED3Pin         0x1               obj/Release/gpio_if.o
+g_p2p_dev           0x21              obj/Release/main.o
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 obj/Release/main.o
+ .data          0x0000000000000000        0x0 obj/Release/main.o
+ .bss           0x0000000000000000        0x0 obj/Release/main.o
+ .rodata.digits
+                0x0000000000000000        0xb obj/Release/main.o
+ .bss.g_ulGatewayIP
+                0x0000000000000000        0x4 obj/Release/main.o
+ .text          0x0000000000000000        0x0 obj/Release/pinmux.o
+ .data          0x0000000000000000        0x0 obj/Release/pinmux.o
+ .bss           0x0000000000000000        0x0 obj/Release/pinmux.o
+ .text          0x0000000000000000        0x0 obj/Release/uart_if.o
+ .data          0x0000000000000000        0x0 obj/Release/uart_if.o
+ .bss           0x0000000000000000        0x0 obj/Release/uart_if.o
+ .text.ClearTerm
+                0x0000000000000000        0xc obj/Release/uart_if.o
+ .text.Error    0x0000000000000000       0x34 obj/Release/uart_if.o
+ .text.TrimSpace
+                0x0000000000000000       0x4e obj/Release/uart_if.o
+ .text.GetCmd   0x0000000000000000       0x94 obj/Release/uart_if.o
+ .data.ilen     0x0000000000000000        0x4 obj/Release/uart_if.o
+ .text          0x0000000000000000        0x0 obj/Release/gpio_if.o
+ .data          0x0000000000000000        0x0 obj/Release/gpio_if.o
+ .bss           0x0000000000000000        0x0 obj/Release/gpio_if.o
+ .text.GPIO_IF_GetPortNPin
+                0x0000000000000000       0x1c obj/Release/gpio_if.o
+ .text.GPIO_IF_ConfigureNIntEnable
+                0x0000000000000000       0x70 obj/Release/gpio_if.o
+ .text.GPIO_IF_Get
+                0x0000000000000000       0x1c obj/Release/gpio_if.o
+ .text.GPIO_IF_LedStatus
+                0x0000000000000000       0x44 obj/Release/gpio_if.o
+ .text.GPIO_IF_LedToggle
+                0x0000000000000000       0x1e obj/Release/gpio_if.o
+ .rodata.ulReg  0x0000000000000000       0x14 obj/Release/gpio_if.o
+ .text          0x0000000000000000        0x0 obj/Release/startup_gcc.o
+ .data          0x0000000000000000        0x0 obj/Release/startup_gcc.o
+ .bss           0x0000000000000000        0x0 obj/Release/startup_gcc.o
+ .text          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .data          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .bss           0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .text.sl_Task  0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .text.sl_Stop_WithNwpLpdsPoll
+                0x0000000000000000       0x98 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .text.sl_EventMaskSet
+                0x0000000000000000       0x40 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .text.sl_EventMaskGet
+                0x0000000000000000       0x40 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .text.sl_DevSet
+                0x0000000000000000       0x64 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .rodata._SlEventMaskGetCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .rodata._SlEventMaskSetCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .rodata._SlDeviceSetCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .text          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .data          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .bss           0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .text._SlDrvDataWriteOp
+                0x0000000000000000       0xe4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .text          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .data          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .bss           0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text.sl_NetAppStart
+                0x0000000000000000       0x40 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text.sl_NetAppStop
+                0x0000000000000000       0x40 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text.sl_NetAppGetServiceList
+                0x0000000000000000       0x90 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text.sl_NetAppMDNSRegisterService
+                0x0000000000000000       0x38 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text.sl_NetAppDnsGetHostByService
+                0x0000000000000000       0xc0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text._sl_HandleAsync_DnsGetHostByAddr
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text.sl_NetAppDnsGetHostByName
+                0x0000000000000000       0xcc ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text.sl_NetAppPingStart
+                0x0000000000000000      0x15c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text.sl_NetAppGet
+                0x0000000000000000       0x7c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata        0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata._SlNetAppStopCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata._SlGetServiceListeCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata._SlGetHostByServiceCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata._SlGetHostByNameCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata._SlNetAppGetCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata._SlNetAppStartCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata.CSWTCH.35
+                0x0000000000000000        0x6 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .text          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .data          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .bss           0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .text          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .data          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .bss           0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .text          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .data          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .bss           0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text._sl_ParseAddress
+                0x0000000000000000       0x30 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.sl_SendTo
+                0x0000000000000000       0xe8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.sl_RecvFrom
+                0x0000000000000000       0xc8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.sl_Connect
+                0x0000000000000000       0xf8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.sl_Send  0x0000000000000000       0xd8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.sl_Htonl
+                0x0000000000000000       0x22 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.sl_GetSockOpt
+                0x0000000000000000       0x94 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.sl_Select
+                0x0000000000000000       0xf4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.SL_FD_SET
+                0x0000000000000000       0x12 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.SL_FD_CLR
+                0x0000000000000000       0x14 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.SL_FD_ISSET
+                0x0000000000000000       0x16 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.SL_FD_ZERO
+                0x0000000000000000        0x6 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlSelectCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlSendCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlPayloadByProtocolLUT
+                0x0000000000000000       0x10 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlGetSockOptCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlRecvfomCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .data          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .bss           0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanPolicyGet
+                0x0000000000000000       0xa8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanProfileAdd
+                0x0000000000000000      0x1b8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanProfileGet
+                0x0000000000000000       0xd4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanGetNetworkList
+                0x0000000000000000       0x68 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanRxFilterAdd
+                0x0000000000000000       0x80 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanRxFilterGet
+                0x0000000000000000       0x70 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanRxStatStart
+                0x0000000000000000       0x28 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanRxStatStop
+                0x0000000000000000       0x28 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanRxStatGet
+                0x0000000000000000       0x44 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanSmartConfigStop
+                0x0000000000000000       0x28 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanSmartConfigStart
+                0x0000000000000000       0x84 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text.sl_WlanGet
+                0x0000000000000000       0x94 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata        0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlSmartConfigStartCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlRxFilterGetCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlWlanGetNetworkListCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlRxFilterAddtCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlPolicyGetCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlProfileGetCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlWlanCfgGetCmdCtrl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .text          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .data          0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .bss           0x0000000000000000        0x0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .text.NwpPowerOff_WithNwpLpdsPoll
+                0x0000000000000000       0x5c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .bss.g_pHostIntHdl
+                0x0000000000000000        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntDefaultHandler
+                0x0000000000000000        0x2 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntMasterEnable
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntMasterDisable
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntVTableBaseSet
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntRegister
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntUnregister
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntPriorityGroupingSet
+                0x0000000000000000       0x1c ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntPriorityGroupingGet
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntPrioritySet
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntPriorityGet
+                0x0000000000000000       0x1c ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntPendSet
+                0x0000000000000000       0x58 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntPendClear
+                0x0000000000000000       0x40 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntPriorityMaskSet
+                0x0000000000000000        0x4 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text.IntPriorityMaskGet
+                0x0000000000000000        0x4 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .rodata.g_pulPendRegs
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .rodata.g_pulUnpendRegs
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .rodata.g_pulPriority
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .rodata.g_pulRegs
+                0x0000000000000000       0xd4 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.IsRTCUsed
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMMCUReset
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMPeripheralClockGet
+                0x0000000000000000       0x48 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMI2SClockFreqSet
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMLPDSRestoreInfoSet
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMLPDSEnter
+                0x0000000000000000       0x38 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMLPDSEnterKeepDebugIf
+                0x0000000000000000       0x30 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMLPDSWakeupSourceEnable
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMLPDSWakeupSourceDisable
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMLPDSWakeupCauseGet
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMLPDSIntervalSet
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMLPDSWakeUpGPIOSelect
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMSleepEnter
+                0x0000000000000000        0x4 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMSRAMRetentionEnable
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMSRAMRetentionDisable
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMHibernateWakeupSourceEnable
+                0x0000000000000000       0x48 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMHibernateWakeupSourceDisable
+                0x0000000000000000       0x4c ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMHibernateWakeupCauseGet
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMHibernateIntervalSet
+                0x0000000000000000       0x70 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMHibernateWakeUpGPIOSelect
+                0x0000000000000000       0x50 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMHibernateEnter
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMSlowClkCtrGet
+                0x0000000000000000       0x40 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMSlowClkCtrFastGet
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMSlowClkCtrMatchSet
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMSlowClkCtrMatchGet
+                0x0000000000000000       0x30 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMOCRRegisterWrite
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMOCRRegisterRead
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMIntRegister
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMIntUnregister
+                0x0000000000000000       0x12 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMIntEnable
+                0x0000000000000000       0x38 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMIntDisable
+                0x0000000000000000       0x38 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMIntStatus
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMRTCInUseSet
+                0x0000000000000000       0x20 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMRTCInUseGet
+                0x0000000000000000        0xe ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMRTCSet
+                0x0000000000000000       0x60 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMRTCGet
+                0x0000000000000000       0x64 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMRTCMatchSet
+                0x0000000000000000       0x68 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMRTCMatchGet
+                0x0000000000000000       0x6c ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMHIBRegRead
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMHIBRegWrite
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text.PRCMCameraFreqSet
+                0x0000000000000000       0x28 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIDmaMaskGet
+                0x0000000000000000       0x38 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIEnable
+                0x0000000000000000        0xe ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIDisable
+                0x0000000000000000        0xe ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIReset
+                0x0000000000000000       0x16 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIDataGetNonBlocking
+                0x0000000000000000       0x16 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIDataGet
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIDataPutNonBlocking
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIDataPut
+                0x0000000000000000        0xe ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIFIFOEnable
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIDmaEnable
+                0x0000000000000000        0x4 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIFIFOLevelSet
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIFIFOLevelGet
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIWordCountSet
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIIntRegister
+                0x0000000000000000       0x4c ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIIntUnregister
+                0x0000000000000000       0x4c ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIIntEnable
+                0x0000000000000000       0x38 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIIntDisable
+                0x0000000000000000       0x3c ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIIntStatus
+                0x0000000000000000       0x44 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPIIntClear
+                0x0000000000000000       0x34 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPICSEnable
+                0x0000000000000000        0xe ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPICSDisable
+                0x0000000000000000        0xe ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text.SPITransfer
+                0x0000000000000000      0x180 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .rodata.g_ppulSPIIntMap
+                0x0000000000000000       0x24 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .rodata.g_ulSPIDmaMaskMap
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerEnable
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerDisable
+                0x0000000000000000       0x12 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerControlLevel
+                0x0000000000000000       0x1c ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerControlEvent
+                0x0000000000000000       0x1e ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerControlStall
+                0x0000000000000000       0x1c ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerPrescaleSet
+                0x0000000000000000       0x12 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerPrescaleGet
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerPrescaleMatchSet
+                0x0000000000000000       0x12 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerPrescaleMatchGet
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerLoadSet
+                0x0000000000000000       0x12 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerLoadGet
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerValueGet
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerValueSet
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerMatchSet
+                0x0000000000000000       0x12 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerMatchGet
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerIntRegister
+                0x0000000000000000       0x60 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerIntUnregister
+                0x0000000000000000       0x58 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerIntEnable
+                0x0000000000000000        0x8 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerIntDisable
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerIntStatus
+                0x0000000000000000        0xa ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerIntClear
+                0x0000000000000000        0x4 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerDMAEventSet
+                0x0000000000000000        0x4 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text.TimerDMAEventGet
+                0x0000000000000000        0x4 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .text.CPUcpsid
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .text.CPUprimask
+                0x0000000000000000        0x6 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .text.CPUcpsie
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .text.CPUwfi   0x0000000000000000        0xc ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .text.CPUbasepriSet
+                0x0000000000000000        0xe ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .text.CPUbasepriGet
+                0x0000000000000000        0x6 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .debug_info    0x0000000000000000       0xfe ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .debug_abbrev  0x0000000000000000       0xb4 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .debug_aranges
+                0x0000000000000000       0x48 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .debug_ranges  0x0000000000000000       0x38 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .debug_line    0x0000000000000000       0x9d ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .debug_str     0x0000000000000000      0x109 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .ARM.attributes
+                0x0000000000000000       0x33 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .debug_frame   0x0000000000000000       0x70 ../../../driverlib/gcc/lib/Release/libdriver.a(cpu.o)
+ .text          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .data          0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .bss           0x0000000000000000        0x0 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashDisable
+                0x0000000000000000       0x48 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashErase
+                0x0000000000000000       0x38 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashEraseNonBlocking
+                0x0000000000000000       0x1c ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashMassErase
+                0x0000000000000000       0x34 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashMassEraseNonBlocking
+                0x0000000000000000       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashProgram
+                0x0000000000000000       0x80 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashProgramNonBlocking
+                0x0000000000000000       0x70 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashProtectGet
+                0x0000000000000000       0x44 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashIntRegister
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashIntUnregister
+                0x0000000000000000       0x12 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashIntEnable
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashIntDisable
+                0x0000000000000000       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashIntStatus
+                0x0000000000000000       0x14 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text.FlashIntClear
+                0x0000000000000000        0xc ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .rodata.g_pulFMPPERegs
+                0x0000000000000000       0x40 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .rodata.g_pulFMPRERegs
+                0x0000000000000000       0x40 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .debug_info    0x0000000000000000      0x3d8 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .debug_abbrev  0x0000000000000000      0x19d ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .debug_loc     0x0000000000000000      0x282 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .debug_aranges
+                0x0000000000000000       0x88 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .debug_ranges  0x0000000000000000       0x78 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .debug_line    0x0000000000000000      0x201 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .debug_str     0x0000000000000000      0x2b3 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .ARM.attributes
+                0x0000000000000000       0x33 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .debug_frame   0x0000000000000000      0x134 ../../../driverlib/gcc/lib/Release/libdriver.a(flash.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x0000000000000000        0x4 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .text.__ssprint_r
+                0x0000000000000000       0xfe /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x1a /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000       0xb4 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+ .text          0x0000000000000000       0x30 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x0000000000000000       0x64 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x0000000000000000       0xb7 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000000000       0x2c /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .text          0x0000000000000000      0x2e4 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0000000000000000        0x8 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_info    0x0000000000000000      0x441 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_abbrev  0x0000000000000000      0x101 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_loc     0x0000000000000000      0xe94 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_ranges  0x0000000000000000       0xd8 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_line    0x0000000000000000      0x1ad /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_str     0x0000000000000000      0x243 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000000000       0x34 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_udivmoddi4.o)
+ .text          0x0000000000000000        0x4 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x0000000000000000       0x64 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x0000000000000000       0xbb /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+SRAM             0x0000000020000000 0x0000000000040000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000004000                BOOTLOADER_SIZE = 0x4000
+
+.bootloader     0x0000000020000000     0x4000
+                0x0000000020000000                _heap2 = .
+                0x0000000020004000                . = (. + BOOTLOADER_SIZE)
+ *fill*         0x0000000020000000     0x4000 
+                0x0000000020004000                . = ALIGN (0x8)
+                0x0000000020004000                _eheap2 = .
+
+.text           0x0000000020004000     0x4a48
+                0x0000000020004000                _text = .
+ *(.intvecs)
+ .intvecs       0x0000000020004000      0x400 obj/Release/startup_gcc.o
+                0x0000000020004000                g_pfnVectors
+ *(.text*)
+ .text.SimpleLinkWlanEventHandler
+                0x0000000020004400       0xb8 obj/Release/main.o
+                0x0000000020004400                SimpleLinkWlanEventHandler
+ .text.SimpleLinkHttpServerCallback
+                0x00000000200044b8        0x2 obj/Release/main.o
+                0x00000000200044b8                SimpleLinkHttpServerCallback
+ *fill*         0x00000000200044ba        0x2 
+ .text.SimpleLinkNetAppEventHandler
+                0x00000000200044bc       0x40 obj/Release/main.o
+                0x00000000200044bc                SimpleLinkNetAppEventHandler
+ .text.SimpleLinkGeneralEventHandler
+                0x00000000200044fc       0x14 obj/Release/main.o
+                0x00000000200044fc                SimpleLinkGeneralEventHandler
+ .text.SimpleLinkSockEventHandler
+                0x0000000020004510        0x2 obj/Release/main.o
+                0x0000000020004510                SimpleLinkSockEventHandler
+ *fill*         0x0000000020004512        0x2 
+ .text.StartDeviceInP2P
+                0x0000000020004514      0x2b4 obj/Release/main.o
+                0x0000000020004514                StartDeviceInP2P
+ .text.P2PConfiguration
+                0x00000000200047c8       0xe8 obj/Release/main.o
+                0x00000000200047c8                P2PConfiguration
+ .text.startup.main
+                0x00000000200048b0      0x3ec obj/Release/main.o
+                0x00000000200048b0                main
+ .text.PinMuxConfig
+                0x0000000020004c9c       0x68 obj/Release/pinmux.o
+                0x0000000020004c9c                PinMuxConfig
+ .text.InitTerm
+                0x0000000020004d04       0x34 obj/Release/uart_if.o
+                0x0000000020004d04                InitTerm
+ .text.Message  0x0000000020004d38       0x20 obj/Release/uart_if.o
+                0x0000000020004d38                Message
+ .text.Report   0x0000000020004d58       0x68 obj/Release/uart_if.o
+                0x0000000020004d58                Report
+ .text.GPIO_IF_LedConfigure
+                0x0000000020004dc0       0x50 obj/Release/gpio_if.o
+                0x0000000020004dc0                GPIO_IF_LedConfigure
+ .text.GPIO_IF_Set
+                0x0000000020004e10       0x1e obj/Release/gpio_if.o
+                0x0000000020004e10                GPIO_IF_Set
+ *fill*         0x0000000020004e2e        0x2 
+ .text.GPIO_IF_LedOn
+                0x0000000020004e30       0x84 obj/Release/gpio_if.o
+                0x0000000020004e30                GPIO_IF_LedOn
+ .text.GPIO_IF_LedOff
+                0x0000000020004eb4       0x84 obj/Release/gpio_if.o
+                0x0000000020004eb4                GPIO_IF_LedOff
+ .text.NmiSR    0x0000000020004f38        0x2 obj/Release/startup_gcc.o
+ .text.FaultISR
+                0x0000000020004f3a        0x2 obj/Release/startup_gcc.o
+ .text.BusFaultHandler
+                0x0000000020004f3c        0x2 obj/Release/startup_gcc.o
+ .text.IntDefaultHandler
+                0x0000000020004f3e        0x2 obj/Release/startup_gcc.o
+ .text.ResetISR
+                0x0000000020004f40       0x5c obj/Release/startup_gcc.o
+                0x0000000020004f40                ResetISR
+ .text._sbrk    0x0000000020004f9c       0x3c obj/Release/startup_gcc.o
+                0x0000000020004f9c                _sbrk
+ .text.sl_Start
+                0x0000000020004fd8       0xcc ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+                0x0000000020004fd8                sl_Start
+ .text._sl_HandleAsync_InitComplete
+                0x00000000200050a4       0x6c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+                0x00000000200050a4                _sl_HandleAsync_InitComplete
+ .text._sl_HandleAsync_Stop
+                0x0000000020005110       0x38 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+                0x0000000020005110                _sl_HandleAsync_Stop
+ .text.sl_Stop  0x0000000020005148       0xa0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+                0x0000000020005148                sl_Stop
+ .text.sl_DevGet
+                0x00000000200051e8       0x8c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+                0x00000000200051e8                sl_DevGet
+ .text._SlDrvDeviceEventHandler
+                0x0000000020005274       0x66 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+                0x0000000020005274                _SlDrvDeviceEventHandler
+ *fill*         0x00000000200052da        0x2 
+ .text._SlAsyncEventGenericHandler
+                0x00000000200052dc       0x54 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .text._SlRemoveFromList
+                0x0000000020005330       0x44 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .text._SlFindAndSetActiveObj
+                0x0000000020005374       0x94 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .text._SlDrvObjGlobalLockWaitForever
+                0x0000000020005408       0x30 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .text._SlDrvMsgWrite
+                0x0000000020005438      0x108 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .text._SlDrvDriverCBDeinit
+                0x0000000020005540       0xac ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020005540                _SlDrvDriverCBDeinit
+ .text._SlDrvRxIrqHandler
+                0x00000000200055ec       0x44 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200055ec                _SlDrvRxIrqHandler
+ .text._SlDrvCmdSend
+                0x0000000020005630       0x74 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020005630                _SlDrvCmdSend
+ .text._SlDrvDispatchHttpServerEvents
+                0x00000000200056a4        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200056a4                _SlDrvDispatchHttpServerEvents
+ .text._SlDrvSyncObjSignal
+                0x00000000200056a8        0xa ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200056a8                _SlDrvSyncObjSignal
+ .text._SlDrvObjLockWaitForever
+                0x00000000200056b2       0x10 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200056b2                _SlDrvObjLockWaitForever
+ *fill*         0x00000000200056c2        0x2 
+ .text._SlDrvProtectionObjLockWaitForever
+                0x00000000200056c4       0x1c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200056c4                _SlDrvProtectionObjLockWaitForever
+ .text._SlDrvObjUnLock
+                0x00000000200056e0        0xa ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200056e0                _SlDrvObjUnLock
+ *fill*         0x00000000200056ea        0x2 
+ .text._SlDrvProtectionObjUnLock
+                0x00000000200056ec       0x14 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200056ec                _SlDrvProtectionObjUnLock
+ .text._SlDrvReleasePoolObj
+                0x0000000020005700       0xc0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020005700                _SlDrvReleasePoolObj
+ .text._SlDrvGlobalObjUnLock
+                0x00000000200057c0       0x14 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200057c0                _SlDrvGlobalObjUnLock
+ .text._SlDrvMemZero
+                0x00000000200057d4        0x8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200057d4                _SlDrvMemZero
+ .text._SlDrvDriverCBInit
+                0x00000000200057dc       0xfc ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200057dc                _SlDrvDriverCBInit
+ .text._SlDrvResetCmdExt
+                0x00000000200058d8        0x6 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200058d8                _SlDrvResetCmdExt
+ *fill*         0x00000000200058de        0x2 
+ .text._SlDrvSyncObjWaitForever
+                0x00000000200058e0       0x24 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200058e0                _SlDrvSyncObjWaitForever
+ .text._SlDrvWaitForPoolObj
+                0x0000000020005904       0xc8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020005904                _SlDrvWaitForPoolObj
+ .text._SlDrvProtectAsyncRespSetting
+                0x00000000200059cc       0x30 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200059cc                _SlDrvProtectAsyncRespSetting
+ .text._SlDriverHandleError
+                0x00000000200059fc       0x68 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200059fc                _SlDriverHandleError
+ .text._SlDrvSyncObjWaitTimeout
+                0x0000000020005a64       0x38 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020005a64                _SlDrvSyncObjWaitTimeout
+ .text._SlDrvDataReadOp
+                0x0000000020005a9c      0x12c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020005a9c                _SlDrvDataReadOp
+ .text._SlDrvStartMeasureTimeout
+                0x0000000020005bc8       0x14 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020005bc8                _SlDrvStartMeasureTimeout
+ .text._SlDrvIsTimeoutExpired
+                0x0000000020005bdc       0x48 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020005bdc                _SlDrvIsTimeoutExpired
+ .text._SlDrvMsgRead
+                0x0000000020005c24      0x520 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .text._SlDrvCmdOp
+                0x0000000020006144      0x160 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020006144                _SlDrvCmdOp
+ .text._SlDrvBasicCmd
+                0x00000000200062a4       0x32 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200062a4                _SlDrvBasicCmd
+ *fill*         0x00000000200062d6        0x2 
+ .text._SlDrvMsgReadSpawnCtx
+                0x00000000200062d8       0x78 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x00000000200062d8                _SlDrvMsgReadSpawnCtx
+ .text.sl_NetAppMDNSRegisterUnregisterService
+                0x0000000020006350       0x98 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                0x0000000020006350                sl_NetAppMDNSRegisterUnregisterService
+ .text.sl_NetAppMDNSUnRegisterService
+                0x00000000200063e8       0x38 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                0x00000000200063e8                sl_NetAppMDNSUnRegisterService
+ .text._sl_HandleAsync_DnsGetHostByService
+                0x0000000020006420       0x5c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                0x0000000020006420                _sl_HandleAsync_DnsGetHostByService
+ .text._sl_HandleAsync_DnsGetHostByName
+                0x000000002000647c       0x5c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                0x000000002000647c                _sl_HandleAsync_DnsGetHostByName
+ .text._sl_HandleAsync_PingResponse
+                0x00000000200064d8       0x7c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                0x00000000200064d8                _sl_HandleAsync_PingResponse
+ .text.sl_NetAppSet
+                0x0000000020006554       0x64 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                0x0000000020006554                sl_NetAppSet
+ .text._sl_NetAppSendTokenValue
+                0x00000000200065b8       0x50 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                0x00000000200065b8                _sl_NetAppSendTokenValue
+ .text._SlDrvNetAppEventHandler
+                0x0000000020006608       0xdc ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                0x0000000020006608                _SlDrvNetAppEventHandler
+ .text.sl_NetCfgSet
+                0x00000000200066e4       0x64 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+                0x00000000200066e4                sl_NetCfgSet
+ .text.sl_NetCfgGet
+                0x0000000020006748       0x94 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+                0x0000000020006748                sl_NetCfgGet
+ .text._SlNonOsSemSet
+                0x00000000200067dc        0x6 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+                0x00000000200067dc                _SlNonOsSemSet
+ *fill*         0x00000000200067e2        0x2 
+ .text._SlNonOsSpawn
+                0x00000000200067e4       0x28 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+                0x00000000200067e4                _SlNonOsSpawn
+ .text._SlNonOsMainLoopTask
+                0x000000002000680c       0x34 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+                0x000000002000680c                _SlNonOsMainLoopTask
+ .text._SlNonOsSemGet
+                0x0000000020006840       0x70 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+                0x0000000020006840                _SlNonOsSemGet
+ .text._sl_BuildAddress
+                0x00000000200068b0       0x28 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .text.sl_Socket
+                0x00000000200068d8       0x50 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x00000000200068d8                sl_Socket
+ .text.sl_Close
+                0x0000000020006928       0x40 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x0000000020006928                sl_Close
+ .text.sl_Bind  0x0000000020006968       0x80 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x0000000020006968                sl_Bind
+ .text._sl_HandleAsync_Connect
+                0x00000000200069e8       0x54 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x00000000200069e8                _sl_HandleAsync_Connect
+ .text.sl_Listen
+                0x0000000020006a3c       0x44 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x0000000020006a3c                sl_Listen
+ .text.sl_Accept
+                0x0000000020006a80      0x114 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x0000000020006a80                sl_Accept
+ .text.sl_Htons
+                0x0000000020006b94       0x14 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x0000000020006b94                sl_Htons
+ .text._sl_HandleAsync_Accept
+                0x0000000020006ba8       0x54 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x0000000020006ba8                _sl_HandleAsync_Accept
+ .text._sl_HandleAsync_Select
+                0x0000000020006bfc       0x40 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x0000000020006bfc                _sl_HandleAsync_Select
+ .text.sl_Recv  0x0000000020006c3c       0x64 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x0000000020006c3c                sl_Recv
+ .text.sl_SetSockOpt
+                0x0000000020006ca0       0x6c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                0x0000000020006ca0                sl_SetSockOpt
+ .text.sl_WlanConnect
+                0x0000000020006d0c      0x1c0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+                0x0000000020006d0c                sl_WlanConnect
+ .text.sl_WlanDisconnect
+                0x0000000020006ecc       0x28 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+                0x0000000020006ecc                sl_WlanDisconnect
+ .text.sl_WlanPolicySet
+                0x0000000020006ef4       0x5c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+                0x0000000020006ef4                sl_WlanPolicySet
+ .text.sl_WlanProfileDel
+                0x0000000020006f50       0x40 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+                0x0000000020006f50                sl_WlanProfileDel
+ .text.sl_WlanRxFilterSet
+                0x0000000020006f90       0x58 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+                0x0000000020006f90                sl_WlanRxFilterSet
+ .text.sl_WlanSetMode
+                0x0000000020006fe8       0x40 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+                0x0000000020006fe8                sl_WlanSetMode
+ .text.sl_WlanSet
+                0x0000000020007028       0x64 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+                0x0000000020007028                sl_WlanSet
+ .text.DmaSpiSwIntHandler
+                0x000000002000708c       0x2c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x000000002000708c                DmaSpiSwIntHandler
+ .text.cc_UDMAChannelSelect.part.0
+                0x00000000200070b8       0x1c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .text.cc_SetupTransfer.constprop.1
+                0x00000000200070d4       0x48 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .text.SetupDMAReceive
+                0x000000002000711c       0x5c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .text.spi_Open
+                0x0000000020007178      0x144 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020007178                spi_Open
+ .text.spi_Close
+                0x00000000200072bc       0x84 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x00000000200072bc                spi_Close
+ .text.spi_Read
+                0x0000000020007340      0x114 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020007340                spi_Read
+ .text.spi_Write
+                0x0000000020007454       0xec ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020007454                spi_Write
+ .text.NwpRegisterInterruptHandler
+                0x0000000020007540       0x46 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020007540                NwpRegisterInterruptHandler
+ *fill*         0x0000000020007586        0x2 
+ .text.NwpMaskInterrupt
+                0x0000000020007588        0xc ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020007588                NwpMaskInterrupt
+ .text.NwpUnMaskInterrupt
+                0x0000000020007594        0xc ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020007594                NwpUnMaskInterrupt
+ .text.NwpPowerOn
+                0x00000000200075a0       0x38 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x00000000200075a0                NwpPowerOn
+ .text.NwpPowerOff
+                0x00000000200075d8       0x3c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x00000000200075d8                NwpPowerOff
+ .text.NwpPowerOnPreamble
+                0x0000000020007614       0x60 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020007614                NwpPowerOnPreamble
+ .text.NwpPrePowerOffTimout0
+                0x0000000020007674       0x20 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020007674                NwpPrePowerOffTimout0
+ .text.simplelink_timerA2_start
+                0x0000000020007694       0x4c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020007694                simplelink_timerA2_start
+ .text.TimerGetCurrentTimestamp
+                0x00000000200076e0       0x24 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x00000000200076e0                TimerGetCurrentTimestamp
+ .text.IntEnable
+                0x0000000020007704       0x68 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+                0x0000000020007704                IntEnable
+ .text.IntDisable
+                0x000000002000776c       0x68 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+                0x000000002000776c                IntDisable
+ .text.PRCMSysResetCauseGet
+                0x00000000200077d4       0x2c ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+                0x00000000200077d4                PRCMSysResetCauseGet
+ .text.PRCMPeripheralClkEnable
+                0x0000000020007800       0x2c ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+                0x0000000020007800                PRCMPeripheralClkEnable
+ .text.PRCMPeripheralClkDisable
+                0x000000002000782c       0x1c ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+                0x000000002000782c                PRCMPeripheralClkDisable
+ .text.PRCMPeripheralReset
+                0x0000000020007848       0x40 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+                0x0000000020007848                PRCMPeripheralReset
+ .text.PRCMPeripheralStatusGet
+                0x0000000020007888       0x1c ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+                0x0000000020007888                PRCMPeripheralStatusGet
+ .text.PRCMCC3200MCUInit
+                0x00000000200078a4      0x150 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+                0x00000000200078a4                PRCMCC3200MCUInit
+ .text.SPIConfigSetExpClk
+                0x00000000200079f4       0x5a ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+                0x00000000200079f4                SPIConfigSetExpClk
+ .text.SPIFIFODisable
+                0x0000000020007a4e        0xe ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+                0x0000000020007a4e                SPIFIFODisable
+ .text.SPIDmaDisable
+                0x0000000020007a5c        0x4 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+                0x0000000020007a5c                SPIDmaDisable
+ .text.TimerConfigure
+                0x0000000020007a60       0x28 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+                0x0000000020007a60                TimerConfigure
+ .text.UtilsDelay
+                0x0000000020007a88        0x8 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+                0x0000000020007a88                UtilsDelay
+ .text.malloc   0x0000000020007a90       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+                0x0000000020007a90                malloc
+ .text.free     0x0000000020007aa0       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+                0x0000000020007aa0                free
+ .text.memcpy   0x0000000020007ab0       0x16 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+                0x0000000020007ab0                memcpy
+ .text.memmove  0x0000000020007ac6       0x36 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+                0x0000000020007ac6                memmove
+ .text.memset   0x0000000020007afc       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+                0x0000000020007afc                memset
+ .text._free_r  0x0000000020007b0c       0x8c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000020007b0c                _free_r
+ .text._malloc_r
+                0x0000000020007b98       0xa8 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020007b98                _malloc_r
+ .text.realloc  0x0000000020007c40       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+                0x0000000020007c40                realloc
+ .text._sbrk_r  0x0000000020007c50       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000020007c50                _sbrk_r
+ .text.strlen   0x0000000020007c70       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+                0x0000000020007c70                strlen
+ .text._vsnprintf_r
+                0x0000000020007c80       0x56 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+                0x0000000020007c80                _vsnprintf_r
+                0x0000000020007c80                _vsniprintf_r
+ *fill*         0x0000000020007cd6        0x2 
+ .text.vsnprintf
+                0x0000000020007cd8       0x1c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+                0x0000000020007cd8                vsnprintf
+                0x0000000020007cd8                vsniprintf
+ .text._realloc_r
+                0x0000000020007cf4       0x4c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000000020007cf4                _realloc_r
+ .text.__ssputs_r
+                0x0000000020007d40       0xb2 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000020007d40                __ssputs_r
+ *fill*         0x0000000020007df2        0x2 
+ .text._svfprintf_r
+                0x0000000020007df4      0x1e8 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000020007df4                _svfprintf_r
+                0x0000000020007df4                _svfiprintf_r
+ .text._printf_common
+                0x0000000020007fdc       0xec /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000020007fdc                _printf_common
+ .text._printf_i
+                0x00000000200080c8      0x24c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000200080c8                _printf_i
+ .text.memchr   0x0000000020008314       0x1e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+                0x0000000020008314                memchr
+ .text._malloc_usable_size_r
+                0x0000000020008332       0x14 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+                0x0000000020008332                _malloc_usable_size_r
+ *(.rodata*)
+ .rodata.__FUNCTION__.5698
+                0x0000000020008346        0xd obj/Release/main.o
+ .rodata.__FUNCTION__.5720
+                0x0000000020008353       0x11 obj/Release/main.o
+ .rodata.str1.1
+                0x0000000020008364      0x467 obj/Release/main.o
+                                        0x468 (size before relaxing)
+ .rodata.__FUNCTION__.5655
+                0x00000000200087cb       0x22 obj/Release/main.o
+ .rodata.__FUNCTION__.5715
+                0x00000000200087ed       0x11 obj/Release/main.o
+ .rodata.__FUNCTION__.5666
+                0x00000000200087fe        0xc obj/Release/main.o
+ .rodata.__FUNCTION__.5731
+                0x000000002000880a        0x5 obj/Release/main.o
+ .rodata.__FUNCTION__.5682
+                0x000000002000880f        0xa obj/Release/main.o
+ .rodata.str1.1
+                0x0000000020008819       0x24 obj/Release/uart_if.o
+                                         0x27 (size before relaxing)
+ *fill*         0x000000002000883d        0x1 
+ .rodata._SlDeviceGetCmdCtrl
+                0x000000002000883e        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .rodata._SlStopCmdCtrl
+                0x0000000020008842        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .rodata.StartResponseLUT
+                0x0000000020008846        0x8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ *fill*         0x000000002000884e        0x2 
+ .rodata.g_H2NSyncPattern
+                0x0000000020008850        0x8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .rodata.g_H2NCnysPattern
+                0x0000000020008858        0x8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .rodata._SlActionLookupTable
+                0x0000000020008860       0x38 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020008860                _SlActionLookupTable
+ .rodata.OpcodeTranslateTable
+                0x0000000020008898       0x3c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020008898                OpcodeTranslateTable
+ .rodata.RxMsgClassLUT
+                0x00000000200088d4       0x20 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .rodata._SlNetAppSendTokenValueCmdCtrl
+                0x00000000200088f4        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                0x00000000200088f4                _SlNetAppSendTokenValueCmdCtrl
+ .rodata._SlRegisterServiceCtrl
+                0x00000000200088f8        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata._SlNetAppSetCmdCtrl
+                0x00000000200088fc        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .rodata._SlNetCfgGetCmdCtrl
+                0x0000000020008900        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .rodata._SlNetCfgSetCmdCtrl
+                0x0000000020008904        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .rodata._SlSockSocketCmdCtrl
+                0x0000000020008908        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlListenCmdCtrl
+                0x000000002000890c        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlSockCloseCmdCtrl
+                0x0000000020008910        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlRecvCmdCtrl
+                0x0000000020008914        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlAcceptCmdCtrl
+                0x0000000020008918        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlSetSockOptCmdCtrl
+                0x000000002000891c        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .rodata._SlWlanCfgSetCmdCtrl
+                0x0000000020008920        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlProfileDelCmdCtrl
+                0x0000000020008924        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlWlanSetModeCmdCtrl
+                0x0000000020008928        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlRxFilterSetCmdCtrl
+                0x000000002000892c        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata._SlPolicySetCmdCtrl
+                0x0000000020008930        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .rodata.g_pulEnRegs
+                0x0000000020008934       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .rodata.g_pulDisRegs
+                0x000000002000894c       0x18 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .rodata.PRCM_PeriphRegsList
+                0x0000000020008964       0xa8 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .rodata.str1.1
+                0x0000000020008a0c        0x2 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .rodata.str1.1
+                0x0000000020008a0e       0x11 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .rodata.str1.1
+                0x0000000020008a1f       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000020008a48                . = ALIGN (0x8)
+ *fill*         0x0000000020008a41        0x7 
+                0x0000000020008a48                _etext = .
+
+.glue_7         0x0000000020008a48        0x0
+ .glue_7        0x0000000000000000        0x0 linker stubs
+
+.glue_7t        0x0000000020008a48        0x0
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+
+.vfp11_veneer   0x0000000020008a48        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x0000000020008a48        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x0000000020008a48        0x0
+ .iplt          0x0000000000000000        0x0 obj/Release/main.o
+
+.rel.dyn        0x0000000020008a48        0x0
+ .rel.iplt      0x0000000000000000        0x0 obj/Release/main.o
+
+.ARM            0x0000000020008a48        0x0
+                0x0000000020008a48                __exidx_start = .
+ *(.ARM.exidx*)
+                0x0000000020008a48                __exidx_end = .
+                0x0000000020008a48                __init_data = .
+
+.data           0x0000000020008a48       0x68
+                0x0000000020008a48                _data = .
+ *(.data*)
+ .data.impure_data
+                0x0000000020008a48       0x60 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x0000000020008aa8        0x4 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+                0x0000000020008aa8                _impure_ptr
+                0x0000000020008ab0                . = ALIGN (0x8)
+ *fill*         0x0000000020008aac        0x4 
+                0x0000000020008ab0                _edata = .
+
+.igot.plt       0x0000000020008ab0        0x0
+ .igot.plt      0x0000000000000000        0x0 obj/Release/main.o
+
+.bss            0x0000000020008ab0     0x17d8
+                0x0000000020008ab0                _bss = .
+ *(.bss*)
+ .bss.g_ulStatus
+                0x0000000020008ab0        0x4 obj/Release/main.o
+                0x0000000020008ab0                g_ulStatus
+ .bss.g_ulDeviceIp
+                0x0000000020008ab4        0x4 obj/Release/main.o
+                0x0000000020008ab4                g_ulDeviceIp
+ .bss.__Errorlog
+                0x0000000020008ab8        0x4 obj/Release/uart_if.o
+ .bss.g_uiLED3Port
+                0x0000000020008abc        0x4 obj/Release/gpio_if.o
+                0x0000000020008abc                g_uiLED3Port
+ .bss.g_uiLED1Port
+                0x0000000020008ac0        0x4 obj/Release/gpio_if.o
+                0x0000000020008ac0                g_uiLED1Port
+ .bss.g_uiLED2Port
+                0x0000000020008ac4        0x4 obj/Release/gpio_if.o
+                0x0000000020008ac4                g_uiLED2Port
+ .bss.pui32Stack
+                0x0000000020008ac8     0x1000 obj/Release/startup_gcc.o
+ .bss.heap_end  0x0000000020009ac8        0x4 obj/Release/startup_gcc.o
+ .bss.heap2_end
+                0x0000000020009acc        0x4 obj/Release/startup_gcc.o
+ .bss.g_StatMem
+                0x0000000020009ad0      0x168 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .bss.g_SlDeviceStatus
+                0x0000000020009c38        0x2 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020009c38                g_SlDeviceStatus
+ .bss.gFirstCmdMode
+                0x0000000020009c3a        0x1 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ *fill*         0x0000000020009c3b        0x1 
+ .bss.pPingCallBackFunc
+                0x0000000020009c3c        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020009c3c                pPingCallBackFunc
+ .bss.g_pCB     0x0000000020009c40        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x0000000020009c40                g_pCB
+ .bss.g__SlNonOsCB
+                0x0000000020009c44       0x3c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+                0x0000000020009c44                g__SlNonOsCB
+ .bss.g_SpiFd   0x0000000020009c80        0x4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020009c80                g_SpiFd
+ .bss.g_ucDMAEnabled
+                0x0000000020009c84        0x1 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x0000000020009c84                g_ucDMAEnabled
+ *fill*         0x0000000020009c85        0x3 
+ .bss.__malloc_sbrk_start
+                0x0000000020009c88        0x4 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020009c88                __malloc_sbrk_start
+ .bss.__malloc_free_list
+                0x0000000020009c8c        0x4 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020009c8c                __malloc_free_list
+ *(COMMON)
+ COMMON         0x0000000020009c90      0x599 obj/Release/main.o
+                0x0000000020009c90                uBuf
+                0x000000002000a208                g_p2p_dev
+ COMMON         0x000000002000a229        0x3 obj/Release/gpio_if.o
+                0x000000002000a229                g_ucLED1Pin
+                0x000000002000a22a                g_ucLED2Pin
+                0x000000002000a22b                g_ucLED3Pin
+ COMMON         0x000000002000a22c        0x2 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                0x000000002000a22c                g_bDeviceRestartIsRequired
+                0x000000002000a22d                RxIrqCnt
+ *fill*         0x000000002000a22e        0x2 
+ COMMON         0x000000002000a230       0x54 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                0x000000002000a230                g_cDummy
+                0x000000002000a234                g_ucDinDout
+ COMMON         0x000000002000a284        0x4 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+                0x000000002000a284                errno
+                0x000000002000a288                _ebss = .
+
+.heap           0x000000002000a288    0x35978
+                0x000000002000a288                _heap = .
+                0x000000002003fc00                . = (((((((. + 0x40000) - SIZEOF (.bss)) - SIZEOF (.data)) - SIZEOF (.ARM)) - SIZEOF (.text)) - SIZEOF (.bootloader)) - 0x400)
+ *fill*         0x000000002000a288    0x35978 
+                0x000000002003fc00                . = ALIGN (0x400)
+                0x000000002003fc00                _eheap = .
+LOAD obj/Release/main.o
+LOAD obj/Release/pinmux.o
+LOAD obj/Release/uart_if.o
+LOAD obj/Release/gpio_if.o
+LOAD obj/Release/startup_gcc.o
+LOAD ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a
+LOAD ../../../driverlib/gcc/lib/Release/libdriver.a
+LOAD /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libm.a
+LOAD /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a
+LOAD /usr/lib/gcc/arm-none-eabi/5.2.0/armv7e-m/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libnosys.a
+OUTPUT(bin/Release/p2p.elf elf32-littlearm)
+
+.debug_info     0x0000000000000000    0x17c8a
+ .debug_info    0x0000000000000000     0x1fc0 obj/Release/main.o
+ .debug_info    0x0000000000001fc0      0x115 obj/Release/pinmux.o
+ .debug_info    0x00000000000020d5      0x512 obj/Release/uart_if.o
+ .debug_info    0x00000000000025e7      0x5fe obj/Release/gpio_if.o
+ .debug_info    0x0000000000002be5      0x221 obj/Release/startup_gcc.o
+ .debug_info    0x0000000000002e06     0x1366 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .debug_info    0x000000000000416c     0x2810 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .debug_info    0x000000000000697c     0x1e63 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .debug_info    0x00000000000087df      0x42d ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .debug_info    0x0000000000008c0c      0x6e1 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .debug_info    0x00000000000092ed     0x1ecd ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .debug_info    0x000000000000b1ba     0x1f99 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .debug_info    0x000000000000d153      0xfd7 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .debug_info    0x000000000000e12a      0x3ea ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .debug_info    0x000000000000e514     0x1648 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .debug_info    0x000000000000fb5c      0xb9e ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .debug_info    0x00000000000106fa      0x67d ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .debug_info    0x0000000000010d77       0x50 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .debug_info    0x0000000000010dc7      0x7b2 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .debug_info    0x0000000000011579      0x115 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .debug_info    0x000000000001168e      0x109 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .debug_info    0x0000000000011797       0xda /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .debug_info    0x0000000000011871      0x821 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_info    0x0000000000012092      0x8ec /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_info    0x000000000001297e      0x786 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .debug_info    0x0000000000013104      0x7a1 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_info    0x00000000000138a5       0xd4 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .debug_info    0x0000000000013979      0x892 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .debug_info    0x000000000001420b      0x7da /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .debug_info    0x00000000000149e5      0x878 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_info    0x000000000001525d      0xd40 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_info    0x0000000000015f9d      0xb33 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_info    0x0000000000016ad0      0x8fb /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .debug_info    0x00000000000173cb       0xff /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .debug_info    0x00000000000174ca      0x7c0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+
+.debug_abbrev   0x0000000000000000     0x4059
+ .debug_abbrev  0x0000000000000000      0x423 obj/Release/main.o
+ .debug_abbrev  0x0000000000000423       0x7a obj/Release/pinmux.o
+ .debug_abbrev  0x000000000000049d      0x1d0 obj/Release/uart_if.o
+ .debug_abbrev  0x000000000000066d      0x22c obj/Release/gpio_if.o
+ .debug_abbrev  0x0000000000000899      0x149 obj/Release/startup_gcc.o
+ .debug_abbrev  0x00000000000009e2      0x327 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .debug_abbrev  0x0000000000000d09      0x3ca ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .debug_abbrev  0x00000000000010d3      0x34a ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .debug_abbrev  0x000000000000141d      0x17b ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .debug_abbrev  0x0000000000001598      0x1f1 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .debug_abbrev  0x0000000000001789      0x3a5 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .debug_abbrev  0x0000000000001b2e      0x291 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .debug_abbrev  0x0000000000001dbf      0x2eb ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .debug_abbrev  0x00000000000020aa      0x178 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .debug_abbrev  0x0000000000002222      0x31a ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .debug_abbrev  0x000000000000253c      0x1f4 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .debug_abbrev  0x0000000000002730      0x100 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .debug_abbrev  0x0000000000002830       0x48 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .debug_abbrev  0x0000000000002878      0x18a /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .debug_abbrev  0x0000000000002a02       0xab /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000002aad       0x9c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .debug_abbrev  0x0000000000002b49       0x8e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .debug_abbrev  0x0000000000002bd7      0x1b6 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_abbrev  0x0000000000002d8d      0x24e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_abbrev  0x0000000000002fdb      0x17f /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .debug_abbrev  0x000000000000315a      0x1a0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_abbrev  0x00000000000032fa       0x8c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000003386      0x1bd /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .debug_abbrev  0x0000000000003543      0x136 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000003679      0x1af /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_abbrev  0x0000000000003828      0x23f /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_abbrev  0x0000000000003a67      0x1f4 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_abbrev  0x0000000000003c5b      0x1f2 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .debug_abbrev  0x0000000000003e4d       0xab /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .debug_abbrev  0x0000000000003ef8      0x161 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+
+.debug_loc      0x0000000000000000     0xa0c5
+ .debug_loc     0x0000000000000000      0x685 obj/Release/main.o
+ .debug_loc     0x0000000000000685      0x2be obj/Release/uart_if.o
+ .debug_loc     0x0000000000000943      0x3c2 obj/Release/gpio_if.o
+ .debug_loc     0x0000000000000d05       0x65 obj/Release/startup_gcc.o
+ .debug_loc     0x0000000000000d6a      0x79f ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .debug_loc     0x0000000000001509     0x16b1 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .debug_loc     0x0000000000002bba     0x119e ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .debug_loc     0x0000000000003d58      0x203 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .debug_loc     0x0000000000003f5b      0x1aa ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .debug_loc     0x0000000000004105      0xfab ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .debug_loc     0x00000000000050b0      0xf55 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .debug_loc     0x0000000000006005      0x8e9 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .debug_loc     0x00000000000068ee      0x165 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .debug_loc     0x0000000000006a53      0xfa1 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .debug_loc     0x00000000000079f4      0xbbe ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .debug_loc     0x00000000000085b2      0x465 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .debug_loc     0x0000000000008a17       0x58 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .debug_loc     0x0000000000008a6f       0x87 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .debug_loc     0x0000000000008af6       0xde /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .debug_loc     0x0000000000008bd4       0x57 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .debug_loc     0x0000000000008c2b      0x172 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_loc     0x0000000000008d9d      0x311 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_loc     0x00000000000090ae       0x58 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .debug_loc     0x0000000000009106       0x4d /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_loc     0x0000000000009153       0x21 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .debug_loc     0x0000000000009174      0x163 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .debug_loc     0x00000000000092d7      0x11b /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_loc     0x00000000000093f2      0x54e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_loc     0x0000000000009940      0x52c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_loc     0x0000000000009e6c       0xfa /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .debug_loc     0x0000000000009f66       0xaa /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .debug_loc     0x000000000000a010       0xb5 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+
+.debug_aranges  0x0000000000000000      0xc60
+ .debug_aranges
+                0x0000000000000000       0x58 obj/Release/main.o
+ .debug_aranges
+                0x0000000000000058       0x20 obj/Release/pinmux.o
+ .debug_aranges
+                0x0000000000000078       0x50 obj/Release/uart_if.o
+ .debug_aranges
+                0x00000000000000c8       0x60 obj/Release/gpio_if.o
+ .debug_aranges
+                0x0000000000000128       0x48 obj/Release/startup_gcc.o
+ .debug_aranges
+                0x0000000000000170       0x70 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .debug_aranges
+                0x00000000000001e0      0x118 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .debug_aranges
+                0x00000000000002f8       0xa0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .debug_aranges
+                0x0000000000000398       0x28 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .debug_aranges
+                0x00000000000003c0       0x38 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .debug_aranges
+                0x00000000000003f8       0xd8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .debug_aranges
+                0x00000000000004d0       0xb0 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .debug_aranges
+                0x0000000000000580       0xa8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .debug_aranges
+                0x0000000000000628       0x98 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .debug_aranges
+                0x00000000000006c0      0x190 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .debug_aranges
+                0x0000000000000850       0xd0 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .debug_aranges
+                0x0000000000000920       0xd8 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .debug_aranges
+                0x00000000000009f8       0x20 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .debug_aranges
+                0x0000000000000a18       0x28 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .debug_aranges
+                0x0000000000000a40       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x0000000000000a60       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .debug_aranges
+                0x0000000000000a80       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .debug_aranges
+                0x0000000000000aa0       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_aranges
+                0x0000000000000ac0       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_aranges
+                0x0000000000000ae0       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .debug_aranges
+                0x0000000000000b00       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_aranges
+                0x0000000000000b20       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .debug_aranges
+                0x0000000000000b40       0x28 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .debug_aranges
+                0x0000000000000b68       0x18 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .debug_aranges
+                0x0000000000000b80       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_aranges
+                0x0000000000000ba0       0x30 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_aranges
+                0x0000000000000bd0       0x28 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_aranges
+                0x0000000000000bf8       0x28 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .debug_aranges
+                0x0000000000000c20       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .debug_aranges
+                0x0000000000000c40       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+
+.debug_ranges   0x0000000000000000     0x13f0
+ .debug_ranges  0x0000000000000000      0x118 obj/Release/main.o
+ .debug_ranges  0x0000000000000118       0x10 obj/Release/pinmux.o
+ .debug_ranges  0x0000000000000128       0x40 obj/Release/uart_if.o
+ .debug_ranges  0x0000000000000168       0x88 obj/Release/gpio_if.o
+ .debug_ranges  0x00000000000001f0       0x38 obj/Release/startup_gcc.o
+ .debug_ranges  0x0000000000000228       0xe8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .debug_ranges  0x0000000000000310      0x2b8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .debug_ranges  0x00000000000005c8      0x128 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .debug_ranges  0x00000000000006f0       0x30 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .debug_ranges  0x0000000000000720       0x58 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .debug_ranges  0x0000000000000778      0x150 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .debug_ranges  0x00000000000008c8      0x180 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .debug_ranges  0x0000000000000a48       0xf8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .debug_ranges  0x0000000000000b40       0x88 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .debug_ranges  0x0000000000000bc8      0x480 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .debug_ranges  0x0000000000001048       0xf0 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .debug_ranges  0x0000000000001138       0xc8 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .debug_ranges  0x0000000000001200       0x10 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .debug_ranges  0x0000000000001210       0x18 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .debug_ranges  0x0000000000001228       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .debug_ranges  0x0000000000001238       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .debug_ranges  0x0000000000001248       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .debug_ranges  0x0000000000001258       0x28 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_ranges  0x0000000000001280       0x28 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_ranges  0x00000000000012a8       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .debug_ranges  0x00000000000012b8       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_ranges  0x00000000000012c8       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .debug_ranges  0x00000000000012d8       0x18 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .debug_ranges  0x00000000000012f0       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_ranges  0x0000000000001300       0x50 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_ranges  0x0000000000001350       0x68 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_ranges  0x00000000000013b8       0x18 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .debug_ranges  0x00000000000013d0       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .debug_ranges  0x00000000000013e0       0x10 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+
+.debug_line     0x0000000000000000     0x4a8e
+ .debug_line    0x0000000000000000      0x3de obj/Release/main.o
+ .debug_line    0x00000000000003de       0x6e obj/Release/pinmux.o
+ .debug_line    0x000000000000044c      0x1ce obj/Release/uart_if.o
+ .debug_line    0x000000000000061a      0x16d obj/Release/gpio_if.o
+ .debug_line    0x0000000000000787      0x127 obj/Release/startup_gcc.o
+ .debug_line    0x00000000000008ae      0x2a3 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .debug_line    0x0000000000000b51      0x6e8 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .debug_line    0x0000000000001239      0x426 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .debug_line    0x000000000000165f       0xdb ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .debug_line    0x000000000000173a      0x13d ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .debug_line    0x0000000000001877      0x51c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .debug_line    0x0000000000001d93      0x477 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .debug_line    0x000000000000220a      0x38f ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .debug_line    0x0000000000002599      0x1b7 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .debug_line    0x0000000000002750      0x686 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .debug_line    0x0000000000002dd6      0x336 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .debug_line    0x000000000000310c      0x2ac ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .debug_line    0x00000000000033b8       0x3c ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .debug_line    0x00000000000033f4      0x148 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .debug_line    0x000000000000353c       0xdc /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000003618       0xe9 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .debug_line    0x0000000000003701       0xdd /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .debug_line    0x00000000000037de      0x13b /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_line    0x0000000000003919      0x175 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_line    0x0000000000003a8e      0x137 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .debug_line    0x0000000000003bc5      0x140 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_line    0x0000000000003d05       0xe4 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .debug_line    0x0000000000003de9      0x17d /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .debug_line    0x0000000000003f66       0xe0 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .debug_line    0x0000000000004046      0x15c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_line    0x00000000000041a2      0x2ad /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_line    0x000000000000444f      0x2e9 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_line    0x0000000000004738      0x17b /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .debug_line    0x00000000000048b3       0xdf /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .debug_line    0x0000000000004992       0xfc /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+
+.debug_str      0x0000000000000000     0x5d38
+ .debug_str     0x0000000000000000     0x11a0 obj/Release/main.o
+                                       0x12be (size before relaxing)
+ .debug_str     0x00000000000011a0       0x24 obj/Release/pinmux.o
+                                         0xee (size before relaxing)
+ .debug_str     0x00000000000011c4       0xe8 obj/Release/uart_if.o
+                                        0x268 (size before relaxing)
+ .debug_str     0x00000000000012ac      0x16d obj/Release/gpio_if.o
+                                        0x3ea (size before relaxing)
+ .debug_str     0x0000000000001419       0xdb obj/Release/startup_gcc.o
+                                        0x234 (size before relaxing)
+ .debug_str     0x00000000000014f4      0xa16 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+                                        0xf51 (size before relaxing)
+ .debug_str     0x0000000000001f0a      0x789 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+                                       0x145b (size before relaxing)
+ .debug_str     0x0000000000002693      0x92c ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+                                       0x1423 (size before relaxing)
+ .debug_str     0x0000000000002fbf       0x83 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+                                        0x428 (size before relaxing)
+ .debug_str     0x0000000000003042       0x4d ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+                                        0x5ed (size before relaxing)
+ .debug_str     0x000000000000308f      0x58d ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+                                        0xf02 (size before relaxing)
+ .debug_str     0x000000000000361c      0xcac ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+                                       0x10a5 (size before relaxing)
+ .debug_str     0x00000000000042c8      0x2e4 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+                                        0x546 (size before relaxing)
+ .debug_str     0x00000000000045ac      0x1ee ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+                                        0x2c4 (size before relaxing)
+ .debug_str     0x000000000000479a      0x5b8 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+                                        0x778 (size before relaxing)
+ .debug_str     0x0000000000004d52      0x2aa ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+                                        0x42f (size before relaxing)
+ .debug_str     0x0000000000004ffc      0x1a6 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+                                        0x2de (size before relaxing)
+ .debug_str     0x00000000000051a2        0xb ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+                                         0xcb (size before relaxing)
+ .debug_str     0x00000000000051ad      0x436 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+                                        0x52b (size before relaxing)
+ .debug_str     0x00000000000055e3       0x9c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+                                        0x1c2 (size before relaxing)
+ .debug_str     0x000000000000567f       0x41 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+                                        0x1c9 (size before relaxing)
+ .debug_str     0x00000000000056c0       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+                                        0x1ae (size before relaxing)
+ .debug_str     0x00000000000056ee       0x90 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+                                        0x56f (size before relaxing)
+ .debug_str     0x000000000000577e       0x46 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                                        0x59a (size before relaxing)
+ .debug_str     0x00000000000057c4       0x3a /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+                                        0x51c (size before relaxing)
+ .debug_str     0x00000000000057fe       0x8f /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+                                        0x50e (size before relaxing)
+ .debug_str     0x000000000000588d       0x9d /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+                                        0x1c3 (size before relaxing)
+ .debug_str     0x000000000000592a       0xa3 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+                                        0x556 (size before relaxing)
+ .debug_str     0x00000000000059cd       0x8b /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+                                        0x556 (size before relaxing)
+ .debug_str     0x0000000000005a58       0x23 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+                                        0x577 (size before relaxing)
+ .debug_str     0x0000000000005a7b      0x19a /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                                        0x677 (size before relaxing)
+ .debug_str     0x0000000000005c15       0x8e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                                        0x616 (size before relaxing)
+ .debug_str     0x0000000000005ca3       0x58 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+                                        0x536 (size before relaxing)
+ .debug_str     0x0000000000005cfb       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+                                        0x1be (size before relaxing)
+ .debug_str     0x0000000000005d29        0xf /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+                                        0x555 (size before relaxing)
+
+.comment        0x0000000000000000       0x42
+ .comment       0x0000000000000000       0x21 obj/Release/main.o
+                                         0x22 (size before relaxing)
+ .comment       0x0000000000000000       0x22 obj/Release/pinmux.o
+ .comment       0x0000000000000000       0x22 obj/Release/uart_if.o
+ .comment       0x0000000000000000       0x22 obj/Release/gpio_if.o
+ .comment       0x0000000000000000       0x22 obj/Release/startup_gcc.o
+ .comment       0x0000000000000000       0x22 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .comment       0x0000000000000000       0x22 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .comment       0x0000000000000000       0x22 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .comment       0x0000000000000000       0x22 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .comment       0x0000000000000000       0x22 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .comment       0x0000000000000000       0x22 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .comment       0x0000000000000000       0x22 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .comment       0x0000000000000000       0x22 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .comment       0x0000000000000000       0x22 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .comment       0x0000000000000021       0x21 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+                                         0x22 (size before relaxing)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .comment       0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+
+.ARM.attributes
+                0x0000000000000000       0x33
+ .ARM.attributes
+                0x0000000000000000       0x33 obj/Release/main.o
+ .ARM.attributes
+                0x0000000000000033       0x33 obj/Release/pinmux.o
+ .ARM.attributes
+                0x0000000000000066       0x33 obj/Release/uart_if.o
+ .ARM.attributes
+                0x0000000000000099       0x33 obj/Release/gpio_if.o
+ .ARM.attributes
+                0x00000000000000cc       0x33 obj/Release/startup_gcc.o
+ .ARM.attributes
+                0x00000000000000ff       0x33 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .ARM.attributes
+                0x0000000000000132       0x33 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .ARM.attributes
+                0x0000000000000165       0x33 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .ARM.attributes
+                0x0000000000000198       0x33 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .ARM.attributes
+                0x00000000000001cb       0x33 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .ARM.attributes
+                0x00000000000001fe       0x33 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .ARM.attributes
+                0x0000000000000231       0x33 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .ARM.attributes
+                0x0000000000000264       0x33 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .ARM.attributes
+                0x0000000000000297       0x33 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .ARM.attributes
+                0x00000000000002ca       0x33 ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .ARM.attributes
+                0x00000000000002fd       0x33 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .ARM.attributes
+                0x0000000000000330       0x33 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .ARM.attributes
+                0x0000000000000363       0x33 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .ARM.attributes
+                0x0000000000000396       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x00000000000003c4       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000000000003f2       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x0000000000000420       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000000000000044e       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x000000000000047c       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x00000000000004aa       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .ARM.attributes
+                0x00000000000004d8       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x0000000000000506       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x0000000000000534       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .ARM.attributes
+                0x0000000000000562       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000590       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .ARM.attributes
+                0x00000000000005be       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .ARM.attributes
+                0x00000000000005ec       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .ARM.attributes
+                0x000000000000061a       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x0000000000000648       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .ARM.attributes
+                0x0000000000000676       0x2e /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)
+
+.debug_frame    0x0000000000000000     0x201c
+ .debug_frame   0x0000000000000000       0xe0 obj/Release/main.o
+ .debug_frame   0x00000000000000e0       0x34 obj/Release/pinmux.o
+ .debug_frame   0x0000000000000114      0x110 obj/Release/uart_if.o
+ .debug_frame   0x0000000000000224      0x100 obj/Release/gpio_if.o
+ .debug_frame   0x0000000000000324       0x78 obj/Release/startup_gcc.o
+ .debug_frame   0x000000000000039c      0x158 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(device.o)
+ .debug_frame   0x00000000000004f4      0x3cc ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(driver.o)
+ .debug_frame   0x00000000000008c0      0x230 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netapp.o)
+ .debug_frame   0x0000000000000af0       0x58 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(netcfg.o)
+ .debug_frame   0x0000000000000b48       0x80 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(nonos.o)
+ .debug_frame   0x0000000000000bc8      0x2bc ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(socket.o)
+ .debug_frame   0x0000000000000e84      0x260 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(wlan.o)
+ .debug_frame   0x00000000000010e4      0x230 ../../../simplelink/gcc/lib/nonos/Release/libsimplelink.a(cc_pal.o)
+ .debug_frame   0x0000000000001314      0x128 ../../../driverlib/gcc/lib/Release/libdriver.a(interrupt.o)
+ .debug_frame   0x000000000000143c      0x48c ../../../driverlib/gcc/lib/Release/libdriver.a(prcm.o)
+ .debug_frame   0x00000000000018c8      0x1f8 ../../../driverlib/gcc/lib/Release/libdriver.a(spi.o)
+ .debug_frame   0x0000000000001ac0      0x1c0 ../../../driverlib/gcc/lib/Release/libdriver.a(timer.o)
+ .debug_frame   0x0000000000001c80       0x20 ../../../driverlib/gcc/lib/Release/libdriver.a(utils.o)
+ .debug_frame   0x0000000000001ca0       0x30 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000001cd0       0x28 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x0000000000001cf8       0x28 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000001d20       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000001d40       0x2c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000001d6c       0x2c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000001d98       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-realloc.o)
+ .debug_frame   0x0000000000001db8       0x2c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000001de4       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000001e04       0x48 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-vsnprintf.o)
+ .debug_frame   0x0000000000001e4c       0x3c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000000000001e88       0x90 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x0000000000001f18       0x60 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000000000001f78       0x5c /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x0000000000001fd4       0x28 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-memchr.o)
+ .debug_frame   0x0000000000001ffc       0x20 /usr/lib/gcc/arm-none-eabi/5.2.0/../../../../arm-none-eabi/lib/armv7e-m/libc_nano.a(lib_a-nano-msizer.o)

@@ -129,7 +129,7 @@ unsigned long  g_ulGatewayIP = 0;
 const char digits[] = "0123456789";
 char g_p2p_dev[MAXIMAL_SSID_LENGTH + 1];
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -816,7 +816,7 @@ BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
