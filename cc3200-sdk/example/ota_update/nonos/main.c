@@ -50,7 +50,6 @@
 // simplelink includes
 #include "simplelink.h"
 #include "wlan.h"
-#include "nonos.h"
 
 // driverlib includes
 #include "hw_ints.h"
@@ -400,7 +399,7 @@ static void TimeToString(unsigned long ulTime, unsigned char *ulStrTime)
     ulGeneralVar = ulTime/SEC_IN_DAY;
     ulGeneralVar /= 365;
 
-    ulStrTime += sprintf((char *)ulStrTime,"%4d ",YEAR2013 + ulGeneralVar);
+    ulStrTime += sprintf((char *)ulStrTime,"%4d ",YEAR2013 + (int)ulGeneralVar);
 
     //
     // time
@@ -412,7 +411,7 @@ static void TimeToString(unsigned long ulTime, unsigned char *ulStrTime)
 
     // number of hours
     ulGeneralVar /= SEC_IN_HOUR;
-    ulStrTime += sprintf((char *)ulStrTime,"%02d:",ulGeneralVar);
+    ulStrTime += sprintf((char *)ulStrTime,"%02d:",(int)ulGeneralVar);
 
 
     // number of minutes per hour
@@ -420,9 +419,9 @@ static void TimeToString(unsigned long ulTime, unsigned char *ulStrTime)
 
     // number of seconds per minute
     ulGeneralVar1 %= SEC_IN_MIN;
-    ulStrTime += sprintf((char *)ulStrTime,"%02d:",ulGeneralVar);
+    ulStrTime += sprintf((char *)ulStrTime,"%02d:",(int)ulGeneralVar);
 
-    sprintf((char *)ulStrTime,"%02d",ulGeneralVar1);
+    sprintf((char *)ulStrTime,"%02d",(int)ulGeneralVar1);
 
 }
 
@@ -662,14 +661,14 @@ int GetNTPTimeTask(void *pvParameters)
         //
         sprintf(sDisplayInfo.ucNwpVersion,
                 "%d.%d.%d.%d.31.%d.%d.%d.%d.%d.%d.%d.%d",
-                sDisplayInfo.sNwpVersion.NwpVersion[0],
-                sDisplayInfo.sNwpVersion.NwpVersion[1],
-                sDisplayInfo.sNwpVersion.NwpVersion[2],
-                sDisplayInfo.sNwpVersion.NwpVersion[3],
-                sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.FwVersion[0],
-                sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.FwVersion[1],
-                sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.FwVersion[2],
-                sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.FwVersion[3],
+                (int)sDisplayInfo.sNwpVersion.NwpVersion[0],
+                (int)sDisplayInfo.sNwpVersion.NwpVersion[1],
+                (int)sDisplayInfo.sNwpVersion.NwpVersion[2],
+                (int)sDisplayInfo.sNwpVersion.NwpVersion[3],
+                (int)sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.FwVersion[0],
+                (int)sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.FwVersion[1],
+                (int)sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.FwVersion[2],
+                (int)sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.FwVersion[3],
                 sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.PhyVersion[0],
                 sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.PhyVersion[1],
                 sDisplayInfo.sNwpVersion.ChipFwAndPhyVersion.PhyVersion[2],
@@ -1377,7 +1376,7 @@ int NonOSMainLoopTask(void *pvParameters)
 //*****************************************************************************
 //
 //*****************************************************************************
-void main()
+int main()
 {
 
   //
