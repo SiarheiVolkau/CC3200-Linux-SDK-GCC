@@ -103,7 +103,7 @@ unsigned char  g_ucConnectionSSID[SSID_LEN_MAX+1]; //Connection SSID
 unsigned char  g_ucConnectionBSSID[BSSID_LEN_MAX]; //Connection BSSID
 Sl_WlanNetworkEntry_t netEntries[20]; // Wlan Network Entry
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -705,7 +705,7 @@ static void BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -730,7 +730,7 @@ static void BoardInit(void)
 //! \return None
 //!
 //*****************************************************************************
-void
+int
 main()
 {
     long lRetVal = -1;
