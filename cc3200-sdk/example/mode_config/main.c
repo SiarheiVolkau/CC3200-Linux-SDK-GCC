@@ -108,7 +108,7 @@
 unsigned short g_usConnectionStatus = 0;
 volatile unsigned short g_usIpObtained = 0;
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -437,7 +437,7 @@ BoardInit(void)
   //
   // Set vector table base
   //
-#if defined(ccs)
+#if defined(ccs)|| defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -457,7 +457,7 @@ BoardInit(void)
 //****************************************************************************
 //                            MAIN FUNCTION
 //****************************************************************************
-void main()
+int main()
 {
     int iMode = 0;
     long lRetVal = -1;
