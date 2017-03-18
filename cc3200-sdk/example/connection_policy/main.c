@@ -570,10 +570,10 @@ static long SetConnectionPolicy()
       and set the priority as per requirement 
       to connect with a secured AP */
     SlSecParams_t secParams;
-    secParams.Key = SECURITY_KEY;
+    secParams.Key = (signed char*)SECURITY_KEY;
     secParams.KeyLen = strlen(SECURITY_KEY);
     secParams.Type = SECURITY_TYPE;
-    lRetVal = sl_WlanProfileAdd(SSID_NAME,strlen(SSID_NAME),0,&secParams,0,1,0);
+    lRetVal = sl_WlanProfileAdd((const signed char*)SSID_NAME,strlen(SSID_NAME),0,&secParams,0,1,0);
     ASSERT_ON_ERROR(lRetVal);
 
     //set AUTO policy
@@ -651,7 +651,7 @@ static long SetConnectionPolicy()
     ASSERT_ON_ERROR(lRetVal);
 
     /* Connect to the open AP */
-    lRetVal = sl_WlanConnect(SSID_NAME, strlen(SSID_NAME), 0, 0, 0);
+    lRetVal = sl_WlanConnect((const signed char*)SSID_NAME, strlen(SSID_NAME), 0, 0, 0);
     ASSERT_ON_ERROR(lRetVal);
     
     //wait until IP is acquired
@@ -667,7 +667,7 @@ static long SetConnectionPolicy()
     // of the profile (fast), the application is required to explicitly add it.
     // The limitation shall be addressed in subsequent SDK release, and the below
     // lines for adding the profile can be removed then...! 
-    secParams.Key = "";
+    secParams.Key = (signed char*)"";
     secParams.KeyLen = 0;
     secParams.Type = SL_SEC_TYPE_OPEN;
     lRetVal = sl_WlanProfileAdd((signed char*)SSID_NAME,
@@ -716,7 +716,7 @@ BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(ccs)
+#if defined(gcc) || defined(ccs)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
