@@ -66,6 +66,10 @@ if (CC3200_USE_LIBS MATCHES "middleware")
 	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} driverlib")
 endif()
 
+if (CC3200_USE_LIBS MATCHES "smtp_client")
+	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
+endif()
+
 #
 # include requested libs
 #
@@ -120,6 +124,12 @@ if (CC3200_USE_LIBS MATCHES "json")
 	include_directories(${CC3200_SDK_ROOT}/netapps/json)
 endif()
 
+if (CC3200_USE_LIBS MATCHES "smtp_client")
+	message(STATUS "Using SMTP client library.")
+	set(LINK_LIBS "'${CC3200_SDK_ROOT}/netapps/smtp/client/gcc/lib/${CC3200_LIB_TYPE}/libemail.a' ${LINK_LIBS}")
+	include_directories(${CC3200_SDK_ROOT}/netapps/smtp/client)
+endif()
+
 
 
 set(CC3200_SDK_ROOT "${CC3200_SDK_ROOT}" CACHE STRING "SDK location" FORCE)
@@ -140,11 +150,13 @@ set(NEWLIB "${NEWLIB}" CACHE STRING "Newlib variant: nano or full (default)." FO
 # use specific linker script
 # default is the script for 256K devices
 #
-if (CC3200_SRAM_SIZE STREQUAL 128K)
-	set(LINKER_SCRIPT "${CC3200_SDK_ROOT}/example/common/gcc/cc3200r1m1.ld")
-else ()
-	set(CC3200_SRAM_SIZE 256K)
-	set(LINKER_SCRIPT "${CC3200_SDK_ROOT}/example/common/gcc/cc3200r1m2.ld")
+if (NOT DEFINED LINKER_SCRIPT)
+	if (CC3200_SRAM_SIZE STREQUAL 128K)
+		set(LINKER_SCRIPT "${CC3200_SDK_ROOT}/example/common/gcc/cc3200r1m1.ld")
+	else ()
+		set(CC3200_SRAM_SIZE 256K)
+		set(LINKER_SCRIPT "${CC3200_SDK_ROOT}/example/common/gcc/cc3200r1m2.ld")
+	endif ()
 endif ()
 
 set(CC3200_SRAM_SIZE "${CC3200_SRAM_SIZE}" CACHE STRING "SRAM size on target: 128K or 256K (default)." FORCE)

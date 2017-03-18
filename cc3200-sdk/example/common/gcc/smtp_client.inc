@@ -1,7 +1,7 @@
 #******************************************************************************
 #
-# json.inc - Rules for building some example with JSON library.
-#            Included automatically by common.make
+# smtp_client.inc - Rules for building some example with SMTP Client library.
+#                   Included automatically by common.make
 #
 #	v- 1.3.0
 #
@@ -29,9 +29,9 @@
 #
 #*****************************************************************************
 
-JSON_LIB_PATH ?= $(SDK_ROOT)/netapps/json
+SMTP_CLIENT_LIB_PATH ?= $(SDK_ROOT)/netapps/smtp/client
 
-IPATH += -I$(JSON_LIB_PATH)
+IPATH += -I$(SMTP_CLIENT_LIB_PATH)
 
-DEBUG_LDLIBS+='$(JSON_LIB_PATH)/gcc/lib/Debug/libjson.a'
-RELEASE_LDLIBS+='$(JSON_LIB_PATH)/gcc/lib/Release/libjson.a'
+DEBUG_LDLIBS+='$(SMTP_CLIENT_LIB_PATH)/gcc/lib/Debug/libemail.a'
+RELEASE_LDLIBS+='$(SMTP_CLIENT_LIB_PATH)/gcc/lib/Release/libemail.a'
