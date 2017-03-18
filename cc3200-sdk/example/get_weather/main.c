@@ -129,7 +129,7 @@ SlSecParams_t SecurityParams = {0};  // AP Security Parameters
 char acSendBuff[512];	// Buffer to send data
 char acRecvbuff[1460];  // Buffer to receive data
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -516,7 +516,7 @@ static long GetWeather(HTTPCli_Handle cli, int iSockID, char *pcCityName)
 //****************************************************************************
 void GetWeatherTask(void *pvParameters)
 {
-    int iSocketDesc;
+    int iSocketDesc = 0;
     int iRetVal;
     char acCityName[32];
     long lRetVal = -1;
@@ -723,7 +723,7 @@ BoardInit(void)
   //
   // Set vector table base
   //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -752,7 +752,7 @@ BoardInit(void)
 //! \return None.
 //
 //****************************************************************************
-void main()
+int main()
 {
     long lRetVal = -1;
 
