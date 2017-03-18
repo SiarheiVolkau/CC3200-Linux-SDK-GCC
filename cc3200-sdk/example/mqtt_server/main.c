@@ -143,7 +143,7 @@ void MqttClientServer(void *pvParameters);
 #if defined(ewarm)
 extern uVectorEntry __vector_table;
 #endif
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 
@@ -157,9 +157,9 @@ struct BridgeHandle {
 }BridgeHndl;
 
 /*Client ID,User Name and Password*/
-unsigned char *ClientId="mnb";
-unsigned char *Username="username1";
-unsigned char *Password="pwd1";
+unsigned char *ClientId=(unsigned char *)"mnb";
+unsigned char *Username=(unsigned char *)"username1";
+unsigned char *Password=(unsigned char *)"pwd1";
 
 /*Subscription topics and qos values*/
 char  *topic[SUB_TOPIC_COUNT]={SUB_TOPIC};
@@ -172,8 +172,8 @@ OsiMsgQ_t g_PBQueue;
 extern SlMqttServerCbs_t server_callbacks;
 extern SlMqttClientCbs_t client_callbacks;
 /*Publishing topics and messages*/
-unsigned char *pub_topic=PUB_TOPIC;
-unsigned char *data={"Push Button SW2 has been pressed on CC32XX device"};
+unsigned char *pub_topic=(unsigned char *)PUB_TOPIC;
+unsigned char *data={(unsigned char*)"Push Button SW2 has been pressed on CC32XX device"};
 
 /*Initialization structure to be used with sl_ExtMqtt_Init API*/
 SlMqttClientCtxCfg_t Mqtt_ClientCtx ={
@@ -367,7 +367,7 @@ void BoardInit(void)
     //
     // Set vector table base
     //
-    #if defined(ccs)
+    #if defined(ccs) || defined(gcc)
         IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
     #endif
     #if defined(ewarm)
@@ -745,7 +745,7 @@ skip_subscription:
 //! \return None
 //!
 //*****************************************************************************
-void
+int
 main()
 { 
     long lRetVal = -1;
