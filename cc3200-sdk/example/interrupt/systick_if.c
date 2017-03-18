@@ -347,6 +347,18 @@ SysCtlDelay(unsigned long ulCount)
           "    bx      lr");
 }
 #endif
+
+#if defined(gcc)
+
+void  __attribute__((naked))
+SysCtlDelay(unsigned long ulCount)
+{
+    __asm("    subs    r0, #1\n"
+          "    bne.n   SysCtlDelay\n"
+          "    bx      lr");
+}
+#endif
+
 void
 UTUtilsDelayCycles(unsigned long ulTimeoutCycles)
 {
