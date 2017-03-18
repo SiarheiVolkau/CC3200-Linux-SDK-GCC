@@ -74,7 +74,7 @@
 //*****************************************************************************
 unsigned char pBuffer[100];
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -139,7 +139,7 @@ BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -165,7 +165,7 @@ BoardInit(void)
 //! \return None.
 //
 //****************************************************************************
-void main()
+int main()
 {
 
     FIL fp;
