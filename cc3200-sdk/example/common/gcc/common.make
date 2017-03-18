@@ -88,9 +88,9 @@ LIBC=$(shell $(CC) $(CFLAGS_COMMON) "-print-file-name=libc.a")
 LIBM=$(shell $(CC) $(CFLAGS_COMMON) "-print-file-name=libm.a")
 
 ifeq (nano,$(LIBC_TYPE))
-    STDLIBS="$(LIBC_NANO)" "$(LIBM)" "$(LIBGCC)" "$(LIBNOSYS)"
+    STDLIBS="$(LIBM)" "$(LIBC_NANO)" "$(LIBGCC)" "$(LIBNOSYS)"
 else
-    STDLIBS="$(LIBC)" "$(LIBM)" "$(LIBGCC)"
+    STDLIBS="$(LIBM)" "$(LIBC)" "$(LIBGCC)"
 endif
 
 DEBUG_BINARY=bin/Debug/$(EXE_NAME).bin

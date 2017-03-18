@@ -76,6 +76,6 @@ string(STRIP "${LIBC_PATH}" LIBC_PATH)
 execute_process(COMMAND ${CMAKE_C_COMPILER} "-mthumb" "-mcpu=cortex-m4" "-print-file-name=libm.a" OUTPUT_VARIABLE LIBM_PATH)
 string(STRIP "${LIBM_PATH}" LIBM_PATH)
 
-set(STDLIBS "'${LIBC_NANO_PATH}' '${LIBM_PATH}' '${LIBGCC_PATH}' '${LIBNOSYS_PATH}'")
+set(STDLIBS "'${LIBM_PATH}' '${LIBC_NANO_PATH}' '${LIBGCC_PATH}' '${LIBNOSYS_PATH}'")
 
 set(CMAKE_C_LINK_EXECUTABLE "${CMAKE_C_LINKER} --gc-sections -o <TARGET> <OBJECTS> <LINK_LIBRARIES> ${STDLIBS}")
