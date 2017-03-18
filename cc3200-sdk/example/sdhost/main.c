@@ -89,7 +89,7 @@
 //*****************************************************************************
 static unsigned char g_ucDataBuff[512];
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -240,7 +240,7 @@ CardCapacityGet(unsigned short ulRCA)
 static unsigned long
 CardInit(CardAttrib_t *CardAttrib)
 {
-    unsigned long ulRet;
+    unsigned long ulRet = -1;
     unsigned long ulResp[4];
 
     //
@@ -586,7 +586,7 @@ BoardInit(void)
   //
   // Set vector table base
   //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -617,6 +617,8 @@ int main()
     CardAttrib_t sCard;
     unsigned long ulCapacity;
     unsigned long ulAddress;
+
+    sCard.ullCapacity = 0;
 
     //
     // Initialize Board configurations
