@@ -1,7 +1,6 @@
 #******************************************************************************
 #
-# mqtt_client.inc - Rules for building some example with MQTT client library.
-#                   Included automatically by common.make
+# Makefile - Rules for building the MQTT Client example.
 #
 #	v- 1.3.0
 #
@@ -29,17 +28,32 @@
 #
 #*****************************************************************************
 
-NETAPPS_PATH ?= $(SDK_ROOT)/netapps
-MQTT_CLIENT_LIB_PATH ?= $(NETAPPS_PATH)/mqtt
+.PHONY: all clean
 
-# Avoid simultaneous MQTT client
-# and MQTT client/server library usage
-ifeq (,$(findstring mqtt_server,$(USE_LIBS)))
+# The base SDK directory.
+SDK_ROOT=../../..
 
-    IPATH += -I$(MQTT_CLIENT_LIB_PATH)/include
-    IPATH += -I$(MQTT_CLIENT_LIB_PATH)/common
-    IPATH += -I$(MQTT_CLIENT_LIB_PATH)/platform
+# Sources root directory
+SRC_ROOT=..
 
-    DEBUG_LDLIBS+='$(MQTT_CLIENT_LIB_PATH)/gcc/lib/client/Debug/libmqtt.a'
-    RELEASE_LDLIBS+='$(MQTT_CLIENT_LIB_PATH)/gcc/lib/client/Release/libmqtt.a'
-endif
+# Lib Name
+EXE_NAME=mqtt_client
+
+USE_LIBS=mqtt_client simplelink oslib driverlib
+
+#for use full libc (for float printing), use `full`
+#default is `nano`
+LIBC_TYPE=nano
+
+# Sources
+SOURCES=main.c \
+        pinmux.c \
+        uart_if.c \
+        network_if.c \
+        gpio_if.c \
+        timer_if.c \
+        button_if.c \
+        startup_gcc.c
+
+# make all targets by vars defined here
+include $(SDK_ROOT)/example/common/gcc/common.make

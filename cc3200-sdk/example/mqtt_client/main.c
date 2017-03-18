@@ -176,7 +176,7 @@ void MqttClient(void *pvParameters);
 #if defined(ewarm)
 extern uVectorEntry __vector_table;
 #endif
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #endif
@@ -206,7 +206,7 @@ connect_config usr_connect_config[] =
             true,
         },
         NULL,
-        "user1",
+        (unsigned char*)"user1",
         NULL,
         NULL,
         true,
@@ -232,8 +232,8 @@ SlMqttClientLibCfg_t Mqtt_Client={
 /*Publishing topics and messages*/
 const char *pub_topic_sw2 = PUB_TOPIC_FOR_SW2;
 const char *pub_topic_sw3 = PUB_TOPIC_FOR_SW3;
-unsigned char *data_sw2={"Push button sw2 is pressed on CC32XX device"};
-unsigned char *data_sw3={"Push button sw3 is pressed on CC32XX device"};
+unsigned char *data_sw2={(unsigned char*)"Push button sw2 is pressed on CC32XX device"};
+unsigned char *data_sw3={(unsigned char*)"Push button sw3 is pressed on CC32XX device"};
 
 void *app_hndl = (void*)usr_connect_config;
 //*****************************************************************************
@@ -572,7 +572,7 @@ void BoardInit(void)
     //
     // Set vector table base
     //
-    #if defined(ccs)
+    #if defined(ccs) || defined(gcc)
         IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
     #endif
     #if defined(ewarm)
@@ -681,7 +681,7 @@ void MqttClient(void *pvParameters)
        LOOP_FOREVER();
     }
 
-    lRetVal = sl_WlanProfileAdd(SSID_NAME,strlen(SSID_NAME),0,&SecurityParams,0,1,0);
+    lRetVal = sl_WlanProfileAdd((signed char*)SSID_NAME,strlen(SSID_NAME),0,&SecurityParams,0,1,0);
 
     //set AUTO policy
     lRetVal = sl_WlanPolicySet(SL_POLICY_CONNECTION,
@@ -915,7 +915,7 @@ end:
 //! \return None
 //!
 //*****************************************************************************
-void main()
+int main()
 { 
     long lRetVal = -1;
     //
