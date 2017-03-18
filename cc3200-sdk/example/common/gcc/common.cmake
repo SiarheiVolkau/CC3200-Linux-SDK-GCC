@@ -92,6 +92,10 @@ elseif (CC3200_USE_LIBS MATCHES "flc_fastboot")
 	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
 endif()
 
+if (CC3200_USE_LIBS MATCHES "provisioning")
+	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
+endif()
+
 #
 # include requested libs
 #
@@ -194,6 +198,12 @@ if (CC3200_USE_LIBS MATCHES "ota")
 	set(LINK_LIBS "'${CC3200_SDK_ROOT}/simplelink_extlib/ota/gcc/lib/${CC3200_LIB_TYPE}/ota.a' ${LINK_LIBS}")
 	# line above should be included by flc library
 	# include_directories(${CC3200_SDK_ROOT}/simplelink_extlib/include)
+endif()
+
+if (CC3200_USE_LIBS MATCHES "provisioning")
+	message(STATUS "Using Provisioning library.")
+	set(LINK_LIBS "'${CC3200_SDK_ROOT}/simplelink_extlib/provisioninglib/gcc/lib/${CC3200_LIB_TYPE}/provisioninglib.a' ${LINK_LIBS}")
+	include_directories(${CC3200_SDK_ROOT}/simplelink_extlib/include)
 endif()
 
 set(CC3200_SDK_ROOT "${CC3200_SDK_ROOT}" CACHE STRING "SDK location" FORCE)
