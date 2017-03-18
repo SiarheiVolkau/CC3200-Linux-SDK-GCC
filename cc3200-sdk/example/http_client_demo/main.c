@@ -37,9 +37,9 @@
 //			mode RTOS is needed.
 //
 // Application Details  -
-// http://processors.wiki.ti.com/index.php/
+// http://processors.wiki.ti.com/index.php/CC32xx_HTTP_Client_Demo
 // or
-// docs\examples\
+// docs\examples\CC32xx HTTP Client Demo.pdf
 //
 //*****************************************************************************
 
