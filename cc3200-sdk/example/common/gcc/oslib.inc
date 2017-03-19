@@ -32,6 +32,9 @@
 OSLIB_PATH ?= $(SDK_ROOT)/oslib
 
 IPATH += -I$(SDK_ROOT)/oslib
+IPATH += -I$(SDK_ROOT)/third_party/FreeRTOS/source
+IPATH += -I$(SDK_ROOT)/third_party/FreeRTOS/source/include
+IPATH += -I$(SDK_ROOT)/third_party/FreeRTOS/source/portable/GCC/ARM_CM4
 
 DEBUG_LDLIBS+='$(OSLIB_PATH)/gcc/free_rtos/Debug/free_rtos.a'
 RELEASE_LDLIBS+='$(OSLIB_PATH)/gcc/free_rtos/Release/free_rtos.a'
