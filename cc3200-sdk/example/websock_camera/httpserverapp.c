@@ -145,7 +145,7 @@ void WebSocketRecvEventHandler(UINT16 uConnection, char *ReadBuffer)
 		if(!g_iCameraTaskHdl)
 		{
 			osi_TaskCreate(CameraAppTask,
-								   "CameraApp",
+								   (signed char*)"CameraApp",
 									1024,
 									NULL,
 									CAMERA_SERVICE_PRIORITY,

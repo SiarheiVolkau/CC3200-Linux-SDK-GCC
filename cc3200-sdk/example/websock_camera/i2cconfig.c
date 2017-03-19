@@ -47,43 +47,10 @@
 #include "rom.h"
 #include "rom_map.h"
 #include "hw_memmap.h"
+#include "utils.h"
 #include "i2c.h"
 #include "prcm.h"
 #include "i2cconfig.h"
-
-
-void MT9D111Delay(unsigned long ucDelay);
-
-//*****************************************************************************
-//
-//! This function implements delay in the camera sensor
-//!
-//! \param                      delay value
-//!
-//! \return                     None
-//
-//*****************************************************************************
-#if defined(ewarm)
-	void MT9D111Delay(unsigned long ucDelay)
-	{
-    __asm("    subs    r0, #1\n"
-          "    bne.n   MT9D111Delay\n"
-          "    bx      lr");
-	}
-#endif
-#if defined(ccs)
-
-    __asm("    .sect \".text:MT9D111Delay\"\n"
-          "    .clink\n"
-          "    .thumbfunc MT9D111Delay\n"
-          "    .thumb\n"
-          "    .global MT9D111Delay\n"
-          "MT9D111Delay:\n"
-          "    subs r0, #1\n"
-          "    bne.n MT9D111Delay\n"
-          "    bx lr\n");
-
-#endif
 
 //*****************************************************************************
 //
@@ -105,6 +72,7 @@ unsigned long I2CInit()
 
     return 0;
 }
+
 //****************************************************************************
 //
 //! Invokes the I2C driver APIs to read from the device. This assumes the 
@@ -151,7 +119,7 @@ unsigned long I2CBufferRead(unsigned char ucDevAddr, unsigned char *ucBuffer,
 
         for(ulNdx=1; ulNdx < ulSize-1; ulNdx++)
         {
-            MT9D111Delay(10);
+            MAP_UtilsDelay(10);
             MAP_I2CMasterIntClearEx(I2CA0_BASE, I2C_INT_MASTER);
 
             // continue the transfer. 

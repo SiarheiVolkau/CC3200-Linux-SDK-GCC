@@ -78,7 +78,7 @@
 //*****************************************************************************
 //                      GLOBAL VARIABLES for VECTOR TABLE
 //*****************************************************************************
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -153,7 +153,7 @@ BoardInit(void)
 //****************************************************************************
 //							MAIN FUNCTION
 //****************************************************************************
-void main() {
+int main() {
 	
 	//
 	// Board Initialization
@@ -192,7 +192,7 @@ void main() {
     //
 
     osi_TaskCreate(HttpServerAppTask,
-                    "WebSocketApp",
+                    (signed char*)"WebSocketApp",
                         OSI_STACK_SIZE,
                         NULL,
                         HTTP_SERVER_APP_TASK_PRIORITY,
@@ -205,7 +205,7 @@ void main() {
     //
     osi_start();
 
-	return;
+	return 0;
 }
 
 //*****************************************************************************

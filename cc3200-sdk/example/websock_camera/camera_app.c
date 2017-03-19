@@ -80,15 +80,11 @@
 #define USER_FILE_NAME          "www/images/cc3200_camera_capture.jpg"
 #define TOTAL_DMA_ELEMENTS      64
 #define AP_SSID_LEN_MAX         (33)
-#define ROLE_INVALID            (-5)
 //*****************************************************************************
 //                      GLOBAL VARIABLES
 //*****************************************************************************
 unsigned long g_frame_size_in_bytes;
 unsigned int g_uiDeviceModeConfig = ROLE_AP; //default is AP mode 
-extern volatile unsigned char g_CaptureImage;
-extern int g_uiIpObtained = 0;
-extern int g_uiSimplelinkRole = ROLE_INVALID;
 unsigned int g_uiIpAddress = 0;
 static unsigned long *p_buffer = NULL;
 static unsigned char g_dma_txn_done;
@@ -788,8 +784,8 @@ static int DefineHuffmanTableMarkerDC(char *pbuf, unsigned int *htable, int clas
     *pbuf++= 0xFF;                  // define huffman table marker 
     *pbuf++= 0xC4;
     plength = pbuf;                 // place holder for length field 
-    *pbuf++;
-    *pbuf++;
+    pbuf++;
+    pbuf++;
     *pbuf++= class_id;              // huffman table class | identifier 
 
     for (l = 0; l < 16; l++)
@@ -847,8 +843,8 @@ static int DefineHuffmanTableMarkerAC(char *pbuf, unsigned int *htable, int clas
     *pbuf++= 0xFF;                      // define huffman table marker 
     *pbuf++= 0xC4;
     plength = pbuf;                     // place holder for length field 
-    *pbuf++;
-    *pbuf++;
+    pbuf++;
+    pbuf++;
     *pbuf++= class_id;                  // huffman table class | identifier 
 
     for (l = 0; l < 16; l++)

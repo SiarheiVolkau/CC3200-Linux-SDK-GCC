@@ -49,6 +49,7 @@
 #include "rom.h"
 #include "rom_map.h"
 #include "hw_memmap.h"
+#include "utils.h"
 #include "i2c.h"
 #include "i2cconfig.h"
 #include "common.h"
@@ -303,7 +304,6 @@ static  const s_RegList init_cmds_list[]= {
 // Static Function Declarations
 //*****************************************************************************
 static long RegLstWrite(s_RegList *pRegLst, unsigned long ulNofItems);
-extern void MT9D111Delay(unsigned long ucDelay);
 
 
 //*****************************************************************************
@@ -444,7 +444,7 @@ static long RegLstWrite(s_RegList *pRegLst, unsigned long ulNofItems)
         if(pRegLst->ucPageAddr == 100)
         {
             // PageAddr == 100, insret a delay equal to reg value 
-            MT9D111Delay(pRegLst->usValue * 80000/3);
+            MAP_UtilsDelay(pRegLst->usValue * 80000/3);
         }
         else if(pRegLst->ucPageAddr == 111)
         {
@@ -515,7 +515,7 @@ static long RegLstWrite(s_RegList *pRegLst, unsigned long ulNofItems)
         }
 
         pRegLst++;
-        MT9D111Delay(10);
+        MAP_UtilsDelay(10);
     }
 
     return RET_OK;
