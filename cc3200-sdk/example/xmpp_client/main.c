@@ -96,7 +96,7 @@ unsigned char  g_ucConnectionSSID[SSID_LEN_MAX+1]; //Connection SSID
 unsigned char  g_ucConnectionBSSID[BSSID_LEN_MAX]; //Connection BSSID
 unsigned int g_IpObtained = 0;
 
-#if defined(gcc)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -613,11 +613,11 @@ long WlanConnect()
    long lRetVal = -1;
    SlSecParams_t secParams;
 
-   secParams.Key = SECURITY_KEY;
+   secParams.Key = (signed char*)SECURITY_KEY;
    secParams.KeyLen = strlen(SECURITY_KEY);
    secParams.Type = SECURITY_TYPE;
 
-   lRetVal = sl_WlanConnect(SSID_NAME,strlen(SSID_NAME),0,&secParams,0);
+   lRetVal = sl_WlanConnect((signed char*)SSID_NAME,strlen(SSID_NAME),0,&secParams,0);
    ASSERT_ON_ERROR(lRetVal);
    
    while((!IS_CONNECTED(g_ulStatus)) || (!IS_IP_ACQUIRED(g_ulStatus)))
@@ -716,8 +716,8 @@ static void XmppClient(void *pvParameters)
     XmppOption.Ip = XMPP_IP_ADDR;
 
     //DNS query to get IP address of XMPP Server
-//    lRetVal = sl_NetAppDnsGetHostByName(XMPP_DOMAIN_NAME, \
-//                                    strlen((const char *)XMPP_DOMAIN_NAME), \
+//    lRetVal = sl_NetAppDnsGetHostByName(XMPP_DOMAIN_NAME,
+//                                    strlen((const char *)XMPP_DOMAIN_NAME),
 //                                    (unsigned long*)&XmppOption.Ip, SL_AF_INET);
 //
 //    if(lRetVal < 0)
@@ -727,7 +727,7 @@ static void XmppClient(void *pvParameters)
 //        LOOP_FOREVER();
 //    }
 
-    lRetVal = sl_NetAppXmppSet(SL_NET_APP_XMPP_ID, NETAPP_XMPP_ADVANCED_OPT, \
+    lRetVal = sl_NetAppXmppSet(SL_NET_APP_XMPP_ID, NETAPP_XMPP_ADVANCED_OPT,
                     sizeof(SlNetAppXmppOpt_t), (unsigned char *)&XmppOption);
 
     if(lRetVal < 0)
@@ -828,7 +828,7 @@ BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(gcc)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
