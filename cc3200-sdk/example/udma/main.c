@@ -146,7 +146,7 @@ int UARTDone=0;
     extern uVectorEntry __vector_table;
 #endif
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     extern void (* const g_pfnVectors[])(void);
 #endif
 //*****************************************************************************
@@ -498,7 +498,7 @@ BoardInit(void)
   //
   // Set vector table base
   //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -663,7 +663,7 @@ InitSGTransfer()
 //! \return none
 //!
 //*****************************************************************************
-void
+int
 main()
 {
     static unsigned long ulPrevSeconds;
@@ -807,8 +807,8 @@ main()
                 "Peripheral \n\r");
     UART_PRINT(" \n\rTransfer Rate is %lu Bytes/Sec \n\r", ulBytesAvg);
     UART_PRINT("\n\rTest Ended\n\r");
-    return ;
 
+	while(1);
 }
 
 
