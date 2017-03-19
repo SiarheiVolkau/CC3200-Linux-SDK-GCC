@@ -77,7 +77,7 @@
 //*****************************************************************************
 //                      GLOBAL VARIABLES for VECTOR TABLE
 //*****************************************************************************
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -178,7 +178,7 @@ static void TFTPTask(void *pvParameters)
     // After this call we will be connected and have IP address
     lRetVal = Network_IF_ConnectAP(SSID,secParams);
 
-    UART_PRINT("Connecting to TFTP server %d.%d.%d.%d\n\r",\
+    UART_PRINT("Connecting to TFTP server %d.%d.%d.%d\n\r",
                   SL_IPV4_BYTE(TFTP_IP, 3),SL_IPV4_BYTE(TFTP_IP, 2),
                   SL_IPV4_BYTE(TFTP_IP, 1),SL_IPV4_BYTE(TFTP_IP, 0));
     if(TFTP_READ)
@@ -194,7 +194,7 @@ static void TFTPTask(void *pvParameters)
 
         memset(pucFileBuffer,'\0',uiFileSize);
 
-        lRetVal = sl_TftpRecv(TFTP_IP, FileRead, (char *)pucFileBuffer,\
+        lRetVal = sl_TftpRecv(TFTP_IP, FileRead, (char *)pucFileBuffer,
                                 &uiFileSize, &uiTftpErrCode );
         if(lRetVal < 0)
         {
@@ -203,14 +203,14 @@ static void TFTPTask(void *pvParameters)
             LOOP_FOREVER();
         }
 
-        lRetVal = sl_FsGetInfo((unsigned char *)FileRead, NULL, &pFsFileInfo);
+        lRetVal = sl_FsGetInfo((unsigned char *)FileRead, 0, &pFsFileInfo);
 
         if(lRetVal < 0 )
-            lRetVal = sl_FsOpen((unsigned char *)FileRead,\
-                    FS_MODE_OPEN_CREATE(FILE_SIZE_MAX,_FS_FILE_OPEN_FLAG_COMMIT|\
+            lRetVal = sl_FsOpen((unsigned char *)FileRead,
+                    FS_MODE_OPEN_CREATE(FILE_SIZE_MAX,_FS_FILE_OPEN_FLAG_COMMIT|
                       _FS_FILE_PUBLIC_WRITE), NULL,&pFileHandle);
         else
-            lRetVal = sl_FsOpen((unsigned char *)FileRead,FS_MODE_OPEN_WRITE, \
+            lRetVal = sl_FsOpen((unsigned char *)FileRead,FS_MODE_OPEN_WRITE,
                                 NULL,&pFileHandle);
 
         if(lRetVal < 0)
@@ -239,7 +239,7 @@ static void TFTPTask(void *pvParameters)
     if(TFTP_WRITE)
     {
     	/* open same file which has been written with the server's file content */
-        lRetVal = sl_FsOpen((unsigned char *)FileRead,FS_MODE_OPEN_READ, \
+        lRetVal = sl_FsOpen((unsigned char *)FileRead,FS_MODE_OPEN_READ,
                                 NULL,&pFileHandle);
         if(lRetVal < 0)
         {
@@ -248,7 +248,7 @@ static void TFTPTask(void *pvParameters)
             LOOP_FOREVER();
         }
 
-        lRetVal = sl_FsGetInfo((unsigned char *)FileRead, NULL, &pFsFileInfo);
+        lRetVal = sl_FsGetInfo((unsigned char *)FileRead, 0, &pFsFileInfo);
         if(lRetVal < 0)
         {
             lRetVal = sl_FsClose(pFileHandle,0,0,0);
@@ -270,7 +270,7 @@ static void TFTPTask(void *pvParameters)
 
         lRetVal = sl_FsClose(pFileHandle,0,0,0);
         /* write to server with different file name */
-        lRetVal = sl_TftpSend(TFTP_IP, FileWrite,(char *) pucFileBuffer,\
+        lRetVal = sl_TftpSend(TFTP_IP, FileWrite,(char *) pucFileBuffer,
                             &uiFileSize, &uiTftpErrCode  );
         if(lRetVal < 0)
         {
@@ -288,7 +288,7 @@ static void TFTPTask(void *pvParameters)
 //****************************************************************************
 //							MAIN FUNCTION
 //****************************************************************************
-void main() 
+int main()
 {
     long lRetVal = -1;
     //
