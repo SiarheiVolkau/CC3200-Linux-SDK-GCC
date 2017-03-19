@@ -100,7 +100,7 @@ volatile bool g_bParthashReadyFlag;
 volatile bool g_bInputReadyFlag;
 volatile bool g_bOutputReadyFlag;
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -318,7 +318,7 @@ BoardInit(void)
   //
   // Set vector table base
   //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
@@ -344,7 +344,7 @@ BoardInit(void)
 //! \return None
 //
 //*****************************************************************************
-void
+int
 main()
 {
     unsigned int uiConfig,uiHashLength,uiDataLength;
