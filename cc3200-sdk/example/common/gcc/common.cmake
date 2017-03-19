@@ -74,6 +74,10 @@ if (CC3200_USE_LIBS MATCHES "http_client")
 	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
 endif()
 
+if (CC3200_USE_LIBS MATCHES "http_server")
+	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
+endif()
+
 if (CC3200_USE_LIBS MATCHES "mqtt_client")
 	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
 endif()
@@ -172,6 +176,12 @@ if (CC3200_USE_LIBS MATCHES "http_client")
 		add_definitions(-DHTTPCli_LIBTYPE_MIN)
 		set(LINK_LIBS "'${CC3200_SDK_ROOT}/netapps/http/client/gcc/lib/min/${CC3200_LIB_TYPE}/libwebclient.a' ${LINK_LIBS}")
 	endif()
+endif()
+
+if (CC3200_USE_LIBS MATCHES "http_server")
+	message(STATUS "Using HTTP Server library.")
+	set(LINK_LIBS "'${CC3200_SDK_ROOT}/netapps/http/server/gcc/lib/${CC3200_LIB_TYPE}/libwebserver.a' ${LINK_LIBS}")
+	include_directories(${CC3200_SDK_ROOT}/netapps/http/server)
 endif()
 
 if (CC3200_USE_LIBS MATCHES "mqtt_server")
