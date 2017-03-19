@@ -313,14 +313,12 @@ void vApplicationStackOverflowHook()
 void PrintIPAddr(unsigned int uiIpaddr)
 {
     char pcIpString[16];
-    unsigned char ucLen1, ucLen2, ucLen3, ucLen4;
-    ucLen1 = sprintf(pcIpString, "%u", (uiIpaddr & 0xFF000000)>>24);
-    ucLen2 = sprintf((pcIpString + ucLen1), ".%u", (uiIpaddr & 0x00FF0000)>>16);
-    ucLen3 = sprintf((pcIpString + ucLen1 + ucLen2), ".%u",
-                     (uiIpaddr & 0x0000FF00)>>8);
-    ucLen4 = sprintf((pcIpString + ucLen1 + ucLen2 + ucLen3), ".%u\0",
-                     (uiIpaddr & 0x000000FF));
-    UNUSED(ucLen4);
+    snprintf(pcIpString, sizeof(pcIpString),
+             "%u.%u.%u.%u",
+             (uiIpaddr & 0xFF000000)>>24,
+             (uiIpaddr & 0x00FF0000)>>16,
+             (uiIpaddr & 0x0000FF00)>>8,
+             (uiIpaddr & 0x000000FF));
     UART_PRINT(pcIpString);
 }
 
@@ -1060,7 +1058,7 @@ no_network_connection:
 //****************************************************************************
 //                            MAIN FUNCTION
 //****************************************************************************
-void main(void)
+int main(void)
 {
     int iRetVal;
     //
