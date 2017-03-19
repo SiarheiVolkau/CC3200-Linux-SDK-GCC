@@ -28,12 +28,12 @@ unsigned char ascii_to_char(char b1, char b2);
 //!
 //! @return hexadecimal equivalent
 //!
-//! @brief  Convert nibble to hexdecimal from ASCII
+//! @brief  Convert nibble to hexadecimal from ASCII
 //
 //*****************************************************************************
 unsigned char atoc(char data)
 {
-    unsigned char ucRes;
+    unsigned char ucRes = 0xff;
 
     if ((data >= 0x30) && (data <= 0x39))
     {
@@ -43,7 +43,7 @@ unsigned char atoc(char data)
     {
         if (data == 'a')
         {
-            ucRes = 0x0a;;
+            ucRes = 0x0a;
         }
         else if (data == 'b')
         {

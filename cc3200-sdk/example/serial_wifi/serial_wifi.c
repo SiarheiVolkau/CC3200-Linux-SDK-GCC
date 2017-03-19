@@ -201,23 +201,23 @@ void Interpreter_Task(void *pvParameters)
 
                 {
                     g_imDNSMode = 1;
-                    lRetVal = sl_FsOpen("mDNSStatusFile.txt",\
-                                           FS_MODE_OPEN_WRITE,\
+                    lRetVal = sl_FsOpen((unsigned char*)"mDNSStatusFile.txt",
+                                           FS_MODE_OPEN_WRITE,
                                            &ulToken,&g_isFileHandle);
                     if(lRetVal < 0)
                     {
                         UART_PRINT("Unable to open file\n\r");
                         LOOP_FOREVER();
                     }
-                    lRetVal = sl_FsWrite(g_isFileHandle, 0, \
-                                         (unsigned char *)&g_imDNSMode,\
+                    lRetVal = sl_FsWrite(g_isFileHandle, 0,
+                                         (unsigned char *)&g_imDNSMode,
                                           sizeof(g_imDNSMode));
                     if(lRetVal < 0)
                     {
                         UART_PRINT("Unable to write file\n\r");
                         LOOP_FOREVER();
                     }
-                    lRetVal = sl_FsClose(g_isFileHandle,0,0,NULL);
+                    lRetVal = sl_FsClose(g_isFileHandle,NULL,NULL,0);
                     if(lRetVal < 0)
                     {
                         UART_PRINT("Unable to close file\n\r");
@@ -743,7 +743,7 @@ long ParseWlanConnectString()
     switch(g_SecParams.Type)
     {
         case SL_SEC_TYPE_OPEN:
-            g_SecParams.Key = "";
+            g_SecParams.Key = (signed char*)"";
             g_SecParams.KeyLen = 0;
             g_SecParams.Type = SL_SEC_TYPE_OPEN;
             break;
@@ -857,7 +857,7 @@ long ParsePingString()
         g_ulPingAttempts = 32768 - 1;
     }
 
-    PingParams.Flags                  = NULL;
+    PingParams.Flags                  = 0;
     PingParams.Ip                     = g_ulPingIp;
     PingParams.PingIntervalTime       = PING_INTERVAL_TIME;
     PingParams.PingRequestTimeout     = PING_REQ_TIMEOUT;
@@ -1485,42 +1485,42 @@ long ExecuteCommand(OperationMode_e source)
         ParsemDNSString();
         if(g_imDNSMode == 0)
         {
-            lRetVal = sl_NetAppMDNSUnRegisterService(CC3200_DNS_NAME,\
+            lRetVal = sl_NetAppMDNSUnRegisterService((signed char*)CC3200_DNS_NAME,
                                         (unsigned char)strlen(CC3200_DNS_NAME));
             //ASSERT_ON_ERROR(lRetVal);
-            lRetVal = sl_NetAppMDNSRegisterService(CC3200_DNS_NAME,\
-                                   (unsigned char)strlen(CC3200_DNS_NAME),\
-                                   "multicast",\
-                                   (unsigned char)strlen("multicast"),\
+            lRetVal = sl_NetAppMDNSRegisterService((signed char*)CC3200_DNS_NAME,
+                                   (unsigned char)strlen(CC3200_DNS_NAME),
+                                   (signed char*)"multicast",
+                                   (unsigned char)strlen("multicast"),
                                     INTERPRETER_PORT,2000,1);
             ASSERT_ON_ERROR(lRetVal);
             g_mDNSStatus = 0;
 
-            lRetVal = sl_FsOpen("mDNSStatusFile.txt",FS_MODE_OPEN_WRITE, \
+            lRetVal = sl_FsOpen((unsigned char*)"mDNSStatusFile.txt",FS_MODE_OPEN_WRITE,
                                      &ulToken,&g_isFileHandle);
             ASSERT_ON_ERROR(lRetVal);
-            lRetVal = sl_FsWrite(g_isFileHandle, 0, \
-                                  (unsigned char *)&g_imDNSMode, \
+            lRetVal = sl_FsWrite(g_isFileHandle, 0,
+                                  (unsigned char *)&g_imDNSMode,
                                   sizeof(g_imDNSMode));
             ASSERT_ON_ERROR(lRetVal);
-            lRetVal = sl_FsClose(g_isFileHandle,0,0,NULL);
+            lRetVal = sl_FsClose(g_isFileHandle,NULL,NULL,0);
             ASSERT_ON_ERROR(lRetVal);
         }
         else if(g_imDNSMode == 1)
         {
             g_mDNSStatus = 1;
-            lRetVal = sl_NetAppMDNSUnRegisterService(CC3200_DNS_NAME,\
+            lRetVal = sl_NetAppMDNSUnRegisterService((signed char*)CC3200_DNS_NAME,
                                        (unsigned char)strlen(CC3200_DNS_NAME));
             //ASSERT_ON_ERROR(lRetVal);
 
-            lRetVal = sl_FsOpen("mDNSStatusFile.txt",FS_MODE_OPEN_WRITE, \
+            lRetVal = sl_FsOpen((unsigned char*)"mDNSStatusFile.txt",FS_MODE_OPEN_WRITE,
                                                    &ulToken,&g_isFileHandle);
             ASSERT_ON_ERROR(lRetVal);
-            lRetVal = sl_FsWrite(g_isFileHandle, 0, \
-                                 (unsigned char *)&g_imDNSMode, \
+            lRetVal = sl_FsWrite(g_isFileHandle, 0,
+                                 (unsigned char *)&g_imDNSMode,
                                  sizeof(g_imDNSMode));
             ASSERT_ON_ERROR(lRetVal);
-            lRetVal = sl_FsClose(g_isFileHandle,0,0,NULL);
+            lRetVal = sl_FsClose(g_isFileHandle,NULL,NULL,0);
             ASSERT_ON_ERROR(lRetVal);
         }
         return(0);
@@ -1798,38 +1798,38 @@ long  InitialConfiguration(void)
 
     g_mDNSStatus = 1;
 
-    lRetVal = sl_FsOpen("mDNSStatusFile.txt",FS_MODE_OPEN_READ, \
+    lRetVal = sl_FsOpen((unsigned char*)"mDNSStatusFile.txt",FS_MODE_OPEN_READ,
                                         &ulToken,&g_isFileHandle);
     if(lRetVal < 0) //file does'nt exist
     {
 
         //create a file
-        lRetVal = sl_FsOpen("mDNSStatusFile.txt",\
-                           FS_MODE_OPEN_CREATE(1024,_FS_FILE_OPEN_FLAG_COMMIT| \
-                                     _FS_FILE_PUBLIC_WRITE), \
+        lRetVal = sl_FsOpen((unsigned char*)"mDNSStatusFile.txt",
+                           FS_MODE_OPEN_CREATE(1024,_FS_FILE_OPEN_FLAG_COMMIT|
+                                     _FS_FILE_PUBLIC_WRITE),
                                      &ulToken,&g_isFileHandle);
         ASSERT_ON_ERROR(lRetVal);
         
-        lRetVal = sl_FsClose(g_isFileHandle,0,0,NULL);        
+        lRetVal = sl_FsClose(g_isFileHandle,NULL,NULL,0);
         ASSERT_ON_ERROR(lRetVal);
         g_imDNSMode = 1;
-        lRetVal = sl_FsOpen("mDNSStatusFile.txt",\
-                               FS_MODE_OPEN_WRITE,\
+        lRetVal = sl_FsOpen((unsigned char*)"mDNSStatusFile.txt",
+                               FS_MODE_OPEN_WRITE,
                                &ulToken,&g_isFileHandle);
         if(lRetVal < 0)
         {
             UART_PRINT("Unable to open file\n\r");
             LOOP_FOREVER();
         }
-        lRetVal = sl_FsWrite(g_isFileHandle, 0, \
-                             (unsigned char *)&g_imDNSMode,\
+        lRetVal = sl_FsWrite(g_isFileHandle, 0,
+                             (unsigned char *)&g_imDNSMode,
                               sizeof(g_imDNSMode));
         if(lRetVal < 0)
         {
             UART_PRINT("Unable to write file\n\r");
             LOOP_FOREVER();
         }
-        lRetVal = sl_FsClose(g_isFileHandle,0,0,NULL);
+        lRetVal = sl_FsClose(g_isFileHandle,NULL,NULL,0);
         if(lRetVal < 0)
         {
             UART_PRINT("Unable to close file\n\r");
@@ -1838,27 +1838,27 @@ long  InitialConfiguration(void)
     }
     else
     {
-        lRetVal = sl_FsRead(g_isFileHandle,0, (unsigned char *)&g_imDNSMode, \
+        lRetVal = sl_FsRead(g_isFileHandle,0, (unsigned char *)&g_imDNSMode,
                                   sizeof(g_imDNSMode));
         ASSERT_ON_ERROR(lRetVal);
         
         if(g_imDNSMode == 0)
         {
-            lRetVal = sl_NetAppMDNSUnRegisterService(CC3200_DNS_NAME,\
+            lRetVal = sl_NetAppMDNSUnRegisterService((signed char*)CC3200_DNS_NAME,
                                        (unsigned char)strlen(CC3200_DNS_NAME));
             //ASSERT_ON_ERROR(lRetVal);
 
-            lRetVal = sl_NetAppMDNSRegisterService(CC3200_DNS_NAME,\
-                                      (unsigned char)strlen(CC3200_DNS_NAME),\
-                                      "multicast",\
-                                      (unsigned char)strlen("multicast"),\
+            lRetVal = sl_NetAppMDNSRegisterService((signed char*)CC3200_DNS_NAME,
+                                      (unsigned char)strlen(CC3200_DNS_NAME),
+                                      (signed char*)"multicast",
+                                      (unsigned char)strlen("multicast"),
                                       INTERPRETER_PORT,2000,1);
             ASSERT_ON_ERROR(lRetVal);
 
             g_mDNSStatus = 0;
         }
 
-        lRetVal = sl_FsClose(g_isFileHandle,0,0,NULL);    
+        lRetVal = sl_FsClose(g_isFileHandle,NULL,NULL,0);
         ASSERT_ON_ERROR(lRetVal);
     }
 
