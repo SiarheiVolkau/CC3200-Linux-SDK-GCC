@@ -51,7 +51,7 @@
 // Demo app includes
 #include "network.h"
 #include "circ_buff.h"
-#include "audioCodec.h"
+#include "audiocodec.h"
 
 //*****************************************************************************
 //                 GLOBAL VARIABLES -- Start

@@ -93,13 +93,15 @@ else
     STDLIBS="$(LIBM)" "$(LIBC)" "$(LIBGCC)"
 endif
 
-DEBUG_BINARY=bin/Debug/$(EXE_NAME).bin
-DEBUG_ELF=bin/Debug/$(EXE_NAME).elf
-RELEASE_BINARY=bin/Release/$(EXE_NAME).bin
-RELEASE_ELF=bin/Release/$(EXE_NAME).elf
+APP_PREFIX ?=
 
-DEBUG_OBJPATH=obj/Debug
-RELEASE_OBJPATH=obj/Release
+DEBUG_BINARY=bin/$(APP_PREFIX)/Debug/$(EXE_NAME).bin
+DEBUG_ELF=bin/$(APP_PREFIX)/Debug/$(EXE_NAME).elf
+RELEASE_BINARY=bin/$(APP_PREFIX)/Release/$(EXE_NAME).bin
+RELEASE_ELF=bin/$(APP_PREFIX)/Release/$(EXE_NAME).elf
+
+DEBUG_OBJPATH=obj/$(APP_PREFIX)/Debug
+RELEASE_OBJPATH=obj/$(APP_PREFIX)/Release
 
 ENTRY_POINT ?= ResetISR
 

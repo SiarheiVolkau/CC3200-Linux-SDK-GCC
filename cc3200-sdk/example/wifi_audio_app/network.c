@@ -53,7 +53,7 @@
 
 //App Includes
 #include "network.h"
-#include "audioCodec.h"
+#include "audiocodec.h"
 
 //*****************************************************************************
 //                          LOCAL DEFINES

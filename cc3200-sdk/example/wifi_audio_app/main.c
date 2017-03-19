@@ -92,7 +92,7 @@
 #include "network.h"
 #include "circ_buff.h"
 #include "control.h"
-#include "audioCodec.h"
+#include "audiocodec.h"
 #include "i2s_if.h"
 #include "pcm_handler.h"
 
@@ -112,7 +112,7 @@ OsiTaskHandle g_NetworkTask = NULL ;
 
 unsigned char g_loopback=1;
 
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
 extern void (* const g_pfnVectors[])(void);
 #endif
 #if defined(ewarm)
@@ -222,7 +222,7 @@ BoardInit(void)
     //
     // Set vector table base
     //
-#if defined(ccs)
+#if defined(ccs) || defined(gcc)
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 #endif
 #if defined(ewarm)
