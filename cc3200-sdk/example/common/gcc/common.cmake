@@ -90,6 +90,10 @@ if (CC3200_USE_LIBS MATCHES "tftp_client")
 	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
 endif()
 
+if (CC3200_USE_LIBS MATCHES "xmpp_client")
+	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} simplelink")
+endif()
+
 if (CC3200_USE_LIBS MATCHES "ota")
 	set(CC3200_USE_LIBS "${CC3200_USE_LIBS} flc")
 endif()
@@ -202,6 +206,12 @@ if (CC3200_USE_LIBS MATCHES "tftp_client")
 	message(STATUS "Using TFTP Client library.")
 	set(LINK_LIBS "'${CC3200_SDK_ROOT}/netapps/tftp/client/gcc/lib/${CC3200_LIB_TYPE}/tftplib.a' ${LINK_LIBS}")
 	include_directories(${CC3200_SDK_ROOT}/netapps/tftp/client)
+endif()
+
+if (CC3200_USE_LIBS MATCHES "xmpp_client")
+	message(STATUS "Using XMPP Client library.")
+	set(LINK_LIBS "'${CC3200_SDK_ROOT}/netapps/xmpp/client/gcc/lib/${CC3200_LIB_TYPE}/libxmpp.a' ${LINK_LIBS}")
+	include_directories(${CC3200_SDK_ROOT}/netapps/xmpp/client)
 endif()
 
 if (CC3200_USE_LIBS MATCHES "flc_fastboot")
