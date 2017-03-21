@@ -51,9 +51,7 @@
 #include "rom_map.h"
 #include "prcm.h"
 #include "cc_types.h"
-
-// Oslib includes
-#include "osi.h"
+#include "cpu.h"
 
 // Middleware
 #include "dma_hal.h"
@@ -71,11 +69,35 @@
 
 extern tDMAControlTable dma_ctrl_table[64];
 int user_sel_power_mode;
+volatile int intr_ref_cnt = 0;
 
 #ifdef DEBUG_GPIO
 #define GPIO_09                    9
 extern cc_hndl tGPIODbgHndl;
 #endif
+
+/* Disable system / global interrupt. ref counted for use by nested calls */
+u32 disable_system_irq(void)
+{
+        u32 primask;
+        /* Disable the interrupts */
+        primask = CPUcpsid();
+        intr_ref_cnt++;
+
+        return(primask);
+}
+
+/* Enable system / global interrupt. */
+void enable_system_irq(u32 primask)
+{
+
+        if(intr_ref_cnt && (--intr_ref_cnt == 0)) {
+                /* Enable the interrupts */
+                primask = CPUcpsie();
+        }
+        UNUSED(primask);
+        return;
+}
 
 struct soc_io_park cc32xx_io_park[] = {
         {PIN_01, "GPIO_10", WEAK_PULL_DOWN_STD},
@@ -273,8 +295,8 @@ int lp3p0_get_pm_ops(struct platform_pm_ops *lp3p0_pm_ops)
         lp3p0_pm_ops->enter_S1 = cc_enter_S1;
         lp3p0_pm_ops->back_up_soc_data = lp3p0_back_up_soc_data;
         lp3p0_pm_ops->restore_soc_data = lp3p0_restore_soc_data;
-        lp3p0_pm_ops->dsbl_sys_irq = osi_EnterCritical;
-        lp3p0_pm_ops->enbl_sys_irq = osi_ExitCritical;
+        lp3p0_pm_ops->dsbl_sys_irq = disable_system_irq;
+        lp3p0_pm_ops->enbl_sys_irq = enable_system_irq;
 
         return 0;
 }

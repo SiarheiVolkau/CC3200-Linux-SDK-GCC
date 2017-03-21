@@ -67,7 +67,6 @@
 #include "uart_hal.h"
 #include "dma_hal.h"
 #include "interrupt_hal.h"
-#include "osi.h"
 #include "user_app_config.h"
 
 #define CTL_TBL_SIZE	        64	//32*2 entries
@@ -87,6 +86,8 @@ tDMAControlTable dma_ctrl_table[CTL_TBL_SIZE] __attribute__((aligned(1024)));
 
 extern int gpio_intr_hndlr(int gpio_num);
 extern int lp3p0_get_pm_ops(struct platform_pm_ops *lp3p0_pm_ops);
+extern u32 disable_system_irq(void);
+extern void enable_system_irq(u32 primask);
 
 
 #define CC32XX_MOD_ID_I2C_0    0x01
@@ -233,8 +234,8 @@ static int rtc_module_init()
         hw_timer_config.user_tfw = true;
         hw_timer_config.cb.tfw_register_hwt_ops = cc_timer_register_hwt_ops;
         hw_timer_config.cb_param = NULL;
-        hw_timer_config.enbl_irqc = osi_ExitCritical;
-        hw_timer_config.dsbl_irqc = osi_EnterCritical;
+        hw_timer_config.enbl_irqc = enable_system_irq;
+        hw_timer_config.dsbl_irqc = disable_system_irq;
         hw_timer_config.set_irq = sw_simulate_rtc_intr/*cc_rtc_isr*/;
 
         retval = cc_rtc_init(&hw_timer_config);
@@ -263,8 +264,8 @@ static int hwt32_timer_init()
         hw_timer_config.user_tfw = true;
         hw_timer_config.cb.tfw_register_hwt_ops = cc_timer_register_hwt_ops;
         hw_timer_config.cb_param = NULL;
-        hw_timer_config.enbl_irqc = osi_ExitCritical;
-        hw_timer_config.dsbl_irqc = osi_EnterCritical;
+        hw_timer_config.enbl_irqc = enable_system_irq;
+        hw_timer_config.dsbl_irqc = disable_system_irq;
         hw_timer_config.set_irq = sw_simulate_timer_intr;
 
         timer_hndl = cc_hwt32_init(&hw_timer_config);
@@ -369,8 +370,8 @@ static int gpio_module_init(int *gpios_in_use, int count)
         }
 
         gpio_config.drv_notify_cb = gpio_intr_hndlr;
-        gpio_config.enbl_irqc = osi_ExitCritical;
-        gpio_config.dsbl_irqc = osi_EnterCritical;
+        gpio_config.enbl_irqc = enable_system_irq;
+        gpio_config.dsbl_irqc = disable_system_irq;
         
         retval = cc_gpio_init(&gpio_config);
 
@@ -447,8 +448,8 @@ int platform_init(void)
         register_isr(INT_TIMERA0A, timer_interrupt_handler, NULL);
 
         /* Initialize the platform specific services */
-        timer_setup.enbl_irqc = osi_ExitCritical;
-        timer_setup.dsbl_irqc = osi_EnterCritical;
+        timer_setup.enbl_irqc = enable_system_irq;
+        timer_setup.dsbl_irqc = disable_system_irq;
         retval = cc_timer_module_init(&timer_setup);
         /* Initialize RTC services */
         retval = rtc_module_init();
