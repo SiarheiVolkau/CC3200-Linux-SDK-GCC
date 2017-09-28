@@ -41,7 +41,7 @@ if (NOT DEFINED TOOLCHAIN_PATH)
 
   if (NOT TOOLCHAIN_PATH)
     # Set default path.
-    set(TOOLCHAIN_PATH "/usr/bin/gcc-arm-none-eabi")
+    set(TOOLCHAIN_PATH "/usr")
     message(STATUS "GCC not found, default path will be used")
   endif ()
 endif ()

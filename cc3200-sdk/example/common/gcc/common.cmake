@@ -252,7 +252,7 @@ set(CC3200_SDK_ROOT "${CC3200_SDK_ROOT}" CACHE STRING "SDK location" FORCE)
 # default is newlib-nano (declared in compiler.cmake)
 #
 if (NEWLIB STREQUAL full)
-	set(STDLIBS "'${LIBM_PATH}' '${LIBC_PATH}' '${LIBGCC_PATH}'")
+	set(STDLIBS "'${LIBM_PATH}' '${LIBC_PATH}' '${LIBGCC_PATH}' '${LIBNOSYS_PATH}'")
 else()
 	set(NEWLIB nano)
 endif ()

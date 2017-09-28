@@ -406,13 +406,16 @@ extern "C" {
 #define IP_DROP_MEMBERSHIP                  SL_IP_DROP_MEMBERSHIP 
                                                                        
 #define socklen_t                           SlSocklen_t
-#define timeval                             SlTimeval_t
 #define sockaddr                            SlSockAddr_t
 #define in6_addr                            SlIn6Addr_t
 #define sockaddr_in6                        SlSockAddrIn6_t
 #define in_addr                             SlInAddr_t
 #define sockaddr_in                         SlSockAddrIn_t
-                                                                       
+#if !defined (gcc)
+#define timeval                             SlTimeval_t
+#endif
+
+
 #define MSG_DONTWAIT                        SL_MSG_DONTWAIT       
                                                                        
 #if defined (gcc)
@@ -435,7 +438,6 @@ extern "C" {
 #define bind                                sl_Bind
 #define listen                              sl_Listen
 #define connect                             sl_Connect
-#define select                              sl_Select
 #define setsockopt                          sl_SetSockOpt
 #define getsockopt                          sl_GetSockOpt
 #define recv                                sl_Recv
@@ -448,6 +450,9 @@ extern "C" {
 #define ntohl                               sl_Ntohl
 #define htons                               sl_Htons
 #define ntohs                               sl_Ntohs
+#if !defined (gcc)
+#define select                              sl_Select
+#endif
 #endif
 
 /*****************************************************************************/
