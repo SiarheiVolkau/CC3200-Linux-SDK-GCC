@@ -97,7 +97,7 @@ void Speaker( void *pvParameters )
                 FD_SET(g_UdpSock.iSockDesc,&writefds);
                 tv.tv_sec = 0;
                 tv.tv_usec = 2000000;
-                int rv = select(g_UdpSock.iSockDesc, &readfds, NULL, NULL, &tv);
+                int rv = sl_Select(g_UdpSock.iSockDesc, &readfds, NULL, NULL, &tv);
                 if(rv <= 0)
                 {
                     continue;

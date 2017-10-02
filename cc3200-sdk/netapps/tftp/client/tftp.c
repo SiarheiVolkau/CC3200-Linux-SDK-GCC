@@ -20,7 +20,7 @@
 //                            Refer: http://tools.ietf.org/html/rfc1350
 //*****************************************************************************
 
-
+#include <sys/time.h>
 
 #include "simplelink.h"
 #include "tftpinc.h"

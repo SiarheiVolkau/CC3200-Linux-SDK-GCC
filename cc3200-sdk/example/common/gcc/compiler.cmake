@@ -37,11 +37,11 @@ set(ARM_GCC_COMPILER "arm-none-eabi-gcc${CMAKE_EXECUTABLE_SUFFIX}")
 
 if (NOT DEFINED TOOLCHAIN_PATH)
   # Check if GCC is reachable.
-  find_path(TOOLCHAIN_PATH bin/${ARM_GCC_COMPILER})
+  find_path(TOOLCHAIN_PATH ${ARM_GCC_COMPILER})
 
   if (NOT TOOLCHAIN_PATH)
     # Set default path.
-    set(TOOLCHAIN_PATH "/usr")
+    set(TOOLCHAIN_PATH "/usr/bin")
     message(STATUS "GCC not found, default path will be used")
   endif ()
 endif ()
@@ -49,12 +49,12 @@ endif ()
 # Specify target's environment
 set(CMAKE_FIND_ROOT_PATH "${TOOLCHAIN_PATH}/arm-none-eabi/")
 
-set(CMAKE_C_COMPILER   "${TOOLCHAIN_PATH}/bin/arm-none-eabi-gcc${CMAKE_EXECUTABLE_SUFFIX}")
-set(CMAKE_CXX_COMPILER "${TOOLCHAIN_PATH}/bin/arm-none-eabi-g++${CMAKE_EXECUTABLE_SUFFIX}")
-set(CMAKE_C_LINKER     "${TOOLCHAIN_PATH}/bin/arm-none-eabi-ld${CMAKE_EXECUTABLE_SUFFIX}")
-set(CMAKE_CXX_LINKER   "${TOOLCHAIN_PATH}/bin/arm-none-eabi-ld${CMAKE_EXECUTABLE_SUFFIX}")
+set(CMAKE_C_COMPILER   "${TOOLCHAIN_PATH}/arm-none-eabi-gcc${CMAKE_EXECUTABLE_SUFFIX}")
+set(CMAKE_CXX_COMPILER "${TOOLCHAIN_PATH}/arm-none-eabi-g++${CMAKE_EXECUTABLE_SUFFIX}")
+set(CMAKE_C_LINKER     "${TOOLCHAIN_PATH}/arm-none-eabi-ld${CMAKE_EXECUTABLE_SUFFIX}")
+set(CMAKE_CXX_LINKER   "${TOOLCHAIN_PATH}/arm-none-eabi-ld${CMAKE_EXECUTABLE_SUFFIX}")
 set(CMAKE_OBJCOPY
-        "${TOOLCHAIN_PATH}/bin/arm-none-eabi-objcopy${CMAKE_EXECUTABLE_SUFFIX}"
+        "${TOOLCHAIN_PATH}/arm-none-eabi-objcopy${CMAKE_EXECUTABLE_SUFFIX}"
         CACHE STRING "Objcopy" FORCE)
 
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)

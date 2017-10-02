@@ -32,6 +32,8 @@
 #include <http/client/httpcli.h>
 #include <http/client/common.h>
 
+#include <sys/time.h>
+
 #if defined(__OSI__)/* __linux__ */
 #include <osi.h>
 #endif

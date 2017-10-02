@@ -364,8 +364,11 @@ extern "C" {
                                                                        
 #define PF_INET                             SL_PF_INET            
 #define PF_INET6                            SL_PF_INET6           
-                                                                       
-#define INADDR_ANY                          SL_INADDR_ANY                                                   
+
+#define INADDR_ANY                          SL_INADDR_ANY
+#if defined(gcc)
+#include <errno.h>
+#else
 #define ERROR                               SL_SOC_ERROR                                                                                                                
 #define INEXE                               SL_INEXE                 
 #define EBADF                               SL_EBADF                 
@@ -392,6 +395,7 @@ extern "C" {
 #define ENOTCONN                            SL_ENOTCONN              
 #define ETIMEDOUT                           SL_ETIMEDOUT             
 #define ECONNREFUSED                        SL_ECONNREFUSED          
+#endif
 
 #define SOL_SOCKET                          SL_SOL_SOCKET         
 #define IPPROTO_IP                          SL_IPPROTO_IP                     
