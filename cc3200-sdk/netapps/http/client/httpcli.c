@@ -387,11 +387,11 @@ static int checkContentField(HTTPCli_Handle cli, char *fname, char *fvalue,
 {
     const char chunk[] = "chunked";
 
-    if ((strcmp(fname, HTTPCli_FIELD_NAME_TRANSFER_ENCODING) == 0)
-            && (strcmp(chunk, fvalue) == 0)) {
+    if ((strcasecmp(fname, HTTPCli_FIELD_NAME_TRANSFER_ENCODING) == 0)
+            && (strcasecmp(chunk, fvalue) == 0)) {
         setCliState(cli, CHUNKED_FLAG, true);
     }
-    else if (strcmp(fname, HTTPCli_FIELD_NAME_CONTENT_LENGTH) == 0) {
+    else if (strcasecmp(fname, HTTPCli_FIELD_NAME_CONTENT_LENGTH) == 0) {
         if (moreFlag) {
             return (HTTPCli_ECONTENTLENLARGE);
         }
