@@ -79,7 +79,7 @@
 /* MCU/Application */
 #define configCPU_CLOCK_HZ				( ( unsigned long ) 80000000 )
 #define configTICK_RATE_HZ				( ( TickType_t ) 1000 )
-#define configMINIMAL_STACK_SIZE		( ( unsigned short ) 1024 )
+#define configMINIMAL_STACK_SIZE		( ( unsigned short ) 2048 )
 #define configMAX_TASK_NAME_LEN			( 12 )
 #define configMAX_PRIORITIES			( 10UL )
 #define configKERNEL_INTERRUPT_PRIORITY	( 7 << 5 )
