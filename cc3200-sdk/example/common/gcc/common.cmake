@@ -34,8 +34,8 @@
 #
 set(CPU_FLAGS "-mthumb -mcpu=cortex-m4")
 set(CMAKE_C_FLAGS "${CPU_FLAGS} -ffunction-sections -fdata-sections -g -Wall -Dgcc")
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS} -O0" CACHE STRING "Debug compiler flags" FORCE)
-set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS} -Os -DTARGET_IS_CC3200" CACHE STRING "Release compiler flags" FORCE)
+set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS} -O0" CACHE STRING "Debug compiler flags")
+set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS} -Os -DTARGET_IS_CC3200" CACHE STRING "Release compiler flags")
 set(CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS} -Os -DTARGET_IS_CC3200")
 set(CMAKE_C_FLAGS_MINSIZEREL "${CMAKE_C_FLAGS} -Os -DTARGET_IS_CC3200")
 
@@ -245,7 +245,7 @@ if (CC3200_USE_LIBS MATCHES "fatfs")
 	include_directories(${CC3200_SDK_ROOT}/third_party/fatfs/src)
 endif()
 
-set(CC3200_SDK_ROOT "${CC3200_SDK_ROOT}" CACHE STRING "SDK location" FORCE)
+set(CC3200_SDK_ROOT "${CC3200_SDK_ROOT}" CACHE STRING "SDK location")
 
 #
 # use newlib or newlib-nano
@@ -257,7 +257,7 @@ else()
 	set(NEWLIB nano)
 endif ()
 
-set(NEWLIB "${NEWLIB}" CACHE STRING "Newlib variant: nano or full (default)." FORCE)
+set(NEWLIB "${NEWLIB}" CACHE STRING "Newlib variant: nano or full (default).")
 
 #
 # use specific linker script
@@ -272,7 +272,7 @@ if (NOT DEFINED LINKER_SCRIPT)
 	endif ()
 endif ()
 
-set(CC3200_SRAM_SIZE "${CC3200_SRAM_SIZE}" CACHE STRING "SRAM size on target: 128K or 256K (default)." FORCE)
+set(CC3200_SRAM_SIZE "${CC3200_SRAM_SIZE}" CACHE STRING "SRAM size on target: 128K or 256K (default).")
 
 #
 # linker commandline
