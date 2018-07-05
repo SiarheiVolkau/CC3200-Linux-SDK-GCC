@@ -258,6 +258,7 @@ else()
 endif ()
 
 set(NEWLIB "${NEWLIB}" CACHE STRING "Newlib variant: nano or full (default).")
+set_property(CACHE NEWLIB PROPERTY STRINGS "full" "nano")
 
 #
 # use specific linker script
@@ -273,6 +274,7 @@ if (NOT DEFINED LINKER_SCRIPT)
 endif ()
 
 set(CC3200_SRAM_SIZE "${CC3200_SRAM_SIZE}" CACHE STRING "SRAM size on target: 128K or 256K (default).")
+set_property(CACHE CC3200_SRAM_SIZE PROPERTY STRINGS "128K" "256K")
 
 #
 # linker commandline
